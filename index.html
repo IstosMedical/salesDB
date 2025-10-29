@@ -8,29 +8,37 @@
 </head>
 <body>
   <main class="container">
-    <h1>📋 Equipment CRM Dashboard</h1>
+    
+    <!-- 🔹 Header -->
+    <header class="dashboard-header">
+      <h1>📋 Equipment CRM Dashboard</h1>
+    </header>
 
-    <!-- Summary Cards -->
-    <section class="summary">
-      <div class="card" id="totalEquipments">Equipments: 0</div>
-      <div class="card" id="uniqueCustomers">Customers: 0</div>
-      <div class="card" id="citiesCovered">Cities: 0</div>
+    <!-- 🔹 Summary Cards -->
+    <section class="summary-cards">
+      <div class="card" id="totalEquipments">📦 Equipments: 0</div>
+      <div class="card" id="uniqueCustomers">🏥 Customers: 0</div>
+      <div class="card" id="citiesCovered">🌆 Cities: 0</div>
     </section>
 
-    <!-- Filters -->
-    <section class="filters">
-      <input type="date" id="startDate" />
-      <input type="date" id="endDate" />
-      <input type="text" id="equipmentFilter" placeholder="Equipment Name" />
-      <input type="text" id="modelFilter" placeholder="Model" />
-      <input type="text" id="customerFilter" placeholder="Customer Name" />
-      <input type="text" id="cityFilter" placeholder="City" />
-      <input type="text" id="makeFilter" placeholder="Make" />
-      <button id="applyFilters">Apply Filters</button>
+    <!-- 🔹 Filter Panel -->
+    <section class="filter-panel">
+      <h2>🔍 Filter Records</h2>
+      <div class="filter-grid">
+        <input type="date" id="startDate" placeholder="Start Date" />
+        <input type="date" id="endDate" placeholder="End Date" />
+        <input type="text" id="equipmentFilter" placeholder="Equipment Name" />
+        <input type="text" id="modelFilter" placeholder="Model" />
+        <input type="text" id="customerFilter" placeholder="Customer Name" />
+        <input type="text" id="cityFilter" placeholder="City" />
+        <input type="text" id="makeFilter" placeholder="Make" />
+        <button id="applyFilters">Apply Filters</button>
+      </div>
     </section>
 
-    <!-- Table -->
-    <section>
+    <!-- 🔹 Data Table -->
+    <section class="data-table">
+      <h2>📑 Equipment Records</h2>
       <table id="crmTable">
         <thead>
           <tr>
@@ -46,6 +54,7 @@
         <tbody></tbody>
       </table>
     </section>
+
   </main>
 
   <script src="script.js"></script>

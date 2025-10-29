@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h2>📊 Sales Dashboard</h2>
+
+    <!-- Filters -->
+    <section class="filters">
+      <label>Date Range:</label>
+      <input type="date" id="startDate" />
+      <input type="date" id="endDate" />
+
+      <label>Equipment Name:</label>
+      <input type="text" id="equipmentFilter" placeholder="e.g. Microtome" />
+
+      <label>Model:</label>
+      <input type="text" id="modelFilter" placeholder="e.g. 3004 M" />
+
+      <button id="applyFilters">Apply Filters</button>
+    </section>
+
+    <!-- Table -->
+    <section>
+      <table id="salesTable">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>City</th>
+            <th>Equipment</th>
+            <th>Model</th>
+            <th>DOI</th>
+            <th>Warranty</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

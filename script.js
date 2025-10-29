@@ -1,8 +1,9 @@
-// 🚀 Fetch data from local JSON server
+// 🚀 Fetch data from GitHub Pages
 async function fetchCRMData() {
   try {
-    const response = await fetch("http://localhost:3000/sales");
-    const crmData = await response.json();
+    const response = await fetch("https://istosmedical.github.io/salesDB/sales-data.json");
+    const json = await response.json();
+    const crmData = json.sales || json; // supports both wrapped and raw array
     renderTable(crmData);
     updateSummary(crmData);
     setupFilter(crmData);
@@ -20,13 +21,13 @@ function renderTable(data) {
   data.forEach(row => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
+      <td>${row.A}</td>
+      <td>${row.B}</td>
       <td>${row.C}</td>
+      <td>${row.D}</td>
       <td>${row.E}</td>
       <td>${row.F}</td>
-      <td>${row.H}</td>
       <td>${row.G}</td>
-      <td>${row.J}</td>
-      <td>${row.K}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -35,8 +36,8 @@ function renderTable(data) {
 // 📦 Update summary cards
 function updateSummary(data) {
   document.getElementById("totalEquipments").textContent = `📦 Equipments: ${data.length}`;
-  const customers = new Set(data.map(d => d.C));
-  const cities = new Set(data.map(d => d.E));
+  const customers = new Set(data.map(d => d.A));
+  const cities = new Set(data.map(d => d.B));
   document.getElementById("uniqueCustomers").textContent = `🏥 Customers: ${customers.size}`;
   document.getElementById("citiesCovered").textContent = `🌆 Cities: ${cities.size}`;
 }
@@ -53,17 +54,17 @@ function setupFilter(crmData) {
     const make = document.getElementById("makeFilter").value.toLowerCase();
 
     const filtered = crmData.filter(row => {
-      const doi = row.J || "";
+      const doi = row.F || "";
       const dateMatch =
         (!start || new Date(doi) >= new Date(start)) &&
         (!end || new Date(doi) <= new Date(end));
       return (
         dateMatch &&
-        row.F.toLowerCase().includes(equipment) &&
-        row.H.toLowerCase().includes(model) &&
-        row.C.toLowerCase().includes(customer) &&
-        row.E.toLowerCase().includes(city) &&
-        row.G.toLowerCase().includes(make)
+        row.C.toLowerCase().includes(equipment) &&
+        row.D.toLowerCase().includes(model) &&
+        row.A.toLowerCase().includes(customer) &&
+        row.B.toLowerCase().includes(city) &&
+        row.E.toLowerCase().includes(make)
       );
     });
 
@@ -81,13 +82,13 @@ function setupExport(data) {
   exportBtn.onclick = () => {
     const headers = ["Customer", "City", "Equipment", "Model", "Make", "DOI", "Warranty"];
     const rows = data.map(row => [
+      row.A,
+      row.B,
       row.C,
+      row.D,
       row.E,
       row.F,
-      row.H,
-      row.G,
-      row.J,
-      row.K
+      row.G
     ]);
 
     const csvContent = [headers, ...rows]

@@ -1,4 +1,4 @@
-// 🔗 Fetch data from local JSON server
+// 🚀 Fetch data from local JSON server
 async function fetchCRMData() {
   try {
     const response = await fetch("http://localhost:3000/sales");
@@ -6,6 +6,7 @@ async function fetchCRMData() {
     renderTable(crmData);
     updateSummary(crmData);
     setupFilter(crmData);
+    setupExport(crmData);
   } catch (error) {
     console.error("Failed to fetch CRM data:", error);
   }
@@ -19,13 +20,13 @@ function renderTable(data) {
   data.forEach(row => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${row.customer}</td>
-      <td>${row.city}</td>
-      <td>${row.equipment}</td>
-      <td>${row.model}</td>
-      <td>${row.make}</td>
-      <td>${row.doi}</td>
-      <td>${row.warranty}</td>
+      <td>${row.C}</td>
+      <td>${row.E}</td>
+      <td>${row.F}</td>
+      <td>${row.H}</td>
+      <td>${row.G}</td>
+      <td>${row.J}</td>
+      <td>${row.K}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -34,8 +35,8 @@ function renderTable(data) {
 // 📦 Update summary cards
 function updateSummary(data) {
   document.getElementById("totalEquipments").textContent = `📦 Equipments: ${data.length}`;
-  const customers = new Set(data.map(d => d.customer));
-  const cities = new Set(data.map(d => d.city));
+  const customers = new Set(data.map(d => d.C));
+  const cities = new Set(data.map(d => d.E));
   document.getElementById("uniqueCustomers").textContent = `🏥 Customers: ${customers.size}`;
   document.getElementById("citiesCovered").textContent = `🌆 Cities: ${cities.size}`;
 }
@@ -52,23 +53,54 @@ function setupFilter(crmData) {
     const make = document.getElementById("makeFilter").value.toLowerCase();
 
     const filtered = crmData.filter(row => {
+      const doi = row.J || "";
       const dateMatch =
-        (!start || new Date(row.doi) >= new Date(start)) &&
-        (!end || new Date(row.doi) <= new Date(end));
+        (!start || new Date(doi) >= new Date(start)) &&
+        (!end || new Date(doi) <= new Date(end));
       return (
         dateMatch &&
-        row.equipment.toLowerCase().includes(equipment) &&
-        row.model.toLowerCase().includes(model) &&
-        row.customer.toLowerCase().includes(customer) &&
-        row.city.toLowerCase().includes(city) &&
-        row.make.toLowerCase().includes(make)
+        row.F.toLowerCase().includes(equipment) &&
+        row.H.toLowerCase().includes(model) &&
+        row.C.toLowerCase().includes(customer) &&
+        row.E.toLowerCase().includes(city) &&
+        row.G.toLowerCase().includes(make)
       );
     });
 
     renderTable(filtered);
     updateSummary(filtered);
+    setupExport(filtered);
   });
 }
 
-// 🚀 Initialize dashboard
+// 🧾 Export filtered data to CSV
+function setupExport(data) {
+  const exportBtn = document.getElementById("exportCSV");
+  if (!exportBtn) return;
+
+  exportBtn.onclick = () => {
+    const headers = ["Customer", "City", "Equipment", "Model", "Make", "DOI", "Warranty"];
+    const rows = data.map(row => [
+      row.C,
+      row.E,
+      row.F,
+      row.H,
+      row.G,
+      row.J,
+      row.K
+    ]);
+
+    const csvContent = [headers, ...rows]
+      .map(e => e.map(v => `"${v}"`).join(","))
+      .join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "crm-data.csv";
+    link.click();
+  };
+}
+
+// 🟢 Initialize dashboard
 fetchCRMData();

@@ -1,7 +1,7 @@
 // 🔗 Fetch data from local JSON server
 async function fetchCRMData() {
   try {
-    const response = await fetch("http://localhost:3000/548");
+    const response = await fetch("http://localhost:3000/sales");
     const crmData = await response.json();
     renderTable(crmData);
     updateSummary(crmData);

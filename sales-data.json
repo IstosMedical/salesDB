@@ -1,0 +1,4918 @@
+{
+  "sales": [ 
+    {
+   "A": "Customer Name",
+   "B": "City",
+   "C": "Equipment name",
+   "D": "Model",
+   "E": "Make",
+   "F": "DOI",
+   "G": "Warranty"
+ },
+ {
+   "A": "B J Wadia Hospital for Children, Parel",
+   "B": "Mumbai",
+   "C": "Cryoconsole",
+   "D": "ES 1050-2",
+   "E": "ISTOS",
+   "F": "14/05/2019",
+   "G": ""
+ },
+ {
+   "A": "B J Wadia Hospital for Children, Parel",
+   "B": "Mumbai",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "",
+   "G": "05/08/2022"
+ },
+ {
+   "A": "B J Wadia Hospital for Children, Parel",
+   "B": "Mumbai",
+   "C": "Xylene Pump",
+   "D": "Accuro",
+   "E": "Drager",
+   "F": "06/08/2019",
+   "G": ""
+ },
+ {
+   "A": "B J Wadia Hospital for Children, Parel",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "02/12/2020",
+   "G": "30/11/2023"
+ },
+ {
+   "A": "B J Wadia Hospital for Children, Parel",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "TP 300",
+   "E": "Intelsint",
+   "F": "01/12/2020",
+   "G": "13/12/2025"
+ },
+ {
+   "A": "B J Wadia Hospital for Children, Parel",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "14/12/2022",
+   "G": "13/12/2025"
+ },
+ {
+   "A": "B J Wadia Hospital for Children, Parel",
+   "B": "Mumbai",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "14/12/2022",
+   "G": ""
+ },
+ {
+   "A": "B J Wadia Hospital for Children, Parel",
+   "B": "Mumbai",
+   "C": "Xylene Pump",
+   "D": "Accuro",
+   "E": "Drager",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "B J Wadia Hospital for Children, Parel",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Cryoconsole",
+   "D": "ES 1050-2",
+   "E": "ISTOS ",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Cryoconsole",
+   "D": "ES 1050-2",
+   "E": "ISTOS ",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Cryoconsole",
+   "D": "ES 1050-2",
+   "E": "ISTOS ",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "EFTP",
+   "E": "Intelsint",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Manual cassette Printer",
+   "D": "VCP 6001",
+   "E": "Vogel",
+   "F": "19/11/2018",
+   "G": "19/11/2020"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "19/11/2018",
+   "G": "08/09/2025"
+ },
+ {
+   "A": "SRL Goregaon",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "09/06/2023",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "KEM Medical College & Hosp, Parel ",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "04/07/2018",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "KEM Medical College & Hosp, Parel ",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "04/07/2018",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "KEM Medical College & Hosp, Parel ",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "04/07/2018",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "KEM Medical College & Hosp, Parel ",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "04/07/2018",
+   "G": "19/06/2022"
+ },
+ {
+   "A": "KEM Medical College & Hosp, Parel ",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "19/06/2019",
+   "G": "19/06/2022"
+ },
+ {
+   "A": "KEM Medical College & Hosp, Parel ",
+   "B": "Mumbai",
+   "C": "Slide Stainer ",
+   "D": "AUS1 with dryer",
+   "E": "Intelsint",
+   "F": "19/06/2019",
+   "G": "07/09/2022"
+ },
+ {
+   "A": "KEM Medical College & Hosp, Parel ",
+   "B": "Mumbai",
+   "C": "Slide Stainer ",
+   "D": "AUS1 with dryer",
+   "E": "Intelsint",
+   "F": "07/11/2019",
+   "G": "07/09/2022"
+ },
+ {
+   "A": "KEM Medical College & Hosp, Parel ",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "07/11/2019",
+   "G": "20/03/2026"
+ },
+ {
+   "A": "KEM Medical College & Hosp, Parel ",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "21/03/2023",
+   "G": "20/03/2026"
+ },
+ {
+   "A": "KEM Medical College & Hosp, Parel ",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "21/03/2023",
+   "G": "NA"
+ },
+ {
+   "A": "Prince Aly Khan Hospital, Mazgaon",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "00/00/2015",
+   "G": "21/01/2021"
+ },
+ {
+   "A": "Prince Aly Khan Hospital, Mazgaon",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "21/01/2019",
+   "G": "21/01/2021"
+ },
+ {
+   "A": "Prince Aly Khan Hospital, Mazgaon",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "21/01/2019",
+   "G": "27/09/2021"
+ },
+ {
+   "A": "Centre for Oncopathology (Tata Trust), Wadala ",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "27/09/2019",
+   "G": "27/09/2021"
+ },
+ {
+   "A": "Centre for Oncopathology (Tata Trust), Wadala ",
+   "B": "Mumbai",
+   "C": "Solvent Recyclling System",
+   "D": "Alcohol recycler",
+   "E": "B/R Instrument",
+   "F": "27/09/2019",
+   "G": "18/08/2023"
+ },
+ {
+   "A": "Centre for Oncopathology (Tata Trust), Wadala ",
+   "B": "Mumbai",
+   "C": "Solvent Recyclling System",
+   "D": "Xylene recycler",
+   "E": "B/R Instrument",
+   "F": "19/08/2021",
+   "G": "18/08/2023"
+ },
+ {
+   "A": "Centre for Oncopathology (Tata Trust), Wadala ",
+   "B": "Mumbai",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "19/08/2021",
+   "G": "27/09/2021"
+ },
+ {
+   "A": "Centre for Oncopathology (Tata Trust), Wadala ",
+   "B": "Mumbai",
+   "C": "Xylene Pump",
+   "D": "Accuro",
+   "E": "Drager",
+   "F": "27/09/2019",
+   "G": "27/09/2021"
+ },
+ {
+   "A": "Centre for Oncopathology (Tata Trust), Wadala ",
+   "B": "Mumbai",
+   "C": "Manual Cassette Printer",
+   "D": "VCP 6001",
+   "E": "Vogel",
+   "F": "27/09/2019",
+   "G": "22/06/2024"
+ },
+ {
+   "A": "Centre for Oncopathology (Tata Trust), Wadala ",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint ",
+   "F": "23/06/2022",
+   "G": "04/12/2021"
+ },
+ {
+   "A": "S L Raheja Hospital- A Fortis Associate, Mahim",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "04/12/2019",
+   "G": "04/12/2021"
+ },
+ {
+   "A": "S L Raheja Hospital- A Fortis Associate, Mahim",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "04/12/2019",
+   "G": "04/12/2021"
+ },
+ {
+   "A": "S L Raheja Hospital- A Fortis Associate, Mahim",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "04/12/2019",
+   "G": "04/12/2021"
+ },
+ {
+   "A": "S L Raheja Hospital- A Fortis Associate, Mahim",
+   "B": "Mumbai",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "04/12/2019",
+   "G": "04/12/2021"
+ },
+ {
+   "A": "S L Raheja Hospital- A Fortis Associate, Mahim",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "04/12/2019",
+   "G": "18/04/2026"
+ },
+ {
+   "A": "S L Raheja Hospital- A Fortis Associate, Mahim",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "19/04/2023",
+   "G": "18/04/2026"
+ },
+ {
+   "A": "S L Raheja Hospital- A Fortis Associate, Mahim",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "19/04/2023",
+   "G": "05/12/2021"
+ },
+ {
+   "A": "Bhakti Vedanta Hospital, Mira Road  (A unit of Apoorva Diagnostics, Bangalore)",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "05/12/2019",
+   "G": "25/11/2021"
+ },
+ {
+   "A": "Bhakti Vedanta Hospital, Mira Road  (A unit of Apoorva Diagnostics, Bangalore)",
+   "B": "Mumbai",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "25/11/2019",
+   "G": "25/11/2021"
+ },
+ {
+   "A": "Bhakti Vedanta Hospital, Mira Road  (A unit of Apoorva Diagnostics, Bangalore)",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "25/11/2019",
+   "G": "25/11/2021"
+ },
+ {
+   "A": "Bhakti Vedanta Hospital, Mira Road  (A unit of Apoorva Diagnostics, Bangalore)",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "25/11/2019",
+   "G": "25/11/2021"
+ },
+ {
+   "A": "Bhakti Vedanta Hospital, Mira Road  (A unit of Apoorva Diagnostics, Bangalore)",
+   "B": "Mumbai",
+   "C": "Cryostat",
+   "D": "CM 560",
+   "E": "ISTOS",
+   "F": "25/11/2019",
+   "G": "13/12/2021"
+ },
+ {
+   "A": "Bhakti Vedanta Hospital, Mira Road  (A unit of Apoorva Diagnostics, Bangalore)",
+   "B": "Mumbai",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "13/12/2019",
+   "G": "03/04/2020"
+ },
+ {
+   "A": "Lilavati Hospital, Bandra",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "04/04/2018",
+   "G": "03/04/2020"
+ },
+ {
+   "A": "Lilavati Hospital, Bandra",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "04/04/2018",
+   "G": "26/03/2026"
+ },
+ {
+   "A": "Lilavati Hospital, Bandra",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3000 Compact",
+   "E": "PFM",
+   "F": "27/03/2023",
+   "G": "22/08/2026"
+ },
+ {
+   "A": "Lilavati Hospital, Bandra",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "23/08/2023",
+   "G": "14/09/2026"
+ },
+ {
+   "A": "Lilavati Hospital, Bandra",
+   "B": "Mumbai",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "15/09/2023",
+   "G": "22/08/2026"
+ },
+ {
+   "A": "Lilavati Hospital, Bandra",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "23/08/2023",
+   "G": "02/05/2019"
+ },
+ {
+   "A": "Metropolis Lab, Vidyavihar",
+   "B": "Mumbai",
+   "C": "Cryostat",
+   "D": "CM 650+",
+   "E": "ISTOS",
+   "F": "02/05/2018",
+   "G": "08/05/2021"
+ },
+ {
+   "A": "LTMG (Sion Hospital), Sion",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "09/05/2018",
+   "G": "08/06/2023"
+ },
+ {
+   "A": "LTMG (Sion Hospital), Sion",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "09/06/2020",
+   "G": ""
+ },
+ {
+   "A": "LTMG (Sion Hospital), Sion",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": "03/06/2024"
+ },
+ {
+   "A": "LTMG (Sion Hospital), Sion",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "04/06/2021",
+   "G": "16/08/2021"
+ },
+ {
+   "A": "Cooper Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "16/08/2018",
+   "G": "25/01/2026"
+ },
+ {
+   "A": "Cooper Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "26/01/2023",
+   "G": "04/08/2024"
+ },
+ {
+   "A": "Cooper Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "05/08/2021",
+   "G": "16/09/2019"
+ },
+ {
+   "A": "Accura Diagnostics , Kandivali ((Dr. Rahul Pandey))",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "16/09/2018",
+   "G": "02/07/2019"
+ },
+ {
+   "A": "Accura Diagnostics , Kandivali ((Dr. Rahul Pandey))",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "02/07/2018",
+   "G": "15/11/2021"
+ },
+ {
+   "A": "Parikshan Lab (Dr. Gauri Vidolkar), Mulund",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "15/11/2019",
+   "G": "13/07/2025"
+ },
+ {
+   "A": "Holy Spirit Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "STP 120",
+   "E": "MYR",
+   "F": "14/07/2020",
+   "G": "01/07/2025"
+ },
+ {
+   "A": "Holy Spirit Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Slide Stainer ",
+   "D": "HP 2430",
+   "E": "Rushab",
+   "F": "01/07/2020",
+   "G": "01/07/2025"
+ },
+ {
+   "A": "Holy Spirit Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "01/07/2020",
+   "G": "01/11/2023"
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "01/11/2021",
+   "G": "01/11/2023"
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Cassette Printer",
+   "D": "vcp 6001",
+   "E": "vogel",
+   "F": "01/11/2021",
+   "G": "01/11/2023"
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Tissue Processor",
+   "D": "PT05TS",
+   "E": "Lupetec",
+   "F": "01/11/2021",
+   "G": "01/11/2023"
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "01/11/2021",
+   "G": "01/11/2023"
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "01/11/2021",
+   "G": "01/11/2023"
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "01/11/2021",
+   "G": "01/11/2023"
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Slide Stainer ",
+   "D": "HP 2430",
+   "E": "Rushab",
+   "F": "01/11/2021",
+   "G": "17/11/2023"
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "18/11/2021",
+   "G": "30/01/2024"
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Cryostat",
+   "D": "Starlet Portable",
+   "E": "BRIGHT",
+   "F": "31/01/2022",
+   "G": "01/11/2023"
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Cryostat",
+   "D": "Starlet Portable",
+   "E": "BRIGHT",
+   "F": "01/11/2021",
+   "G": ""
+ },
+ {
+   "A": "Histopia Lab, Borivali",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": "16/11/2023"
+ },
+ {
+   "A": "Speciality Oncopathology Centre, Ghatkopar (Cytocure Medicare)",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "17/11/2021",
+   "G": "03/11/2023"
+ },
+ {
+   "A": "Speciality Oncopathology Centre, Ghatkopar (Cytocure Medicare)",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "STP 120",
+   "E": "MYR",
+   "F": "04/11/2021",
+   "G": "03/11/2023"
+ },
+ {
+   "A": "Speciality Oncopathology Centre, Ghatkopar (Cytocure Medicare)",
+   "B": "Mumbai",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "04/11/2021",
+   "G": "03/11/2023"
+ },
+ {
+   "A": "Speciality Oncopathology Centre, Ghatkopar (Cytocure Medicare)",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "04/11/2021",
+   "G": "03/11/2023"
+ },
+ {
+   "A": "Speciality Oncopathology Centre, Ghatkopar (Cytocure Medicare)",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "04/11/2021",
+   "G": "03/11/2023"
+ },
+ {
+   "A": "Speciality Oncopathology Centre, Ghatkopar (Cytocure Medicare)",
+   "B": "Mumbai",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "04/11/2021",
+   "G": "03/11/2023"
+ },
+ {
+   "A": "Speciality Oncopathology Centre, Ghatkopar (Cytocure Medicare)",
+   "B": "Mumbai",
+   "C": "Manual slide stainer",
+   "D": "SS 112",
+   "E": "ISTOS",
+   "F": "04/11/2021",
+   "G": "03/11/2023"
+ },
+ {
+   "A": "Speciality Oncopathology Centre, Ghatkopar (Cytocure Medicare)",
+   "B": "Mumbai",
+   "C": "Cryostat",
+   "D": "Starlet Portable",
+   "E": "BRIGHT",
+   "F": "04/11/2021",
+   "G": "16/11/2023"
+ },
+ {
+   "A": "Speciality Oncopathology Centre, Ghatkopar (Cytocure Medicare)",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "17/11/2021",
+   "G": "27/09/2024"
+ },
+ {
+   "A": "Neuberg Supratech Laboratory, Vidyavihar",
+   "B": "Mumbai",
+   "C": "Solvent Recyclling System",
+   "D": "Mini pro M690",
+   "E": "B/R Instrument",
+   "F": "28/09/2022",
+   "G": "29/10/2024"
+ },
+ {
+   "A": "Neuberg Supratech Laboratory, Vidyavihar",
+   "B": "Mumbai",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "30/10/2022",
+   "G": "27/09/2024"
+ },
+ {
+   "A": "Neuberg Supratech Laboratory, Vidyavihar",
+   "B": "Mumbai",
+   "C": "Xylene Pump",
+   "D": "Accuro",
+   "E": "Drager",
+   "F": "28/09/2022",
+   "G": "27/09/2024"
+ },
+ {
+   "A": "Neuberg Supratech Laboratory, Vidyavihar",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "28/09/2022",
+   "G": "17/08/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "18/08/2022",
+   "G": "17/08/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3000 Compact",
+   "E": "PFM",
+   "F": "18/08/2022",
+   "G": "17/08/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "18/08/2022",
+   "G": "17/08/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "18/08/2022",
+   "G": "17/08/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "18/08/2022",
+   "G": "12/09/2026"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Andheri",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "13/09/2023",
+   "G": "15/04/2024"
+ },
+ {
+   "A": "N M Medical, Borivali",
+   "B": "Mumbai",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "16/04/2021",
+   "G": ""
+ },
+ {
+   "A": "N M Medical, Borivali",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "TP 300",
+   "E": "Intelsint ",
+   "F": "05/03/2023",
+   "G": "31/05/2025"
+ },
+ {
+   "A": "HCG Manavta Curie, Bombay Naka",
+   "B": "Mumbai",
+   "C": "Wax Dispenser",
+   "D": "",
+   "E": "Lupetec",
+   "F": "01/06/2022",
+   "G": ""
+ },
+ {
+   "A": "HCG Hospital, Borivali",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": "16/12/2020"
+ },
+ {
+   "A": "P D Hinduja Hospital, Mahim",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "17/12/2018",
+   "G": "30/06/2021"
+ },
+ {
+   "A": "P D Hinduja Hospital, Mahim",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3000 Compact",
+   "E": "PFM",
+   "F": "01/07/2019",
+   "G": "06/03/2024"
+ },
+ {
+   "A": "P D Hinduja Hospital, Mahim",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "07/03/2022",
+   "G": "06/07/2026"
+ },
+ {
+   "A": "Reliance HN Hospital, Charni Road",
+   "B": "Mumbai",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "07/07/2021",
+   "G": "08/11/2026"
+ },
+ {
+   "A": "Reliance HN Hospital, Charni Road",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "EFTP",
+   "E": "Intelsint",
+   "F": "09/11/2021",
+   "G": "02/11/2028"
+ },
+ {
+   "A": "Reliance HN Hospital, Charni Road",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "03/11/2023",
+   "G": "24/09/2028"
+ },
+ {
+   "A": "Reliance HN Hospital, Charni Road",
+   "B": "Mumbai",
+   "C": "Grossing camera",
+   "D": "propath HD",
+   "E": "propath",
+   "F": "25/09/2023",
+   "G": ""
+ },
+ {
+   "A": "Reliance HN Hospital, Charni Road",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "",
+   "G": "16/03/2026"
+ },
+ {
+   "A": "T. N. Medical College & BYL Nair Ch. Hospital, Mumbai Central",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "17/03/2023",
+   "G": "28/09/2023"
+ },
+ {
+   "A": "Dr. Balabhai Nanavati Hospital, Vile Parle",
+   "B": "Mumbai",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "29/09/2021",
+   "G": "29/10/2024"
+ },
+ {
+   "A": "Igenetic Diagnostics Pvt Ltd, Andheri",
+   "B": "Mumbai",
+   "C": "Cryostat",
+   "D": "Starlet Portable",
+   "E": "BRIGHT",
+   "F": "30/10/2021",
+   "G": "20/06/2023"
+ },
+ {
+   "A": "Dr. Sameer Pathan",
+   "B": "Mumbai",
+   "C": "Cryostat",
+   "D": "Starlet Portable",
+   "E": "BRIGHT",
+   "F": "21/06/2021",
+   "G": "06/08/2024"
+ },
+ {
+   "A": "Dr. Asawari Ambekar",
+   "B": "Thane",
+   "C": "Solvent Recyclling System",
+   "D": "Instruments",
+   "E": "B/R Instrument",
+   "F": "07/08/2022",
+   "G": "12/06/2024"
+ },
+ {
+   "A": "Saifee Hospital, Charni Road",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "13/06/2022",
+   "G": "09/03/2026"
+ },
+ {
+   "A": "Saifee Hospital, Charni Road",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "10/03/2023",
+   "G": ""
+ },
+ {
+   "A": "Cancare (Head & Neck Cancer) Hospital, Dockyard",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "TP 300",
+   "E": "Intelsint",
+   "F": "",
+   "G": "21/08/2026"
+ },
+ {
+   "A": "Dr. Babasaheb Ambedkar Memorial (Central Railway) Hospital, Byculla ",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "22/08/2023",
+   "G": "21/08/2026"
+ },
+ {
+   "A": "Dr. Babasaheb Ambedkar Memorial (Central Railway) Hospital, Byculla ",
+   "B": "Mumbai",
+   "C": "Cryostat",
+   "D": "Starlet Portable",
+   "E": "BRIGHT",
+   "F": "22/08/2023",
+   "G": "18/06/2025"
+ },
+ {
+   "A": "Dr. Divyanshu Singh (Sergipath Diagnostics), Sion",
+   "B": "Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "19/06/2023",
+   "G": "04/07/2022"
+ },
+ {
+   "A": "Plus Care Internationals Pvt Ltd, Sewri",
+   "B": "Mumbai",
+   "C": "Cryostat",
+   "D": "650+",
+   "E": "ISTOS",
+   "F": "05/07/2021",
+   "G": "04/11/2020"
+ },
+ {
+   "A": "Tata Cancer Hospital, Parel",
+   "B": "Mumbai",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "05/11/2018",
+   "G": "01/05/2025"
+ },
+ {
+   "A": "K B Bhabha Hospital, Bandra",
+   "B": "Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "02/05/2022",
+   "G": "05/07/2025"
+ },
+ {
+   "A": "K B Bhabha Hospital, Bandra",
+   "B": "Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "06/07/2022",
+   "G": "24/01/2020"
+ },
+ {
+   "A": "New MGM Hospital, Vashi",
+   "B": "Navi Mumbai",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "24/01/2017",
+   "G": "24/01/2020"
+ },
+ {
+   "A": "New MGM Hospital, Vashi",
+   "B": "Navi Mumbai",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "MYR",
+   "F": "24/01/2017",
+   "G": "24/01/2020"
+ },
+ {
+   "A": "New MGM Hospital, Vashi",
+   "B": "Navi Mumbai",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "24/01/2017",
+   "G": "24/01/2020"
+ },
+ {
+   "A": "New MGM Hospital, Vashi",
+   "B": "Navi Mumbai",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "24/01/2017",
+   "G": "24/01/2020"
+ },
+ {
+   "A": "New MGM Hospital, Vashi",
+   "B": "Navi Mumbai",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "24/01/2017",
+   "G": "24/01/2020"
+ },
+ {
+   "A": "New MGM Hospital, Vashi",
+   "B": "Navi Mumbai",
+   "C": "Slide Stainer ",
+   "D": "SS 30",
+   "E": "MYR",
+   "F": "24/01/2017",
+   "G": "24/01/2020"
+ },
+ {
+   "A": "New MGM Hospital, Vashi",
+   "B": "Navi Mumbai",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "24/01/2017",
+   "G": "24/01/2020"
+ },
+ {
+   "A": "New MGM Hospital, Vashi",
+   "B": "Navi Mumbai",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "24/01/2017",
+   "G": "28/08/2020"
+ },
+ {
+   "A": "ACTREC, Kharghar (Animal House)",
+   "B": "Navi Mumbai",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "28/08/2018",
+   "G": "24/05/2021"
+ },
+ {
+   "A": "ACTREC, Kharghar (Animal House)",
+   "B": "Navi Mumbai",
+   "C": "Embedding System",
+   "D": "ES 1050-1",
+   "E": "ISTOS",
+   "F": "24/05/2019",
+   "G": "24/05/2021"
+ },
+ {
+   "A": "ACTREC, Kharghar (Animal House)",
+   "B": "Navi Mumbai",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "24/05/2019",
+   "G": "24/05/2021"
+ },
+ {
+   "A": "ACTREC, Kharghar (Animal House)",
+   "B": "Navi Mumbai",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "24/05/2019",
+   "G": "10/11/2019"
+ },
+ {
+   "A": "ACTREC, Kharghar (Hospital Lab)",
+   "B": "Navi Mumbai",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "10/11/2017",
+   "G": "03/08/2017"
+ },
+ {
+   "A": "Apollo Hospital, Nerul",
+   "B": "Navi Mumbai",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "03/08/2016",
+   "G": "03/08/2017"
+ },
+ {
+   "A": "Apollo Hospital, Nerul",
+   "B": "Navi Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "03/08/2016",
+   "G": "29/05/2025"
+ },
+ {
+   "A": "Apollo Hospital, Nerul",
+   "B": "Navi Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "30/05/2023",
+   "G": "21/05/2021"
+ },
+ {
+   "A": "MGM Medical College, Kamothe",
+   "B": "Navi Mumbai",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "21/05/2019",
+   "G": "16/01/2027"
+ },
+ {
+   "A": "MGM Medical College, Kamothe",
+   "B": "Navi Mumbai",
+   "C": "Tissue processor",
+   "D": "PT09TS",
+   "E": "Lupetec",
+   "F": "17/01/2022",
+   "G": "16/01/2027"
+ },
+ {
+   "A": "MGM Medical College, Kamothe",
+   "B": "Navi Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "17/01/2022",
+   "G": "08/12/2023"
+ },
+ {
+   "A": "Reliance Life Sciences, Rabale (COMPLETE LAB SETUP)",
+   "B": "Navi Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "08/12/2021",
+   "G": "08/12/2023"
+ },
+ {
+   "A": "Reliance Life Sciences, Rabale (COMPLETE LAB SETUP)",
+   "B": "Navi Mumbai",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "08/12/2021",
+   "G": "18/01/2024"
+ },
+ {
+   "A": "Reliance Life Sciences, Rabale (COMPLETE LAB SETUP)",
+   "B": "Navi Mumbai",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "19/01/2022",
+   "G": "08/12/2023"
+ },
+ {
+   "A": "Reliance Life Sciences, Rabale (COMPLETE LAB SETUP)",
+   "B": "Navi Mumbai",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "08/12/2021",
+   "G": "18/03/2024"
+ },
+ {
+   "A": "Reliance Life Sciences, Rabale (COMPLETE LAB SETUP)",
+   "B": "Navi Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "19/03/2022",
+   "G": "27/12/2024"
+ },
+ {
+   "A": "Karkinos Healthcare Pvt Ltd, Turbhe",
+   "B": "Navi Mumbai",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "28/12/2022",
+   "G": "27/12/2024"
+ },
+ {
+   "A": "Karkinos Healthcare Pvt Ltd, Turbhe",
+   "B": "Navi Mumbai",
+   "C": "Auto Formalin Preparation & Dispensing system",
+   "D": "Formadose",
+   "E": "Zenon",
+   "F": "28/12/2022",
+   "G": "27/12/2024"
+ },
+ {
+   "A": "Karkinos Healthcare Pvt Ltd, Turbhe",
+   "B": "Navi Mumbai",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "28/12/2022",
+   "G": "27/12/2024"
+ },
+ {
+   "A": "Karkinos Healthcare Pvt Ltd, Turbhe",
+   "B": "Navi Mumbai",
+   "C": "Cassette Printer",
+   "D": "VCP 6001",
+   "E": "Vogel ",
+   "F": "28/12/2022",
+   "G": "08/01/2025"
+ },
+ {
+   "A": "Karkinos Healthcare Pvt Ltd, Turbhe",
+   "B": "Navi Mumbai",
+   "C": "Solvent Recyclling System",
+   "D": "M690",
+   "E": "B/R Instrument",
+   "F": "09/01/2023",
+   "G": "27/12/2024"
+ },
+ {
+   "A": "Karkinos Healthcare Pvt Ltd, Turbhe",
+   "B": "Navi Mumbai",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "28/12/2022",
+   "G": "27/12/2024"
+ },
+ {
+   "A": "Karkinos Healthcare Pvt Ltd, Turbhe",
+   "B": "Navi Mumbai",
+   "C": "Xylene Pump",
+   "D": "Accuro",
+   "E": "Drager",
+   "F": "28/12/2022",
+   "G": "27/12/2024"
+ },
+ {
+   "A": "Karkinos Healthcare Pvt Ltd, Turbhe",
+   "B": "Navi Mumbai",
+   "C": "Tissue processor",
+   "D": "PT05TS",
+   "E": "Lupetec",
+   "F": "28/12/2022",
+   "G": "25/09/2025"
+ },
+ {
+   "A": "General Diagnostics, Sanpada",
+   "B": "Navi Mumbai",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "26/09/2023",
+   "G": "25/09/2025"
+ },
+ {
+   "A": "General Diagnostics, Sanpada",
+   "B": "Navi Mumbai",
+   "C": "Microtome",
+   "D": "3000 Compact",
+   "E": "PFM",
+   "F": "26/09/2023",
+   "G": "25/09/2025"
+ },
+ {
+   "A": "General Diagnostics, Sanpada",
+   "B": "Navi Mumbai",
+   "C": "Embedding System",
+   "D": "TEC II",
+   "E": "TBS",
+   "F": "26/09/2023",
+   "G": "02/05/2018"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Slide Stainer ",
+   "D": "AUS1",
+   "E": "Intelsint",
+   "F": "03/05/2017",
+   "G": "02/05/2020"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "03/05/2017",
+   "G": "24/05/2018"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "25/05/2017",
+   "G": ""
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "",
+   "G": "28/10/2022"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "29/10/2020",
+   "G": "15/04/2023"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "16/04/2021",
+   "G": "27/07/2023"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Bone Band Saw",
+   "D": "Robusta",
+   "E": "ADE",
+   "F": "28/07/2021",
+   "G": "17/08/2024"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "18/08/2022",
+   "G": "17/08/2024"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "18/08/2022",
+   "G": "17/08/2024"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Cassette Printer",
+   "D": "VCPA 5001",
+   "E": "Vogel ",
+   "F": "18/08/2022",
+   "G": "21/08/2024"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Slide Labelling",
+   "D": "Slidebel duo",
+   "E": "Gordiamkey",
+   "F": "22/08/2022",
+   "G": "21/08/2024"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Histology Specimen storage cabinet",
+   "D": "Histostore",
+   "E": "ISTOS",
+   "F": "22/08/2022",
+   "G": "17/08/2024"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "18/08/2022",
+   "G": "17/08/2024"
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "18/08/2022",
+   "G": "10/07/2020"
+ },
+ {
+   "A": "Dr. D Y Patil Medical College, Pimpri",
+   "B": "Pune",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "10/07/2017",
+   "G": "10/07/2020"
+ },
+ {
+   "A": "Dr. D Y Patil Medical College, Pimpri",
+   "B": "Pune",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "10/07/2017",
+   "G": "10/07/2020"
+ },
+ {
+   "A": "Dr. D Y Patil Medical College, Pimpri",
+   "B": "Pune",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "10/07/2017",
+   "G": "23/04/2025"
+ },
+ {
+   "A": "Dr. D Y Patil Medical College, Pimpri",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "24/05/2023",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "Indrayani Cancer Hospital, Alandi",
+   "B": "Pune",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "04/07/2019",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "Indrayani Cancer Hospital, Alandi",
+   "B": "Pune",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "04/07/2019",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "Indrayani Cancer Hospital, Alandi",
+   "B": "Pune",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "04/07/2019",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "Indrayani Cancer Hospital, Alandi",
+   "B": "Pune",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "04/07/2019",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "Indrayani Cancer Hospital, Alandi",
+   "B": "Pune",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "04/07/2019",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "Indrayani Cancer Hospital, Alandi",
+   "B": "Pune",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "04/07/2019",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "Indrayani Cancer Hospital, Alandi",
+   "B": "Pune",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "04/07/2019",
+   "G": "04/07/2021"
+ },
+ {
+   "A": "Indrayani Cancer Hospital, Alandi",
+   "B": "Pune",
+   "C": "Cryostat",
+   "D": "650+",
+   "E": "CM",
+   "F": "04/07/2019",
+   "G": ""
+ },
+ {
+   "A": "Indrayani Cancer Hospital, Alandi",
+   "B": "Pune",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "",
+   "G": "16/11/2021"
+ },
+ {
+   "A": "Dr. D Y Patil Dental College, Pimpri",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "16/11/2019",
+   "G": "NA"
+ },
+ {
+   "A": "Megavision Lab, Pune station",
+   "B": "Pune",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": "NA"
+ },
+ {
+   "A": "Megavision Lab, Pune station",
+   "B": "Pune",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "ISTOS",
+   "F": "02/03/2017",
+   "G": ""
+ },
+ {
+   "A": "Megavision Lab, Pune station",
+   "B": "Pune",
+   "C": "Tissue processor",
+   "D": "TP 300",
+   "E": "Intelsint ",
+   "F": "29/06/2020",
+   "G": "12/04/2025"
+ },
+ {
+   "A": "Megavision Lab, Pune station",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "13/04/2023",
+   "G": "13/06/2021"
+ },
+ {
+   "A": "Ruby Hall Clinic, Pune Station",
+   "B": "Pune",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "13/06/2019",
+   "G": "20/11/2026"
+ },
+ {
+   "A": "Ruby Hall Clinic, Pune Station",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "21/11/2023",
+   "G": "NA"
+ },
+ {
+   "A": "Excel Diagnostics, Erandwane",
+   "B": "Pune",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": "NA"
+ },
+ {
+   "A": "Excel Diagnostics, Erandwane",
+   "B": "Pune",
+   "C": "Tissue processor",
+   "D": "EFTP",
+   "E": "Intelsint",
+   "F": "na",
+   "G": "17/08/2023"
+ },
+ {
+   "A": "Excel Diagnostics, Erandwane",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "18/08/2021",
+   "G": "22/11/2016"
+ },
+ {
+   "A": "B J Medical College, Pune station",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "23/11/2015",
+   "G": "06/03/2020"
+ },
+ {
+   "A": "B J Medical College, Pune station",
+   "B": "Pune",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "07/03/2019",
+   "G": "01/08/2019"
+ },
+ {
+   "A": "B J Medical College, Pune station",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "01/08/2018",
+   "G": "00/06/2019"
+ },
+ {
+   "A": "Bharati vidyapeeth Medical College, Katraj",
+   "B": "Pune",
+   "C": "Cryostat",
+   "D": "OTF 6000",
+   "E": "BRIGHT",
+   "F": "00/06/2016",
+   "G": "02/07/2024"
+ },
+ {
+   "A": "Bharati vidyapeeth Medical College, Katraj",
+   "B": "Pune",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "03/07/2021",
+   "G": "05/05/2024"
+ },
+ {
+   "A": "Bharati vidyapeeth Medical College, Katraj",
+   "B": "Pune",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "06/05/2021",
+   "G": "05/05/2024"
+ },
+ {
+   "A": "Bharati vidyapeeth Medical College, Katraj",
+   "B": "Pune",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "06/05/2021",
+   "G": "05/05/2024"
+ },
+ {
+   "A": "Bharati vidyapeeth Medical College, Katraj",
+   "B": "Pune",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "06/05/2021",
+   "G": "05/05/2024"
+ },
+ {
+   "A": "Bharati vidyapeeth Medical College, Katraj",
+   "B": "Pune",
+   "C": "Tissue processor",
+   "D": "TP 300",
+   "E": "Intelsint ",
+   "F": "06/05/2021",
+   "G": "02/06/2025"
+ },
+ {
+   "A": "Bharati vidyapeeth Medical College, Katraj",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "03/06/2022",
+   "G": "26/08/2021"
+ },
+ {
+   "A": "Sahyadri Hospital, Kothrud",
+   "B": "Pune",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "26/08/2019",
+   "G": "26/08/2021"
+ },
+ {
+   "A": "Sahyadri Hospital, Kothrud",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "26/08/2019",
+   "G": "00/06/2020"
+ },
+ {
+   "A": "A G Diagnostics (Golwilkar), Kothrud",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "00/06/2018",
+   "G": "00/11/2017"
+ },
+ {
+   "A": "Inlaks Budhrani, Koregaon Park",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "00/11/2016",
+   "G": "00/00/2018"
+ },
+ {
+   "A": "Galaxy Hospital, Karve Road (Dr. Swati Kadam)",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "00/00/2017",
+   "G": "16/02/2025"
+ },
+ {
+   "A": "Symbiosis Medical College of Women, Lavale",
+   "B": "Pune",
+   "C": "Grossing Camera",
+   "D": "Propath HD",
+   "E": "Propath",
+   "F": "17/02/2020",
+   "G": "12/03/2025"
+ },
+ {
+   "A": "Symbiosis Medical College of Women, Lavale",
+   "B": "Pune",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "13/03/2020",
+   "G": "06/10/2023"
+ },
+ {
+   "A": "Symbiosis Medical College of Women, Lavale",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "07/10/2021",
+   "G": "PO from banaglore"
+ },
+ {
+   "A": "Manipal Hospitals, Baner ",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "27/04/2022",
+   "G": "08/06/2024"
+ },
+ {
+   "A": "Jehangir Hospital",
+   "B": "Pune",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "09/06/2022",
+   "G": "08/06/2024"
+ },
+ {
+   "A": "Jehangir Hospital",
+   "B": "Pune",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "09/06/2022",
+   "G": ""
+ },
+ {
+   "A": "Asian Institute of Oncology(K J Somaiya)",
+   "B": "Pune",
+   "C": "Tissue Processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "29/07/2017",
+   "G": ""
+ },
+ {
+   "A": "Asian Institute of Oncology(K J Somaiya)",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "31/07/2017",
+   "G": ""
+ },
+ {
+   "A": "Sujith Joshi",
+   "B": "Pune",
+   "C": "Microtome",
+   "D": "3000 Compact",
+   "E": "PFM ",
+   "F": "",
+   "G": "02/05/2025"
+ },
+ {
+   "A": "Noble Hospital, Hadapsar",
+   "B": "Pune",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "03/05/2022",
+   "G": "17/10/2025"
+ },
+ {
+   "A": "Noble Hospital, Hadapsar",
+   "B": "Pune",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "18/10/2023",
+   "G": "31/03/2025"
+ },
+ {
+   "A": "Noble Hospital, Hadapsar",
+   "B": "Pune",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "01/04/2023",
+   "G": "04/06/2020"
+ },
+ {
+   "A": "Dr. Vasantrao Pawar Medical College, Adgaon",
+   "B": "Nashik",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "05/06/2017",
+   "G": ""
+ },
+ {
+   "A": "Dr. Vasantrao Pawar Medical College, Adgaon",
+   "B": "Nashik",
+   "C": "Tissue processor",
+   "D": "ETP",
+   "E": "Intelsint",
+   "F": "27/02/2018",
+   "G": "12/11/2021"
+ },
+ {
+   "A": "Dr. Vasantrao Pawar Medical College, Adgaon",
+   "B": "Nashik",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "13/11/2018",
+   "G": ""
+ },
+ {
+   "A": "Dr. Vasantrao Pawar Medical College, Adgaon",
+   "B": "Nashik",
+   "C": "Grossing Camera",
+   "D": "Propath HD",
+   "E": "Propath",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Dr. Vasantrao Pawar Medical College, Adgaon",
+   "B": "Nashik",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": "04/05/2021"
+ },
+ {
+   "A": "HCG Manavta Curie, Bombay Naka",
+   "B": "Nashik",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "05/05/2018",
+   "G": "24/04/2019"
+ },
+ {
+   "A": "Shinde Diagnostics, Ahmednagar",
+   "B": "Ahmednagar",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "25/04/2018",
+   "G": "22/09/2021"
+ },
+ {
+   "A": "GMC, Jilha Peth",
+   "B": "Jalgaon",
+   "C": "Microtome",
+   "D": "3000 Compact",
+   "E": "PFM",
+   "F": "23/09/2018",
+   "G": "03/03/2025"
+ },
+ {
+   "A": "Chandak Cancer Care",
+   "B": "Aurangabad",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "04/03/2023",
+   "G": "09/12/2017"
+ },
+ {
+   "A": "MGM Medical College & Hospital, Cidco",
+   "B": "Aurangabad",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "10/12/2016",
+   "G": "07/04/2018"
+ },
+ {
+   "A": "MGM Medical College & Hospital, Cidco",
+   "B": "Aurangabad",
+   "C": "Slide Stainer ",
+   "D": "SS 30",
+   "E": "MYR",
+   "F": "08/04/2017",
+   "G": "01/06/2019"
+ },
+ {
+   "A": "Government Medical College, Ghati",
+   "B": "Aurangabad",
+   "C": "Slide Stainer ",
+   "D": "SS 30",
+   "E": "MYR",
+   "F": "01/06/2017",
+   "G": "01/06/2019"
+ },
+ {
+   "A": "Government Cancer Hospital, Aam Khas",
+   "B": "Aurangabad",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "01/06/2017",
+   "G": "00/00/2017"
+ },
+ {
+   "A": "Wochkardt Research Center, Chikalthana",
+   "B": "Aurangabad",
+   "C": "Tissue Processor",
+   "D": "PT05TS",
+   "E": "Lupetec",
+   "F": "00/00/2016",
+   "G": "27/04/2027"
+ },
+ {
+   "A": "Dr. Hegdewar Hospital (Dr. BAVP Trust)",
+   "B": "Aurangabad",
+   "C": "Slide Stainer ",
+   "D": "SS 30",
+   "E": "MYR",
+   "F": "28/04/2022",
+   "G": "01/06/2019"
+ },
+ {
+   "A": "Shri Bhausaheb Hire GMC, ",
+   "B": "Dhule",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "Microm",
+   "F": "02/06/2017",
+   "G": "12/06/2019"
+ },
+ {
+   "A": "Anatpath Lab (Mahesh Deshmukh), Reshambaug",
+   "B": "Nagpur",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "13/06/2018",
+   "G": "12/06/2019"
+ },
+ {
+   "A": "Anatpath Lab (Mahesh Deshmukh), Reshambaug",
+   "B": "Nagpur",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "13/06/2018",
+   "G": ""
+ },
+ {
+   "A": "Alexis Hospital, Mankapur",
+   "B": "Nagpur",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": "12/04/2018"
+ },
+ {
+   "A": "Kanhere Lab, (Histo care labe) Besa Chowk",
+   "B": "Nagpur",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "13/04/2017",
+   "G": "25/05/2024"
+ },
+ {
+   "A": "RST Cancer hospital",
+   "B": "Nagpur",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "26/05/2022",
+   "G": "14/05/2024"
+ },
+ {
+   "A": "NKP Salve Institute of Medical Sciences & Lata Mangeshkar Hospital, Digdo Hills",
+   "B": "Nagpur",
+   "C": "Grossing Camera",
+   "D": "D5 600",
+   "E": "Nikon",
+   "F": "15/02/2021",
+   "G": "05/08/2024"
+ },
+ {
+   "A": "NKP Salve Institute of Medical Sciences & Lata Mangeshkar Hospital, Digdo Hills",
+   "B": "Nagpur",
+   "C": "Tissue Processor",
+   "D": "STP 120 ",
+   "E": "MYR",
+   "F": "06/08/2021",
+   "G": "14/05/2024"
+ },
+ {
+   "A": "NKP Salve Institute of Medical Sciences & Lata Mangeshkar Hospital, Digdo Hills",
+   "B": "Nagpur",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "15/02/2021",
+   "G": "14/05/2024"
+ },
+ {
+   "A": "NKP Salve Institute of Medical Sciences & Lata Mangeshkar Hospital, Digdo Hills",
+   "B": "Nagpur",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "15/02/2021",
+   "G": "14/05/2024"
+ },
+ {
+   "A": "NKP Salve Institute of Medical Sciences & Lata Mangeshkar Hospital, Digdo Hills",
+   "B": "Nagpur",
+   "C": "Slide Stainer ",
+   "D": "HP 2430",
+   "E": "Rushab",
+   "F": "15/02/2021",
+   "G": "14/05/2024"
+ },
+ {
+   "A": "NKP Salve Institute of Medical Sciences & Lata Mangeshkar Hospital, Digdo Hills",
+   "B": "Nagpur",
+   "C": "Cryostat",
+   "D": "650+",
+   "E": "CM",
+   "F": "15/02/2021",
+   "G": "14/05/2024"
+ },
+ {
+   "A": "NKP Salve Institute of Medical Sciences & Lata Mangeshkar Hospital, Digdo Hills",
+   "B": "Nagpur",
+   "C": "Slide Stainer ",
+   "D": "SS 30",
+   "E": "MYR",
+   "F": "15/02/2021",
+   "G": "08/06/2019"
+ },
+ {
+   "A": "Government Medical College, Gondia",
+   "B": "Gondia",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "09/06/2017",
+   "G": "04/10/2023"
+ },
+ {
+   "A": "Vivekanand Cancer Hospital",
+   "B": "Latur",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "05/10/2021",
+   "G": "15/08/2024"
+ },
+ {
+   "A": "Vivekanand Cancer Hospital",
+   "B": "Latur",
+   "C": "Microtome",
+   "D": "3000 Compact",
+   "E": "PFM",
+   "F": "16/08/2023",
+   "G": ""
+ },
+ {
+   "A": "Krishna Surgical Pathology",
+   "B": "Latur",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": "17/05/2023"
+ },
+ {
+   "A": "Bharati Vidyapeeth Medical College & Hospital",
+   "B": "Sangli",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "18/05/2022",
+   "G": "17/05/2023"
+ },
+ {
+   "A": "Bharati Vidyapeeth Medical College & Hospital",
+   "B": "Sangli",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "18/05/2022",
+   "G": ""
+ },
+ {
+   "A": "Rahu Health and Medical Tourism pvt ltd",
+   "B": "",
+   "C": "Microtome",
+   "D": "3000 Compact",
+   "E": "PFM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Diagnocare enterprises",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Varadvinayak Enterprises",
+   "B": "",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Varadvinayak Enterprises",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Boston Ivy Healthcare Solutions Pvt Ltd",
+   "B": "",
+   "C": "Microtome",
+   "D": "3000 Compact",
+   "E": "PFM",
+   "F": "",
+   "G": "18/05/2026"
+ },
+ {
+   "A": "Healthway Hospital, Kadamba Plateau",
+   "B": "Old Goa",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "19/05/2023",
+   "G": "18/05/2026"
+ },
+ {
+   "A": "Healthway Hospital, Kadamba Plateau",
+   "B": "Old Goa",
+   "C": "Cryostat",
+   "D": "Starlet Portable",
+   "E": "BRIGHT",
+   "F": "19/05/2023",
+   "G": "26/05/2024"
+ },
+ {
+   "A": "Surgipath Diagnostic Center, Janjirawala Circle",
+   "B": "Indore",
+   "C": "Tissue processor",
+   "D": "TP 300",
+   "E": "Intelsint",
+   "F": "27/05/2022",
+   "G": "23/09/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Nipaniya",
+   "B": "Indore",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "24/09/2022",
+   "G": "23/09/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Nipaniya",
+   "B": "Indore",
+   "C": "Microtome",
+   "D": "3000 Compact",
+   "E": "PFM",
+   "F": "24/09/2022",
+   "G": "23/09/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Nipaniya",
+   "B": "Indore",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "24/09/2022",
+   "G": "23/09/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Nipaniya",
+   "B": "Indore",
+   "C": "Slide Stainer ",
+   "D": "HP 2430",
+   "E": "Rushab",
+   "F": "24/09/2022",
+   "G": "23/09/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Nipaniya",
+   "B": "Indore",
+   "C": "Cryostat",
+   "D": "OTF 6000",
+   "E": "BRIGHT",
+   "F": "24/09/2022",
+   "G": "23/09/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Nipaniya",
+   "B": "Indore",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "24/09/2022",
+   "G": "28/12/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Nipaniya",
+   "B": "Indore",
+   "C": "Wax Dispenser",
+   "D": "",
+   "E": "Lupetec",
+   "F": "29/12/2022",
+   "G": "23/09/2025"
+ },
+ {
+   "A": "Kokilaben Dhirubhai Ambani Hospital, Nipaniya",
+   "B": "Indore",
+   "C": "Laser Cassette Printer",
+   "D": "NOVA ENB 91",
+   "E": "Fatech",
+   "F": "24/09/2022",
+   "G": "24/02/2022"
+ },
+ {
+   "A": "Supratech Neuberg Lab, Parimal Garden",
+   "B": "Ahmedabad",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "25/02/2020",
+   "G": "23/02/2025"
+ },
+ {
+   "A": "Supratech Neuberg Lab, Parimal Garden",
+   "B": "Ahmedabad",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "24/02/2023",
+   "G": "17/10/2019"
+ },
+ {
+   "A": "SMIMER, Bombay Market",
+   "B": "Surat",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "18/10/2016",
+   "G": "10/01/2021"
+ },
+ {
+   "A": "Formica Laminates, Kalol, Gandhinagar",
+   "B": "Ahmedabad",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "11/01/2020",
+   "G": "02/05/2025"
+ },
+ {
+   "A": "Abhalab (Neuberg), Surat",
+   "B": "Surat",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "03/05/2023",
+   "G": ""
+ },
+ {
+   "A": "Sunpharma, Baroda",
+   "B": "Baroda",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Sunpharma, Baroda",
+   "B": "Baroda",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Babha Atomic Cancer Hosp, Railway Cant",
+   "B": "Varanasi",
+   "C": "Cryostat",
+   "D": "CM 550",
+   "E": "ISTOS",
+   "F": "12/06/2018",
+   "G": "29/12/2022"
+ },
+ {
+   "A": "Mahamana Pandit Madan Mohan Malviya Cancer Centre, (Nidhi life care)",
+   "B": "Varanasi",
+   "C": "Cryostat",
+   "D": "CM 550",
+   "E": "ISTOS",
+   "F": "30/12/2020",
+   "G": "29/12/2022"
+ },
+ {
+   "A": "Mahamana Pandit Madan Mohan Malviya Cancer Centre, (Nidhi life care)",
+   "B": "Varanasi",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "30/12/2020",
+   "G": "01/05/2024"
+ },
+ {
+   "A": "King George Medical University",
+   "B": "Lucknow",
+   "C": "Cryoconsole",
+   "D": "ES 1050-2",
+   "E": "ISTOS",
+   "F": "02/05/2019",
+   "G": "12/10/2020"
+ },
+ {
+   "A": "SRL Daignostics",
+   "B": "Kolkata",
+   "C": "Tissue processor",
+   "D": "PT05TS",
+   "E": "Lupetec",
+   "F": "13/10/2018",
+   "G": "19/05/2025"
+ },
+ {
+   "A": "Swargdev Siu Ka Pha Hospital, Sivsagar",
+   "B": "",
+   "C": "Microtome",
+   "D": "3000",
+   "E": "PFM",
+   "F": "20/05/2023",
+   "G": "19/05/2025"
+ },
+ {
+   "A": "Swargdev Siu Ka Pha Hospital, Sivsagar",
+   "B": "",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "20/05/2023",
+   "G": "19/05/2025"
+ },
+ {
+   "A": "Swargdev Siu Ka Pha Hospital, Sivsagar",
+   "B": "",
+   "C": "Slide Stainer ",
+   "D": "SS 30",
+   "E": "MYR",
+   "F": "20/05/2023",
+   "G": ""
+ },
+ {
+   "A": "Phillabs (Dhananjay Datar),  Lusaka",
+   "B": "",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "11/10/2018",
+   "G": ""
+ },
+ {
+   "A": "Phillabs (Dhananjay Datar),  Lusaka",
+   "B": "",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "11/10/2018",
+   "G": ""
+ },
+ {
+   "A": "Green Apple Medical Systems",
+   "B": "",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Green Apple Medical Systems",
+   "B": "",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Green Apple Medical Systems",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Green Apple Medical System",
+   "B": "",
+   "C": "Histology Specimen storage cabinet",
+   "D": "",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Green Apple Medical System",
+   "B": "",
+   "C": "Macroscopy Camera",
+   "D": "Paxcam",
+   "E": "",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Green Apple Medical System",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Green Apple Medical System",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Green Apple Medical System",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Alamelu Charitable Foundation",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Alamelu Charitable Foundation",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Alamelu Charitable Foundation",
+   "B": "",
+   "C": "Solvent Recyclling System",
+   "D": "",
+   "E": "B/R Instrument",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Alamelu Charitable Foundation",
+   "B": "",
+   "C": "Xylene Pump",
+   "D": "Accuro",
+   "E": "Drager",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Alamelu Charitable Foundation",
+   "B": "",
+   "C": "Manual Cassette Printer",
+   "D": "CP 6001",
+   "E": "Vogel",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Alamelu Charitable Foundation",
+   "B": "",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Green Apple Medical System",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": "3 years"
+ },
+ {
+   "A": "Green Apple Medical Systems",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Apollo Hospitals Enterprise Ltd",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "10/03/2022",
+   "G": ""
+ },
+ {
+   "A": "Cytecare Hospitals Pvt Ltd",
+   "B": "Bangalore",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "06/02/2017",
+   "G": ""
+ },
+ {
+   "A": "Sapthagiri Hospital",
+   "B": "Bangalore",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Anand Diagnostic Laboratory",
+   "B": "Bangalore",
+   "C": "Slide Labelling",
+   "D": "Slidebel",
+   "E": "Gordiamkey",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Anand Diagnostic Laboratory",
+   "B": "Bangalore",
+   "C": "Image Processor for Histrology laboratory",
+   "D": "",
+   "E": "Propath",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "Bangalore",
+   "C": "Slide Stainer ",
+   "D": "Histopro 2430H",
+   "E": "Rushab",
+   "F": "19/06/2023",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "Bangalore",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "19/06/2023",
+   "G": ""
+ },
+ {
+   "A": "Shri atal bihari vajpayee medical college and research institute",
+   "B": "Bangalore",
+   "C": "Cryostat",
+   "D": "650+",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Shri atal bihari vajpayee medical college and research institute",
+   "B": "Bangalore",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Shri atal bihari vajpayee medical college and research institute",
+   "B": "Bangalore",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Shri atal bihari vajpayee medical college and research institute",
+   "B": "Bangalore",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Institute of Nephro Urology",
+   "B": "Bangalore",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "12/06/2023",
+   "G": ""
+ },
+ {
+   "A": "Shri atal bihari vajpayee medical college and research institute",
+   "B": "Bangalore",
+   "C": "Histology Specimen storage cabinet",
+   "D": "",
+   "E": "ISTOS",
+   "F": "11/08/2023",
+   "G": ""
+ },
+ {
+   "A": "Shri atal bihari vajpayee medical college and research institute",
+   "B": "Bangalore",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "11/08/2023",
+   "G": ""
+ },
+ {
+   "A": "Shri atal bhiari vajpayee medical college and research institute",
+   "B": "Bangalore",
+   "C": "Imaging System",
+   "D": "",
+   "E": "Glissando",
+   "F": "14/08/2023",
+   "G": ""
+ },
+ {
+   "A": "Shri atal bhiari vajpayee medical college and research institute",
+   "B": "Bangalore",
+   "C": "Tissue processor",
+   "D": "EFTP VACCUM",
+   "E": "Intelsint",
+   "F": "14/08/2023",
+   "G": ""
+ },
+ {
+   "A": "Shri atal bhiari vajpayee medical college and research institute",
+   "B": "Bangalore",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "14/08/2023",
+   "G": ""
+ },
+ {
+   "A": "Manipal Academy of higher education",
+   "B": "Bangalore",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "Bangalore",
+   "C": "Histology Specimen storage cabinet",
+   "D": "",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "Bangalore",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel tech Inc",
+   "B": "Bangalore",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel tech Inc",
+   "B": "Bangalore",
+   "C": "Bone Band Saw",
+   "D": "Robusta",
+   "E": "Ade",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Vydehi Institute of Medical Sciences and Research Centre",
+   "B": "Bangalore",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "07/12/2023",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "Bangalore",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "Bangalore",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "Bangalore",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel tech Inc",
+   "B": "Bangalore",
+   "C": "Slide Stainer ",
+   "D": "AUS 2",
+   "E": "Intelsint",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel tech Inc",
+   "B": "Bangalore",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Himalaya wellness company",
+   "B": "Bangalore",
+   "C": "Cytocentrifuge",
+   "D": "Pro Cyt LED",
+   "E": "Centurion",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel tech Inc",
+   "B": "Bangalore",
+   "C": "Microtome",
+   "D": "3000",
+   "E": "PFM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Mr. Ravi Kanhere",
+   "B": "Bangalore",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel tech Inc",
+   "B": "Bangalore",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel tech Inc",
+   "B": "Bangalore",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel tech Inc",
+   "B": "Bangalore",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel tech Inc",
+   "B": "Bangalore",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel tech Inc",
+   "B": "Bangalore",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Anand Diagnostic Laboratory",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Anand Diagnostic Laboratory",
+   "B": "",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Institute of Stem Cell Biology & Regenrative (GKVK)",
+   "B": "",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "09/05/2018",
+   "G": ""
+ },
+ {
+   "A": "Institute of Stem Cell Biology & Regenrative (GKVK)",
+   "B": "",
+   "C": "Cryostat",
+   "D": "650+",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Slide Labelling",
+   "D": "Slidebel",
+   "E": "Gordiamkey",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "",
+   "C": "Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "SRL Limited",
+   "B": "",
+   "C": "Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Embedding System",
+   "D": "EC 350",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Microscope",
+   "D": "Olympus",
+   "E": "",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Yenepoya University",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "BGS Global Institute of Medical Science",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Grindwell Norton Ltd",
+   "B": "",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Slide Stainer ",
+   "D": "HistoPro 620",
+   "E": "Rushab",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Imaging System",
+   "D": "GLISS-10H-40X-USDLR",
+   "E": "Gordiamkey",
+   "F": "",
+   "G": "44339"
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "23/05/2019",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Embedding System",
+   "D": "EC 350",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Slide Stainer ",
+   "D": "920004",
+   "E": "AUS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Slide Stainer ",
+   "D": "920002",
+   "E": "AUS",
+   "F": "",
+   "G": "44392"
+ },
+ {
+   "A": "Adi Chunchanagiri Institute of Medical Science",
+   "B": "",
+   "C": "Cryoconsole",
+   "D": "CP 45",
+   "E": "Gordiamkey",
+   "F": "15/07/2019",
+   "G": ""
+ },
+ {
+   "A": "Vikram Hospital (Bangalore) Pvt Ltd",
+   "B": "Bangalore",
+   "C": "Spin Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Macroscopy Camera",
+   "D": "Propath",
+   "E": "",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Microtome",
+   "D": "Shurwave 1200",
+   "E": "",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Anand Diagnostic Laboratory",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Anand Diagnostic Laboratory",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Neuberg Anand Reference Laboratory",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Anand Diagnostic Laboratory",
+   "B": "",
+   "C": "Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Dayananda Sagar University",
+   "B": "",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "04/12/2019",
+   "G": ""
+ },
+ {
+   "A": "Dayananda Sagar University",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Vydehi Institute of Medical Sciences and Research Centre",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Vydehi Institute of Medical Sciences and Research Centre",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": "44627"
+ },
+ {
+   "A": "Aster Clinical Lab LLP",
+   "B": "",
+   "C": "Formalin Tank",
+   "D": "",
+   "E": "ISTOS",
+   "F": "07/03/2020",
+   "G": "44627"
+ },
+ {
+   "A": "Aster Clinical Lab LLP",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "07/03/2020",
+   "G": "44627"
+ },
+ {
+   "A": "Aster Clinical Lab LLP",
+   "B": "",
+   "C": "Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "07/03/2020",
+   "G": ""
+ },
+ {
+   "A": "Vikram Hospital (Bangalore) Pvt Ltd",
+   "B": "",
+   "C": "Embedding System",
+   "D": "EC 350",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Vikram Hospital (Bangalore) Pvt Ltd",
+   "B": "",
+   "C": "Cryostat",
+   "D": "HM 525",
+   "E": "Unbranded",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Vikram Hospital (Bangalore) Pvt Ltd",
+   "B": "",
+   "C": "Cryoconsole",
+   "D": "ES 1050-2",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Vikram Hospital (Bangalore) Pvt Ltd",
+   "B": "Bangalore",
+   "C": "Microtome",
+   "D": "HM 340E+STS",
+   "E": "",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Vikram Hospital (Bangalore) Pvt Ltd",
+   "B": "",
+   "C": "Grossing Camera",
+   "D": "Propath HD",
+   "E": "Propath",
+   "F": "",
+   "G": "44262"
+ },
+ {
+   "A": "Aster Clinical Lab LLP",
+   "B": "",
+   "C": "Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "07/03/2020",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Embedding System",
+   "D": "EC 350",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Syngene Internaional Limited",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Manipal Health Enterprises Pvt ltd",
+   "B": "",
+   "C": "Slide Stainer ",
+   "D": "AUS1",
+   "E": "Intelsint",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Aster Clinical Lab LLP",
+   "B": "",
+   "C": "Cassette Printer",
+   "D": "ENB91",
+   "E": "Fatech",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "SRL Diagnostics Pvt Ltd",
+   "B": "",
+   "C": "Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Slide Stainer ",
+   "D": "AUS1",
+   "E": "Intelsint",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": "20/01/2023"
+ },
+ {
+   "A": "Mangalore Institute of Oncology Pvt Ltd",
+   "B": "",
+   "C": "Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "20/01/2021",
+   "G": "20/01/2023"
+ },
+ {
+   "A": "Mangalore Institute of Oncology Pvt Ltd",
+   "B": "",
+   "C": "Embedding System",
+   "D": "EC 350",
+   "E": "MYR",
+   "F": "20/01/2021",
+   "G": "20/01/2023"
+ },
+ {
+   "A": "Mangalore Institute of Oncology Pvt Ltd",
+   "B": "",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "20/01/2021",
+   "G": "20/01/2023"
+ },
+ {
+   "A": "Mangalore Institute of Oncology Pvt Ltd",
+   "B": "",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "20/01/2021",
+   "G": "20/01/2023"
+ },
+ {
+   "A": "Mangalore Institute of Oncology Pvt Ltd",
+   "B": "",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "20/01/2021",
+   "G": "20/01/2023"
+ },
+ {
+   "A": "Mangalore Institute of Oncology Pvt Ltd",
+   "B": "",
+   "C": "Manual Stainer",
+   "D": "",
+   "E": "",
+   "F": "20/01/2021",
+   "G": "20/01/2023"
+ },
+ {
+   "A": "Mangalore Institute of Oncology Pvt Ltd",
+   "B": "",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "20/01/2021",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "Bangalore",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "Bangalore",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "Bangalore",
+   "C": "Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": "08/07/2026"
+ },
+ {
+   "A": "K.R hospital (mysore)",
+   "B": "",
+   "C": "Cryostat",
+   "D": "Starlet Portable",
+   "E": "BRIGHT",
+   "F": "08/07/2021",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Cryostat",
+   "D": "6250",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Sakra World Hospital",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "11/08/2021",
+   "G": ""
+ },
+ {
+   "A": "KLES Dr Prabhakar Kore Hospital & Mrc Belagavi",
+   "B": "",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "",
+   "G": "05/11/2024"
+ },
+ {
+   "A": "Bangalore Medical system",
+   "B": "",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "06/11/2021",
+   "G": "05/11/2024"
+ },
+ {
+   "A": "Bangalore Medical system",
+   "B": "Bangalore",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "06/11/2021",
+   "G": "05/11/2024"
+ },
+ {
+   "A": "Bangalore Medical system",
+   "B": "",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "06/11/2021",
+   "G": ""
+ },
+ {
+   "A": "Anand Diagnostic Laboratory",
+   "B": "Bangalore",
+   "C": "Cryostat",
+   "D": "OTF 6000",
+   "E": "BRIGHT",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Anand Diagnostic Laboratory",
+   "B": "",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "",
+   "G": "05/11/2024"
+ },
+ {
+   "A": "Bangalore Medical system",
+   "B": "",
+   "C": "Manual Stainer",
+   "D": "",
+   "E": "",
+   "F": "06/11/2021",
+   "G": "05/11/2024"
+ },
+ {
+   "A": "Bangalore Medical system",
+   "B": "",
+   "C": "Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "06/11/2021",
+   "G": ""
+ },
+ {
+   "A": "Bangalore Medical system",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Bangalore Medical system (kidwai)",
+   "B": "",
+   "C": "Histology Specimen storage cabinet",
+   "D": "",
+   "E": "ISTOS",
+   "F": "01/08/2022",
+   "G": ""
+ },
+ {
+   "A": "Bangalore Medical system (kidwai)",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "01/08/2022",
+   "G": ""
+ },
+ {
+   "A": "Bangalore Medical system (kidwai)",
+   "B": "",
+   "C": "Macroscopy Camera",
+   "D": "Propath",
+   "E": "",
+   "F": "01/08/2022",
+   "G": ""
+ },
+ {
+   "A": "Bangalore Medical system (kidwai)",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "01/08/2022",
+   "G": ""
+ },
+ {
+   "A": "Bangalore Medical system (kidwai)",
+   "B": "",
+   "C": "Automated slide stainer & Coverslipper",
+   "D": "AVR",
+   "E": "Intelsint",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Eurofins Advinus Limited",
+   "B": "",
+   "C": "Tissue processor",
+   "D": "ETP PLUS",
+   "E": "Intelsint",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Eurofins Advinus Limited",
+   "B": "",
+   "C": "Programmable Vibrotome",
+   "D": "7000smZ-2",
+   "E": "",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "National Centre for Biological Science (gkvk)",
+   "B": "",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "24/03/2022",
+   "G": ""
+ },
+ {
+   "A": "Eurofins Advinus Limited",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "07/04/2022",
+   "G": ""
+ },
+ {
+   "A": "Sri Shankara Cancer Hospital & Research Centre",
+   "B": "",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "06/04/2022",
+   "G": ""
+ },
+ {
+   "A": "Adichunchangiri Institute of Medical Science",
+   "B": "",
+   "C": "Embedding System",
+   "D": "EC 350",
+   "E": "MYR",
+   "F": "14/05/2022",
+   "G": ""
+ },
+ {
+   "A": "Adichunchangiri Institute of Medical Science",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "14/05/2022",
+   "G": "30/06/2023"
+ },
+ {
+   "A": "Medgenome Labs Limited",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "30/06/2022",
+   "G": "25/04/2025"
+ },
+ {
+   "A": "Manipal Hospitals Private Limited",
+   "B": "",
+   "C": "Propath Macrophotography",
+   "D": "",
+   "E": "",
+   "F": "26/04/2022",
+   "G": ""
+ },
+ {
+   "A": "Manipal Hospitals Private Limited",
+   "B": "",
+   "C": "Embedding System",
+   "D": "HistoPro 650",
+   "E": "Rushab",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Syngene International Limited",
+   "B": "",
+   "C": "Auto Formalin Preparation & Dispensing system",
+   "D": "",
+   "E": "",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "ADGYL Lifesciences Private Limited",
+   "B": "",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1100",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Syngene International Limited",
+   "B": "",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Novel Tech Inc",
+   "B": "",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Sri Sathya Sai Sarala Memorial Hospital",
+   "B": "",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "01/02/2023",
+   "G": ""
+ },
+ {
+   "A": "Sri Sathya Sai Sarala Memorial Hospital",
+   "B": "",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "01/02/2023",
+   "G": "14/03/2028"
+ },
+ {
+   "A": "NIMHANS",
+   "B": "",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "15/03/2023",
+   "G": "14/03/2028"
+ },
+ {
+   "A": "NIMHANS",
+   "B": "Bangalore",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "15/03/2023",
+   "G": ""
+ },
+ {
+   "A": "Devaraj Urs Educational Trust pharma",
+   "B": "",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "28/07/2023",
+   "G": ""
+ },
+ {
+   "A": "Gulbarga institute of medical science",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Gulbarga institute of medical science",
+   "B": "",
+   "C": "Microtome",
+   "D": "SLEE CUT 6062",
+   "E": "",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Kodagu Institute of Medical Science",
+   "B": "",
+   "C": "Embedding System",
+   "D": "EC 350",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Kodagu Institute of Medical Science",
+   "B": "",
+   "C": "Cryostat",
+   "D": "650+",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Kodagu Institute of Medical Science",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Kodagu Institute of Medical Science",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Manipal Academy of Higher ",
+   "B": "",
+   "C": "Xylene Pump",
+   "D": "Accuro",
+   "E": "Drager",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Manipal Academy of Higher ",
+   "B": "",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Mysore Institue of medical science",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Mysore Institue of medical science",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Karkinos Healthcare Private Llimited",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": "11/03/2025"
+ },
+ {
+   "A": "Karkinos Healthcare Private Llimited",
+   "B": "",
+   "C": "Solvent Recyclling System",
+   "D": "M690",
+   "E": "B/R Instrument",
+   "F": "11/03/2022",
+   "G": "11/03/2025"
+ },
+ {
+   "A": "Karkinos Healthcare Private Llimited",
+   "B": "",
+   "C": "Auto Formalin Preparation & Dispensing system",
+   "D": "Formadose",
+   "E": "Zenon",
+   "F": "11/03/2022",
+   "G": "11/03/2025"
+ },
+ {
+   "A": "Karkinos Healthcare Private Llimited",
+   "B": "",
+   "C": "Xylene Pump",
+   "D": "Accuro",
+   "E": "Drager",
+   "F": "11/03/2022",
+   "G": "11/03/2025"
+ },
+ {
+   "A": "Karkinos Healthcare Private Llimited",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "11/03/2022",
+   "G": ""
+ },
+ {
+   "A": "United Medical Centre",
+   "B": "",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "27/03/2022",
+   "G": ""
+ },
+ {
+   "A": "United Medical Centre",
+   "B": "",
+   "C": "Cassette Printer",
+   "D": "VCP 6001",
+   "E": "Vogel",
+   "F": "27/03/2022",
+   "G": "11/03/2025"
+ },
+ {
+   "A": "Karkinos Healthcare Private Llimited",
+   "B": "",
+   "C": "Tissue Processor",
+   "D": "PT05TS",
+   "E": "Lupetec",
+   "F": "11/03/2022",
+   "G": ""
+ },
+ {
+   "A": "United Medical Centre",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "27/03/2022",
+   "G": ""
+ },
+ {
+   "A": "AMS Medical Systems",
+   "B": "",
+   "C": "Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "United Medical Centre",
+   "B": "",
+   "C": "Tissue Flotation Workstation",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "27/03/2022",
+   "G": ""
+ },
+ {
+   "A": "United Medical Centre",
+   "B": "",
+   "C": "Manual Stainer",
+   "D": "",
+   "E": "",
+   "F": "27/03/2022",
+   "G": ""
+ },
+ {
+   "A": "United Medical Centre",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "27/03/2022",
+   "G": ""
+ },
+ {
+   "A": "Aster Clinical Lab LLP",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Aster Clinical Lab LLP",
+   "B": "",
+   "C": "Formaldehyde Meter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Karkinos Healthcare Private Limited",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Amrita Vishwa Vidyapeetham",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Aster MIMS-Calicut",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Ehrlich Laboratory Pvt Ltd",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "S M Surgipath Lab",
+   "B": "",
+   "C": "Spin Tissue Processor",
+   "D": "STP 120-1",
+   "E": "MYR",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Sathiya Sai Lab",
+   "B": "",
+   "C": "Slide drying table",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Sathiya Sai Lab",
+   "B": "",
+   "C": "Grossing Workstation",
+   "D": "Labgross",
+   "E": "ISTOS",
+   "F": "",
+   "G": ""
+ },
+ {
+   "A": "Central Lab Chennai",
+   "B": "",
+   "C": "Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "21/03/2023",
+   "G": ""
+ },
+ {
+   "A": "Basavatarakam Indo-American cancer hospital and research institute",
+   "B": "",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "17/08/2023",
+   "G": ""
+ },
+ {
+   "A": "SIR H N Hospital, Charni Road",
+   "B": "",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "45821",
+   "G": ""
+ },
+ {
+   "A": "SIR H N Hospital, Charni Road",
+   "B": "",
+   "C": "Automated Formalin Preparation & Dispensing System",
+   "D": "FMD",
+   "E": "ULS",
+   "F": "45821",
+   "G": ""
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "",
+   "C": "Slide Stainer",
+   "D": "AUS 2",
+   "E": "Intelsint",
+   "F": "45793",
+   "G": ""
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "",
+   "C": "Coverslipper",
+   "D": "CVR",
+   "E": "Intelsint",
+   "F": "45793",
+   "G": ""
+ },
+ {
+   "A": "Deenanath Mangeshkar Hospital, Erandwane",
+   "B": "",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "45793",
+   "G": ""
+ },
+ {
+   "A": "Bharati Vidyapeeth deemed University",
+   "B": "",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "45369",
+   "G": ""
+ },
+ {
+   "A": "Bharati Vidyapeeth deemed University",
+   "B": "",
+   "C": "Tissue processor",
+   "D": "PT052TS",
+   "E": "Lupetec",
+   "F": "45369",
+   "G": ""
+ },
+ {
+   "A": "Bharati Vidyapeeth deemed University",
+   "B": "",
+   "C": "Formaldehydemeter",
+   "D": "HTVM",
+   "E": "PPM",
+   "F": "45867",
+   "G": ""
+ },
+ {
+   "A": "Bharati Vidyapeeth deemed University",
+   "B": "",
+   "C": "Xylene Pump",
+   "D": "Accuro",
+   "E": "Drager",
+   "F": "45867",
+   "G": ""
+ },
+ {
+   "A": "Bharati Vidyapeeth deemed University",
+   "B": "",
+   "C": "Cryostat",
+   "D": "OTF 6000",
+   "E": "Bright",
+   "F": "45867",
+   "G": ""
+ },
+ {
+   "A": "Bharath Ratna Atal Bihari Vajpayee Medical college",
+   "B": "",
+   "C": "Coverslipper",
+   "D": "CVR",
+   "E": "Intelsint",
+   "F": "45456",
+   "G": ""
+ },
+ {
+   "A": "Bharath Ratna Atal Bihari Vajpayee Medical college",
+   "B": "",
+   "C": "Grossing station",
+   "D": "LG 6",
+   "E": "ISTOS",
+   "F": "45492",
+   "G": ""
+ },
+ {
+   "A": "DR. VAISHAMPAYAN GOVERNMENT MEDICAL COLLEGE",
+   "B": "",
+   "C": "Procycler Solvent Recyclling System",
+   "D": "M690",
+   "E": "BR Instrument",
+   "F": "45794",
+   "G": ""
+ },
+ {
+   "A": "Bhaikaka University (Charutar Arogya Mandal)",
+   "B": "",
+   "C": "Microtome",
+   "D": "3004 M",
+   "E": "PFM",
+   "F": "45484",
+   "G": ""
+ },
+ {
+   "A": "Neuberg Diagnostics Pvt Ltd",
+   "B": "",
+   "C": "Diamond Bone Band Saw",
+   "D": "BBS",
+   "E": "ISTOS",
+   "F": "45490",
+   "G": ""
+ },
+ {
+   "A": "AIIMS All India Institute of Medical science",
+   "B": "",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "Myr",
+   "F": "45740",
+   "G": ""
+ },
+ {
+   "A": "Himalaya wellness company",
+   "B": "",
+   "C": "Cytocentrifuge",
+   "D": "Pro cyt LED",
+   "E": "Centurion",
+   "F": "45685",
+   "G": ""
+ },
+ {
+   "A": "St. John's Medical College Hospital",
+   "B": "",
+   "C": "Cryostat",
+   "D": "650+",
+   "E": "ISTOS",
+   "F": "45524",
+   "G": ""
+ },
+ {
+   "A": "Neuberg Anand Diagnostic Laboratory",
+   "B": "",
+   "C": "Microtome",
+   "D": "Polycut legacy",
+   "E": "Gigatome",
+   "F": "45796",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "",
+   "C": "Slide Labeller ",
+   "D": "LPS-17-001",
+   "E": "Patholab",
+   "F": "45671",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "",
+   "C": "Slide Labeller ",
+   "D": "LPS-17-001",
+   "E": "Patholab",
+   "F": "45691",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "",
+   "C": "Slide Labeller ",
+   "D": "LPS-17-001",
+   "E": "Patholab",
+   "F": "45698",
+   "G": ""
+ },
+ {
+   "A": "Nimhans",
+   "B": "",
+   "C": "Tissue processor",
+   "D": "STP 120-1",
+   "E": "Myr",
+   "F": "45698",
+   "G": ""
+ },
+ {
+   "A": "Mysore Institue of medical science",
+   "B": "",
+   "C": "Grossing station",
+   "D": "6 feet",
+   "E": "ISTOS",
+   "F": "45684",
+   "G": ""
+ },
+ {
+   "A": "Mysore Institue of medical science",
+   "B": "",
+   "C": "Tissue Embedding System",
+   "D": "ES 1050",
+   "E": "ISTOS",
+   "F": "45695",
+   "G": ""
+ },
+ {
+   "A": "Mysore Institue of medical science",
+   "B": "",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "45684",
+   "G": ""
+ },
+ {
+   "A": "Mysore Institue of medical science",
+   "B": "",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "45684",
+   "G": ""
+ },
+ {
+   "A": "Aurigene Oncology Limited",
+   "B": "",
+   "C": "Tissue Embedding System",
+   "D": "EC 350",
+   "E": "Myr",
+   "F": "45666",
+   "G": ""
+ },
+ {
+   "A": "Aurigene Oncology Limited",
+   "B": "",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "45666",
+   "G": ""
+ },
+ {
+   "A": "Aurigene Oncology Limited",
+   "B": "",
+   "C": "Cryostat",
+   "D": "650+",
+   "E": "ISTOS",
+   "F": "45666",
+   "G": ""
+ },
+ {
+   "A": "Bidar Institute of Medical Science",
+   "B": "",
+   "C": "Grossing station",
+   "D": "LG-6",
+   "E": "ISTOS",
+   "F": "45700",
+   "G": ""
+ },
+ {
+   "A": "Manipal Academy of higher education",
+   "B": "",
+   "C": "Tissue processor",
+   "D": "STP 120",
+   "E": "Myr",
+   "F": "45826",
+   "G": ""
+ },
+ {
+   "A": "Raichur Institute of Medical Science",
+   "B": "",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "45880",
+   "G": ""
+ },
+ {
+   "A": "Raichur Institute of Medical Science",
+   "B": "",
+   "C": "Grossing station",
+   "D": "LG 6",
+   "E": "ISTOS",
+   "F": "45880",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Microtome",
+   "D": "3006 EM",
+   "E": "PFM",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Microtome",
+   "D": "3005 E",
+   "E": "PFM",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Tissue processor",
+   "D": "STP 120",
+   "E": "Myr",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Slide Dryer",
+   "D": "SDT 1200",
+   "E": "ISTOS",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Diamond Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Regional Cancer Center",
+   "B": "",
+   "C": "Tissue Flotation Bath",
+   "D": "TFB 1300",
+   "E": "ISTOS",
+   "F": "45699",
+   "G": ""
+ },
+ {
+   "A": "Nizam's Institute of Medical Sciences",
+   "B": "",
+   "C": "Gross Imaging Camera",
+   "D": "propath HD",
+   "E": "Propath",
+   "F": "45415",
+   "G": ""
+ },
+ {
+   "A": "Mysore Institue of medical science",
+   "B": "",
+   "C": "Cyro console",
+   "D": "ES 1060-2",
+   "E": "ISTOS",
+   "F": "45695",
+   "G": ""
+ },
+ {
+   "A": "MGM NEW BOMBAY HOSPITAL",
+   "B": "",
+   "C": "Diamond Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "45878",
+   "G": ""
+ },
+ {
+   "A": "Narayana Hrudayalaya Limited",
+   "B": "",
+   "C": "Cryostat",
+   "D": "650+ ",
+   "E": "ISTOS",
+   "F": "45876",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Slide Stainer",
+   "D": "HistoPro 2430",
+   "E": "Rushabh",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Tissue Embedding System",
+   "D": "ES 1060",
+   "E": "ISTOS",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Diamond Bone Band Saw",
+   "D": "DBS 220",
+   "E": "ISTOS",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Slide Storage",
+   "D": "",
+   "E": "ISTOS",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
+   "B": "",
+   "C": "Grossing station",
+   "D": "LG 6",
+   "E": "ISTOS",
+   "F": "45874",
+   "G": ""
+ },
+ {
+   "A": "SSTR Bharath Hospital & Institute of Oncology",
+   "B": "",
+   "C": "Tissue Embedding System",
+   "D": "ES 1060",
+   "E": "ISTOS",
+   "F": "45894",
+   "G": ""
+ },
+ {
+   "A": "SSTR Bharath Hospital & Institute of Oncology",
+   "B": "",
+   "C": "",
+   "D": "",
+   "E": "",
+   "F": "45894",
+   "G": ""
+ }
+]
+}

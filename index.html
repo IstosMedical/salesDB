@@ -2,38 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sales Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRM Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="container">
-    <h2>📊 Sales Dashboard</h2>
+    <h1>📋 Equipment CRM Dashboard</h1>
+
+    <!-- Summary Cards -->
+    <section class="summary">
+      <div class="card" id="totalEquipments">Equipments: 0</div>
+      <div class="card" id="uniqueCustomers">Customers: 0</div>
+      <div class="card" id="citiesCovered">Cities: 0</div>
+    </section>
 
     <!-- Filters -->
     <section class="filters">
-      <label>Date Range:</label>
       <input type="date" id="startDate" />
       <input type="date" id="endDate" />
-
-      <label>Equipment Name:</label>
-      <input type="text" id="equipmentFilter" placeholder="e.g. Microtome" />
-
-      <label>Model:</label>
-      <input type="text" id="modelFilter" placeholder="e.g. 3004 M" />
-
+      <input type="text" id="equipmentFilter" placeholder="Equipment Name" />
+      <input type="text" id="modelFilter" placeholder="Model" />
+      <input type="text" id="customerFilter" placeholder="Customer Name" />
+      <input type="text" id="cityFilter" placeholder="City" />
+      <input type="text" id="makeFilter" placeholder="Make" />
       <button id="applyFilters">Apply Filters</button>
     </section>
 
     <!-- Table -->
     <section>
-      <table id="salesTable">
+      <table id="crmTable">
         <thead>
           <tr>
             <th>Customer</th>
             <th>City</th>
             <th>Equipment</th>
             <th>Model</th>
+            <th>Make</th>
             <th>DOI</th>
             <th>Warranty</th>
           </tr>

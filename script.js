@@ -1,10 +1,11 @@
-// Sample data structure (replace with parsed Excel data)
-const salesData = [
+// Sample data (replace with parsed Excel data)
+const crmData = [
   {
     customer: "B J Wadia Hospital",
     city: "Mumbai",
     equipment: "Microtome",
     model: "3004 M",
+    make: "PFM",
     doi: "2020-11-19",
     warranty: "2021-11-19"
   },
@@ -13,14 +14,15 @@ const salesData = [
     city: "Mumbai",
     equipment: "Tissue processor",
     model: "EFTP",
+    make: "Intelsint",
     doi: "2018-11-19",
     warranty: "2021-11-19"
   }
-  // Add more rows from parsed Excel
+  // Add more rows from Excel
 ];
 
 function renderTable(data) {
-  const tbody = document.querySelector("#salesTable tbody");
+  const tbody = document.querySelector("#crmTable tbody");
   tbody.innerHTML = "";
 
   data.forEach(row => {
@@ -30,6 +32,7 @@ function renderTable(data) {
       <td>${row.city}</td>
       <td>${row.equipment}</td>
       <td>${row.model}</td>
+      <td>${row.make}</td>
       <td>${row.doi}</td>
       <td>${row.warranty}</td>
     `;
@@ -37,23 +40,41 @@ function renderTable(data) {
   });
 }
 
+function updateSummary(data) {
+  document.getElementById("totalEquipments").textContent = `Equipments: ${data.length}`;
+  const customers = new Set(data.map(d => d.customer));
+  const cities = new Set(data.map(d => d.city));
+  document.getElementById("uniqueCustomers").textContent = `Customers: ${customers.size}`;
+  document.getElementById("citiesCovered").textContent = `Cities: ${cities.size}`;
+}
+
 document.getElementById("applyFilters").addEventListener("click", () => {
   const start = document.getElementById("startDate").value;
   const end = document.getElementById("endDate").value;
   const equipment = document.getElementById("equipmentFilter").value.toLowerCase();
   const model = document.getElementById("modelFilter").value.toLowerCase();
+  const customer = document.getElementById("customerFilter").value.toLowerCase();
+  const city = document.getElementById("cityFilter").value.toLowerCase();
+  const make = document.getElementById("makeFilter").value.toLowerCase();
 
-  const filtered = salesData.filter(row => {
+  const filtered = crmData.filter(row => {
     const dateMatch =
       (!start || new Date(row.doi) >= new Date(start)) &&
       (!end || new Date(row.doi) <= new Date(end));
-    const equipmentMatch = row.equipment.toLowerCase().includes(equipment);
-    const modelMatch = row.model.toLowerCase().includes(model);
-    return dateMatch && equipmentMatch && modelMatch;
+    return (
+      dateMatch &&
+      row.equipment.toLowerCase().includes(equipment) &&
+      row.model.toLowerCase().includes(model) &&
+      row.customer.toLowerCase().includes(customer) &&
+      row.city.toLowerCase().includes(city) &&
+      row.make.toLowerCase().includes(make)
+    );
   });
 
   renderTable(filtered);
+  updateSummary(filtered);
 });
 
 // Initial render
-renderTable(salesData);
+renderTable(crmData);
+updateSummary(crmData);

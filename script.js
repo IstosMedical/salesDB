@@ -58,11 +58,15 @@ function renderTable(data) {
 
 // 📦 Update summary cards
 function updateSummary(data) {
-  document.getElementById("totalEquipments").textContent = `Equipments: ${data.length}`;
-  const customers = new Set(data.map(d => d.B));
-  const cities = new Set(data.map(d => d.C));
-  document.getElementById("uniqueCustomers").textContent = `Customers: ${customers.size}`;
-  document.getElementById("citiesCovered").textContent = `Cities: ${cities.size}`;
+  const instruments = new Set(data.map(d => d.D)); // Equipment name
+  const models = new Set(data.map(d => d.E));      // Model
+  const makes = new Set(data.map(d => d.F));       // Make
+  const customers = new Set(data.map(d => d.B));   // Customer Name
+
+  document.getElementById("cardInstruments").textContent = instruments.size;
+  document.getElementById("cardModels").textContent = models.size;
+  document.getElementById("cardMakes").textContent = makes.size;
+  document.getElementById("cardCustomers").textContent = customers.size;
 }
 
 // 🔍 Setup filter logic

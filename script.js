@@ -86,38 +86,6 @@ function updateSummary(data) {
   animateCounter("cardCustomers", customers.size);
 }
 
-// 🔍 Setup filter logic
-function setupFilter(dataSet) {
-  document.getElementById("applyFilters").addEventListener("click", () => {
-    const start = document.getElementById("startDate").value;
-    const end = document.getElementById("endDate").value;
-    const equipment = document.getElementById("equipmentFilter").value.toLowerCase();
-    const model = document.getElementById("modelFilter").value.toLowerCase();
-    const customer = document.getElementById("customerFilter").value.toLowerCase();
-    const city = document.getElementById("cityFilter").value.toLowerCase();
-    const make = document.getElementById("makeFilter").value.toLowerCase();
-
-    const filtered = dataSet.filter(row => {
-      const doi = row.G || "";
-      const dateMatch =
-        (!start || new Date(doi) >= new Date(start)) &&
-        (!end || new Date(doi) <= new Date(end));
-      return (
-        dateMatch &&
-        row.D.toLowerCase().includes(equipment) &&
-        row.E.toLowerCase().includes(model) &&
-        row.B.toLowerCase().includes(customer) &&
-        row.C.toLowerCase().includes(city) &&
-        row.F.toLowerCase().includes(make)
-      );
-    });
-
-    renderTable(filtered);
-    updateSummary(filtered);
-    setupExport(filtered);
-  });
-}
-
 // 🧾 Export filtered data to CSV
 function setupExport(data) {
   const exportBtn = document.getElementById("exportCSV");

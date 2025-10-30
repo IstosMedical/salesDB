@@ -15,7 +15,6 @@ async function fetchCRMData() {
     crmData = (json.sales || json).slice(1); // Skip header row
     renderTable(crmData);
     updateSummary(crmData);
-    setupFilter(crmData);
     setupExport(crmData);
     renderInstrumentList(instruments);
     animateCards(); // 🔥 Animate card entry

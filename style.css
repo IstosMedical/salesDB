@@ -262,3 +262,41 @@ tbody tr:hover {
 .clear-btn:hover {
   background-color: #d32f2f;
 }
+
+.instrument-group {
+  margin-bottom: 1.5rem;
+}
+
+.instrument-group h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+  border-left: 4px solid #0078d4;
+  padding-left: 0.5rem;
+}
+
+.instrument-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.instrument-tag {
+  background-color: #eef4ff;
+  border: 1px solid #cce;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.instrument-tag:hover {
+  background-color: #dbe9ff;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0 1rem;
+}

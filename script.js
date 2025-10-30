@@ -1,13 +1,35 @@
+let crmData = []; // Global reference
+
+const instruments = [
+  "Cryostat",
+  "Microtome",
+  "Tissue Processor",
+  "Embedding System",
+  "Cassette Printer",
+  "Slide drying table",
+  "Tissue Flotation Bath",
+  "Bone Band Saw",
+  "Grossing Workstation",
+  "Formaldehyde Meter",
+  "Solvent Recyclling System",
+  "Cytocentrifuge",
+  "Manual slide stainer",
+  "Slide Stainer",
+  "Wax Dispenser",
+  "Grossing camera"
+];
+
 // 🚀 Fetch data from GitHub Pages
 async function fetchCRMData() {
   try {
     const response = await fetch("https://istosmedical.github.io/salesDB/sales-data.json");
     const json = await response.json();
-    const crmData = json.sales || json; // supports both wrapped and raw array
+    crmData = json.sales || json;
     renderTable(crmData);
     updateSummary(crmData);
     setupFilter(crmData);
     setupExport(crmData);
+    renderInstrumentList(instruments);
   } catch (error) {
     console.error("Failed to fetch CRM data:", error);
   }
@@ -35,15 +57,15 @@ function renderTable(data) {
 
 // 📦 Update summary cards
 function updateSummary(data) {
-  document.getElementById("totalEquipments").textContent = `Equipments: ${data.length}`;
+  document.getElementById("totalEquipments").textContent = `📦 Equipments: ${data.length}`;
   const customers = new Set(data.map(d => d.A));
   const cities = new Set(data.map(d => d.B));
-  document.getElementById("uniqueCustomers").textContent = `Customers: ${customers.size}`;
-  document.getElementById("citiesCovered").textContent = `Cities: ${cities.size}`;
+  document.getElementById("uniqueCustomers").textContent = `🏥 Customers: ${customers.size}`;
+  document.getElementById("citiesCovered").textContent = `🌆 Cities: ${cities.size}`;
 }
 
 // 🔍 Setup filter logic
-function setupFilter(crmData) {
+function setupFilter(dataSet) {
   document.getElementById("applyFilters").addEventListener("click", () => {
     const start = document.getElementById("startDate").value;
     const end = document.getElementById("endDate").value;
@@ -53,7 +75,7 @@ function setupFilter(crmData) {
     const city = document.getElementById("cityFilter").value.toLowerCase();
     const make = document.getElementById("makeFilter").value.toLowerCase();
 
-    const filtered = crmData.filter(row => {
+    const filtered = dataSet.filter(row => {
       const doi = row.F || "";
       const dateMatch =
         (!start || new Date(doi) >= new Date(start)) &&
@@ -103,38 +125,33 @@ function setupExport(data) {
   };
 }
 
-// 🚀 Initiating custom search
-
-const instruments = [
-  "Bonesaw",
-  "LabGross Grossing",
-  "Rotary Microtome",
-  "Tissue Processor",
-  "Cryostat",
-  "Tissue Embedding Centre",
-  "Cassette Printer"
-];
-
-// 🟢 Initialize dashboard
-fetchCRMData();
-
-function renderInstrumentList(filteredList) {
+// 🧠 Render and wire instrument tags
+function renderInstrumentList(list) {
   const container = document.getElementById("instrumentList");
   container.innerHTML = "";
 
-  filteredList.forEach(name => {
+  list.forEach(name => {
     const tag = document.createElement("button");
     tag.className = "instrument-tag";
     tag.textContent = name;
+
+    tag.addEventListener("click", () => {
+      const filtered = crmData.filter(row => row.C.toLowerCase() === name.toLowerCase());
+      renderTable(filtered);
+      updateSummary(filtered);
+      setupExport(filtered);
+    });
+
     container.appendChild(tag);
+  });
+
+  // 🔍 Live search
+  document.getElementById("instrumentSearch").addEventListener("input", e => {
+    const query = e.target.value.toLowerCase();
+    const filtered = list.filter(item => item.toLowerCase().includes(query));
+    renderInstrumentList(filtered);
   });
 }
 
-document.getElementById("instrumentSearch").addEventListener("input", e => {
-  const query = e.target.value.toLowerCase();
-  const filtered = instruments.filter(item => item.toLowerCase().includes(query));
-  renderInstrumentList(filtered);
-});
-
-// Initial render
-renderInstrumentList(instruments);
+// 🟢 Initialize dashboard
+fetchCRMData();

@@ -424,8 +424,14 @@ tbody tr:hover {
 }
 
 .pdf-icon {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
+  width: 14px;
+  height: 14px;
 }
+
+.pdf-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 

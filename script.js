@@ -19,6 +19,9 @@ const instruments = [
   "Grossing camera"
 ];
 
+const dataWithoutHeader = crmData.slice(1); // Skip first row
+renderTable(dataWithoutHeader);
+
 // 🚀 Fetch data from GitHub Pages
 async function fetchCRMData() {
   try {

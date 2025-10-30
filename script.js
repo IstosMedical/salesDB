@@ -11,10 +11,10 @@ function excelSerialToDate(serial) {
 let crmData = []; // Global reference
 
 const fullInstrumentList = [
-  "Cryostat", "Microtome", "Tissue Processor", "Embedding System", "Cassette Printer",
-  "Slide drying table", "Tissue Flotation Bath", "Bone Band Saw", "Grossing Workstation",
-  "Formaldehyde Meter", "Solvent Recyclling System", "Cytocentrifuge", "Manual slide stainer",
-  "Slide Stainer", "Grossing camera"
+  "Auto Slide Stainer", "Cassette Printer", "Coverslipper", "Cryo console", "Cryostat",
+  "Cytocentrifuge", "Bone Band Saw", "Dispensing Console", "Formadose",
+  "Formaldehydemeter", "Formalin tank", "Grossing Imaging camera (Propath)", "Grossing station",
+  "Manual slide stainer", "Microscope", "Microtome Manual","Microtome Semi Automated","Microtome Fully Automated","Procycler Solvent Recyclling System","Programmable Vibrotome","Slide Dryer","Slide Labeller","Slide Scanner","Slide Stainer","Specimen storage cabinet","Tissue Embedding Centre","Tissue Flotation Bath","Tissue processor","Tissue Water Bath","Wax Dispenser","Xylene Pump"
 ];
 
 // 🚀 Fetch data from GitHub Pages

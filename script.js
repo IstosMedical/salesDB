@@ -80,12 +80,10 @@ function updateSummary(data) {
   const quotations = data.length;
   const instruments = new Set(data.map(d => d.D));
   const customers = new Set(data.map(d => d.B));
-  const vendors = new Set(data.map(d => d.F)); // Assuming 'Make' maps to vendors
 
   animateCounter("cardQuotations", quotations);
   animateCounter("cardInstruments", instruments.size);
   animateCounter("cardCustomers", customers.size);
-  animateCounter("cardVendors", vendors.size);
 }
 
 // 🔍 Setup filter logic

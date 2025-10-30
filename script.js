@@ -103,5 +103,38 @@ function setupExport(data) {
   };
 }
 
+// 🚀 Initiating custom search
+
+const instruments = [
+  "Bonesaw",
+  "LabGross Grossing",
+  "Rotary Microtome",
+  "Tissue Processor",
+  "Cryostat",
+  "Tissue Embedding Centre",
+  "Cassette Printer"
+];
+
 // 🟢 Initialize dashboard
 fetchCRMData();
+
+function renderInstrumentList(filteredList) {
+  const container = document.getElementById("instrumentList");
+  container.innerHTML = "";
+
+  filteredList.forEach(name => {
+    const tag = document.createElement("button");
+    tag.className = "instrument-tag";
+    tag.textContent = name;
+    container.appendChild(tag);
+  });
+}
+
+document.getElementById("instrumentSearch").addEventListener("input", e => {
+  const query = e.target.value.toLowerCase();
+  const filtered = instruments.filter(item => item.toLowerCase().includes(query));
+  renderInstrumentList(filtered);
+});
+
+// Initial render
+renderInstrumentList(instruments);

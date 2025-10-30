@@ -190,20 +190,20 @@ tbody tr:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .instrument-tag {
-  background-color: #eef4ff;
-  border: 1px solid #cce;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .instrument-tag:hover {
-  background-color: #dbe9ff;
+  transform: scale(1.05);
 }
 
 .istos-summary {

@@ -309,3 +309,10 @@ tbody tr:hover {
   border: 1px solid #ccc;
   width: 100%;
 }
+
+.instrument-caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+}

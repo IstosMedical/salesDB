@@ -331,11 +331,20 @@ document.getElementById("instrumentSearch").addEventListener("input", e => {
 
 document.getElementById("clearSearch").addEventListener("click", () => {
   document.getElementById("instrumentSearch").value = "";
-  renderInstrumentList(fullInstrumentList);
   renderTable(crmData);
   updateSummary(crmData);
   setupExport(crmData);
 });
+
+const clearBtn = document.getElementById("clearSearch");
+if (clearBtn) {
+  clearBtn.addEventListener("click", () => {
+    renderTable(crmData);
+    updateSummary(crmData);
+    setupExport(crmData);
+    document.getElementById("yearDropdown").value = "";
+  });
+}
 
 // 🟢 Initialize dashboard
 fetchCRMData();

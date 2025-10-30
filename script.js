@@ -76,16 +76,19 @@ function animateCards() {
 }
 
 // 📦 Update summary cards with animation
-function updateSummary(data) {
-  const instruments = new Set(data.map(d => d.D));
-  const models = new Set(data.map(d => d.E));
-  const makes = new Set(data.map(d => d.F));
-  const customers = new Set(data.map(d => d.B));
 
-  animateCounter("cardInstruments", instruments.size);
-  animateCounter("cardModels", models.size);
-  animateCounter("cardMakes", makes.size);
-  animateCounter("cardCustomers", customers.size);
+function updateSummary(data) {
+  const quotations = data.length;
+  const instruments = new Set(data.map(d => d.D));
+  const customers = new Set(data.map(d => d.B));
+  const vendors = new Set(data.map(d => d.F)); // Assuming 'Make' maps to vendors
+
+  document.getElementById("cardQuotations").textContent = quotations;
+  document.getElementById("cardInstruments").textContent = instruments.size;
+  document.getElementById("cardCustomers").textContent = customers.size;
+  document.getElementById("cardVendors").textContent = vendors.size;
+}
+
 }
 
 // 🔍 Setup filter logic

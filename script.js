@@ -59,7 +59,9 @@ function populateInstrumentDropdown(data) {
     dropdown.appendChild(option);
   });
 
-  renderTopInstruments(data);
+  // 🚀 Top 5 instruments is commented out
+  
+  // renderTopInstruments(data);
 }
 
 // 🚀 Dropdown Listener

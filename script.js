@@ -1,22 +1,10 @@
 let crmData = []; // Global reference
 
 const instruments = [
-  "Cryostat",
-  "Microtome",
-  "Tissue Processor",
-  "Embedding System",
-  "Cassette Printer",
-  "Slide drying table",
-  "Tissue Flotation Bath",
-  "Bone Band Saw",
-  "Grossing Workstation",
-  "Formaldehyde Meter",
-  "Solvent Recyclling System",
-  "Cytocentrifuge",
-  "Manual slide stainer",
-  "Slide Stainer",
-  "Wax Dispenser",
-  "Grossing camera"
+  "Cryostat", "Microtome", "Tissue Processor", "Embedding System", "Cassette Printer",
+  "Slide drying table", "Tissue Flotation Bath", "Bone Band Saw", "Grossing Workstation",
+  "Formaldehyde Meter", "Solvent Recyclling System", "Cytocentrifuge", "Manual slide stainer",
+  "Slide Stainer", "Wax Dispenser", "Grossing camera"
 ];
 
 // 🚀 Fetch data from GitHub Pages
@@ -30,6 +18,7 @@ async function fetchCRMData() {
     setupFilter(crmData);
     setupExport(crmData);
     renderInstrumentList(instruments);
+    animateCards(); // 🔥 Animate card entry
   } catch (error) {
     console.error("Failed to fetch CRM data:", error);
   }
@@ -56,17 +45,47 @@ function renderTable(data) {
   });
 }
 
-// 📦 Update summary cards
-function updateSummary(data) {
-  const instruments = new Set(data.map(d => d.D)); // Equipment name
-  const models = new Set(data.map(d => d.E));      // Model
-  const makes = new Set(data.map(d => d.F));       // Make
-  const customers = new Set(data.map(d => d.B));   // Customer Name
+// 📦 Animate counters
+function animateCounter(id, target) {
+  const el = document.getElementById(id);
+  let count = 0;
+  const step = Math.ceil(target / 30);
 
-  document.getElementById("cardInstruments").textContent = instruments.size;
-  document.getElementById("cardModels").textContent = models.size;
-  document.getElementById("cardMakes").textContent = makes.size;
-  document.getElementById("cardCustomers").textContent = customers.size;
+  const interval = setInterval(() => {
+    count += step;
+    if (count >= target) {
+      count = target;
+      clearInterval(interval);
+    }
+    el.textContent = `(${count})`;
+  }, 30);
+}
+
+// 🧠 Animate card entry
+function animateCards() {
+  const cards = document.querySelectorAll(".summary-card");
+  cards.forEach((card, i) => {
+    card.style.opacity = 0;
+    card.style.transform = "translateY(20px)";
+    setTimeout(() => {
+      card.style.transition = "all 0.6s ease";
+      card.style.opacity = 1;
+      card.style.transform = "translateY(0)";
+    }, i * 100);
+  });
+}
+
+// 📦 Update summary cards with animation
+function updateSummary(data) {
+  const instruments = new Set(data.map(d => d.D));
+  const models = new Set(data.map(d => d.E));
+  const makes = new Set(data.map(d => d.F));
+  const customers = new Set(data.map(d => d.B));
+
+  animateCounter("cardInstruments", instruments.size);
+  animateCounter("cardModels", models.size);
+  animateCounter("cardMakes", makes.size);
+  animateCounter("cardCustomers", customers.size);
 }
 
 // 🔍 Setup filter logic
@@ -109,14 +128,7 @@ function setupExport(data) {
   exportBtn.onclick = () => {
     const headers = ["#", "Customer", "City", "Equipment", "Model", "Make", "DOI", "Warranty"];
     const rows = data.map(row => [
-      row.A,
-      row.B,
-      row.C,
-      row.D,
-      row.E,
-      row.F,
-      row.G,
-      row.H
+      row.A, row.B, row.C, row.D, row.E, row.F, row.G, row.H
     ]);
 
     const csvContent = [headers, ...rows]

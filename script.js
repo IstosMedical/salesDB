@@ -1,3 +1,5 @@
+// 🚀 date column conversion
+
 function excelSerialToDate(serial) {
   const baseDate = new Date(1900, 0, 1); // Jan 1, 1900
   const offset = serial - 1; // Excel starts at 1
@@ -7,6 +9,39 @@ function excelSerialToDate(serial) {
   const yy = String(baseDate.getFullYear()).slice(-2);
   return `${dd}/${mm}/${yy}`;
 }
+
+// 🚀 Year dropdown filter
+
+document.getElementById("yearDropdown").addEventListener("change", e => {
+  const selectedYear = e.target.value;
+  if (!selectedYear) {
+    renderTable(crmData);
+    updateSummary(crmData);
+    setupExport(crmData);
+    return;
+  }
+
+  const filtered = crmData.filter(row => {
+    const doi = row.G;
+    if (!doi) return false;
+
+    let date;
+    if (!isNaN(doi)) {
+      const baseDate = new Date(1900, 0, 1);
+      baseDate.setDate(baseDate.getDate() + (doi - 1));
+      date = baseDate;
+    } else {
+      const [dd, mm, yyyy] = doi.split("/");
+      date = new Date(`${yyyy}-${mm}-${dd}`);
+    }
+
+    return date.getFullYear() === parseInt(selectedYear);
+  });
+
+  renderTable(filtered);
+  updateSummary(filtered);
+  setupExport(filtered);
+});
 
 let crmData = []; // Global reference
 

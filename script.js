@@ -88,7 +88,16 @@ function renderInstrumentGroups(groups) {
   const container = document.getElementById("instrumentGroups");
   if (!container) return;
 
-  container.innerHTML = ""; // Clear previous
+  container.innerHTML = "";
+
+  const groupColors = {
+    Microtomes: "#1976d2",
+    Cryo: "#388e3c",
+    Processors: "#f57c00",
+    Imaging: "#6a1b9a",
+    Workstations: "#c2185b",
+    Others: "#455a64"
+  };
 
   Object.entries(groups).forEach(([groupName, instruments]) => {
     const groupDiv = document.createElement("div");
@@ -102,9 +111,14 @@ function renderInstrumentGroups(groups) {
     tagContainer.className = "instrument-tags";
 
     instruments.forEach(name => {
+      const count = crmData.filter(row =>
+        row.D?.trim().toLowerCase() === name.toLowerCase()
+      ).length;
+
       const tag = document.createElement("span");
       tag.className = "instrument-tag";
-      tag.textContent = name;
+      tag.textContent = `${name} (${count})`;
+      tag.style.backgroundColor = groupColors[groupName] || "#607d8b";
 
       tag.addEventListener("click", () => {
         const filtered = crmData.filter(row =>

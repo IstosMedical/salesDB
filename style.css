@@ -224,7 +224,33 @@ tbody tr:hover {
   background-color: #dbe9ff;
 }
 
-#summaryCards {
-  display: flex; /* or block */
-  visibility: visible;
+.summary-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 1rem 0;
+  flex-wrap: wrap;
 }
+
+.card {
+  background-color: #f8faff;
+  border: 1px solid #d0e3ff;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card-label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0078d4;
+}
+

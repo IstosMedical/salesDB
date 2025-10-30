@@ -4,7 +4,7 @@ const fullInstrumentList = [
   "Cryostat", "Microtome", "Tissue Processor", "Embedding System", "Cassette Printer",
   "Slide drying table", "Tissue Flotation Bath", "Bone Band Saw", "Grossing Workstation",
   "Formaldehyde Meter", "Solvent Recyclling System", "Cytocentrifuge", "Manual slide stainer",
-  "Slide Stainer", "Wax Dispenser", "Grossing camera"
+  "Slide Stainer", "Grossing camera"
 ];
 
 // 🚀 Fetch data from GitHub Pages

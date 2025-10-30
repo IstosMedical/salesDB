@@ -136,5 +136,13 @@ document.getElementById("instrumentSearch").addEventListener("input", e => {
   renderInstrumentList(filtered);
 });
 
+document.getElementById("clearSearch").addEventListener("click", () => {
+  document.getElementById("instrumentSearch").value = "";
+  renderInstrumentList(fullInstrumentList);
+  renderTable(crmData);
+  updateSummary(crmData);
+  setupExport(crmData);
+});
+
 // 🟢 Initialize dashboard
 fetchCRMData();

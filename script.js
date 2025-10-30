@@ -1,7 +1,8 @@
 // 🚀 Render Top 3 Instruments as Badges
-
 function renderTopInstruments(data) {
   const badgeContainer = document.getElementById("topInstruments");
+  if (!badgeContainer) return;
+
   badgeContainer.innerHTML = "";
 
   const countMap = {};
@@ -22,11 +23,11 @@ function renderTopInstruments(data) {
   });
 }
 
-
-// 🚀 Animate Unique instrument list dropdown
-
+// 🚀 Animate Count Display
 function animateCount(id, target) {
   const el = document.getElementById(id);
+  if (!el) return;
+
   let count = 0;
   const step = Math.ceil(target / 30);
 
@@ -40,10 +41,12 @@ function animateCount(id, target) {
   }, 30);
 }
 
+// 🚀 Populate Instrument Dropdown
 function populateInstrumentDropdown(data) {
   const dropdown = document.getElementById("instrumentDropdown");
-  const instruments = [...new Set(data.map(row => row.D))].sort();
+  if (!dropdown) return;
 
+  const instruments = [...new Set(data.map(row => row.D))].sort();
   instruments.forEach(name => {
     const option = document.createElement("option");
     option.value = name;
@@ -54,63 +57,29 @@ function populateInstrumentDropdown(data) {
   renderTopInstruments(data);
 }
 
-document.getElementById("instrumentDropdown").addEventListener("change", e => {
-  const selected = e.target.value;
-  const count = crmData.filter(row => row.D === selected).length;
-
-  animateCount("instrumentCount", count);
-});
-
-
-// 🚀 Unique instrument list dropdown
-
-function populateInstrumentDropdown(data) {
+// 🚀 Dropdown Listener
+function setupDropdownListener(data) {
   const dropdown = document.getElementById("instrumentDropdown");
-  const instruments = [...new Set(data.map(row => row.D))].sort();
+  const display = document.getElementById("instrumentCount");
+  if (!dropdown || !display) return;
 
-  instruments.forEach(name => {
-    const option = document.createElement("option");
-    option.value = name;
-    option.textContent = name;
-    dropdown.appendChild(option);
+  dropdown.addEventListener("change", e => {
+    const selected = e.target.value;
+    const count = data.filter(row => row.D === selected).length;
+
+    if (selected) {
+      animateCount("instrumentCount", count);
+    } else {
+      display.textContent = "Select an instrument";
+    }
   });
 }
 
-document.getElementById("instrumentDropdown").addEventListener("change", e => {
-  const selected = e.target.value;
-  const count = crmData.filter(row => row.D === selected).length;
-
-  const display = document.getElementById("instrumentCount");
-  display.textContent = selected
-    ? `🔢 Total Installations: ${count}`
-    : "Select an instrument";
-});
-
-
-// 🚀 Group filter
-
-const instrumentGroups = {
-  "Staining & Slide Prep": [
-    "Auto Slide Stainer", "Manual slide stainer", "Slide Dryer", "Slide Labeler", "Slide Scanner", "Slide Stainer", "Coverslipper"
-  ],
-  "Tissue Processing": [
-    "Tissue processor", "Tissue Embedding Centre", "Tissue Water Bath", "Tissue Fixation Bath", "Wax Dispenser"
-  ],
-  "Cutting & Imaging": [
-    "Cryostat", "Microtome Manual", "Microtome Semi-Automated", "Microtome Fully Automated", "Programmable Vibrotome", "Grossing station", "Grossing Imaging camera (Prosight)"
-  ],
-  "Safety & Storage": [
-    "Formalin tank", "Formaldehydemeter", "Formadose", "Specimen storage cabinet", "Xylene Pump"
-  ],
-  "Miscellaneous": [
-    "Cassette Printer", "Cryo console", "Optocentrifuge", "Bone Band Saw", "Dispensing Console", "Microscope", "Procycler Solvent Recycling System"
-  ]
-};
-
-// 🚀 Group filter function
-
+// 🚀 Group Filter Function
 function renderInstrumentGroups(groups) {
   const container = document.getElementById("instrumentGroups");
+  if (!container) return;
+
   container.innerHTML = "";
 
   Object.entries(groups).forEach(([groupName, instruments]) => {
@@ -144,6 +113,7 @@ function renderInstrumentGroups(groups) {
   });
 }
 
+
 // 🚀 date column conversion
 
 function excelSerialToDate(serial) {
@@ -158,61 +128,83 @@ function excelSerialToDate(serial) {
 
 // 🚀 Year dropdown filter
 
-document.getElementById("yearDropdown").addEventListener("change", e => {
-  const selectedYear = e.target.value;
-  if (!selectedYear) {
-    renderTable(crmData);
-    updateSummary(crmData);
-    setupExport(crmData);
-    return;
-  }
-
-  const filtered = crmData.filter(row => {
-    const doi = row.G;
-    if (!doi) return false;
-
-    let date;
-    if (!isNaN(doi)) {
-      const baseDate = new Date(1900, 0, 1);
-      baseDate.setDate(baseDate.getDate() + (doi - 1));
-      date = baseDate;
-    } else {
-      const [dd, mm, yyyy] = doi.split("/");
-      date = new Date(`${yyyy}-${mm}-${dd}`);
-    }
-
-    return date.getFullYear() === parseInt(selectedYear);
-  });
-
-  renderTable(filtered);
-  updateSummary(filtered);
-  setupExport(filtered);
-});
-
 let crmData = []; // Global reference
 
-const fullInstrumentList = [
-  "Auto Slide Stainer", "Cassette Printer", "Coverslipper", "Cryo console", "Cryostat",
+const fullInstrumentList = [ "Auto Slide Stainer", "Cassette Printer", "Coverslipper", "Cryo console", "Cryostat",
   "Cytocentrifuge", "Bone Band Saw", "Dispensing Console", "Formadose",
   "Formaldehydemeter", "Formalin tank", "Grossing Imaging camera (Propath)", "Grossing station",
   "Manual slide stainer", "Microscope", "Microtome Manual","Microtome Semi Automated","Microtome Fully Automated","Procycler Solvent Recyclling System","Programmable Vibrotome","Slide Dryer","Slide Labeller","Slide Scanner","Slide Stainer","Specimen storage cabinet","Tissue Embedding Centre","Tissue Flotation Bath","Tissue processor","Tissue Water Bath","Wax Dispenser","Xylene Pump"
 ];
 
-// 🚀 Fetch data from GitHub Pages
+const yearDropdown = document.getElementById("yearDropdown");
+if (yearDropdown) {
+  yearDropdown.addEventListener("change", e => {
+    const selectedYear = e.target.value;
+    if (!selectedYear) {
+      renderTable(crmData);
+      updateSummary(crmData);
+      setupExport(crmData);
+      return;
+    }
+
+    const filtered = crmData.filter(row => {
+      const doi = row.G;
+      if (!doi) return false;
+
+      let date;
+      if (!isNaN(doi)) {
+        const baseDate = new Date(1900, 0, 1);
+        baseDate.setDate(baseDate.getDate() + (doi - 1));
+        date = baseDate;
+      } else if (doi.includes("/")) {
+        const parts = doi.split("/");
+        if (parts.length === 3) {
+          const [dd, mm, yyyy] = parts;
+          date = new Date(`${yyyy}-${mm}-${dd}`);
+        } else {
+          return false;
+        }
+      } else {
+        return false;
+      }
+
+      return date.getFullYear() === Number(selectedYear);
+    });
+
+    renderTable(filtered);
+    updateSummary(filtered);
+    setupExport(filtered);
+  });
+}
+
+// 🚀 Fetch and initialize CRM data from GitHub Pages
 async function fetchCRMData() {
+  const url = "https://istosmedical.github.io/salesDB/sales-data.json";
+
   try {
-    const response = await fetch("https://istosmedical.github.io/salesDB/sales-data.json");
+    const response = await fetch(url);
     const json = await response.json();
-    crmData = (json.sales || json).slice(1); // Skip header row
+
+    // Validate and extract data
+    const rawData = json.sales || json;
+    if (!Array.isArray(rawData) || rawData.length < 2) {
+      console.warn("CRM data is empty or malformed.");
+      return;
+    }
+
+    // Skip header row
+    crmData = rawData.slice(1);
+
+    // ✅ Render dashboard components
     renderTable(crmData);
     updateSummary(crmData);
     setupExport(crmData);
-    renderInstrumentList(fullInstrumentList);
     renderInstrumentGroups(instrumentGroups);
-    populateInstrumentDropdown(crmData)
-    animateCards(); // 🔥 Animate card entry
+    populateInstrumentDropdown(crmData);
+    animateCards();
+
   } catch (error) {
-    console.error("Failed to fetch CRM data:", error);
+    console.error("❌ Failed to fetch CRM data:", error);
   }
 }
 

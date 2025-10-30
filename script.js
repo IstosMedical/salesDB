@@ -389,7 +389,6 @@ function setupInstrumentDropdown(data) {
     if (!selected) {
       display.textContent = "Select an instrument";
       renderTable(data);
-      updateSummary(data);
       setupExport(data);
       return;
     }
@@ -401,12 +400,11 @@ function setupInstrumentDropdown(data) {
 
     display.textContent = `🔢 Total Installations: ${filtered.length}`;
     renderTable(filtered);
-    updateSummary(filtered);
     setupExport(filtered);
-    updateStatewiseCounts(filtered);
+    // updateSummary(filtered);         ❌ Removed
+    // updateStatewiseCounts(filtered); ❌ Removed
   });
 }
-
 
 // Export to PDF
 

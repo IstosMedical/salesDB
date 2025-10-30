@@ -57,13 +57,13 @@ function animateCounter(id, target) {
       count = target;
       clearInterval(interval);
     }
-    el.textContent = `(${count})`;
+    el.textContent = count;
   }, 30);
 }
 
 // 🧠 Animate card entry
 function animateCards() {
-  const cards = document.querySelectorAll(".summary-card");
+  const cards = document.querySelectorAll(".istos-card");
   cards.forEach((card, i) => {
     card.style.opacity = 0;
     card.style.transform = "translateY(20px)";
@@ -76,19 +76,16 @@ function animateCards() {
 }
 
 // 📦 Update summary cards with animation
-
 function updateSummary(data) {
   const quotations = data.length;
   const instruments = new Set(data.map(d => d.D));
   const customers = new Set(data.map(d => d.B));
   const vendors = new Set(data.map(d => d.F)); // Assuming 'Make' maps to vendors
 
-  document.getElementById("cardQuotations").textContent = quotations;
-  document.getElementById("cardInstruments").textContent = instruments.size;
-  document.getElementById("cardCustomers").textContent = customers.size;
-  document.getElementById("cardVendors").textContent = vendors.size;
-}
-
+  animateCounter("cardQuotations", quotations);
+  animateCounter("cardInstruments", instruments.size);
+  animateCounter("cardCustomers", customers.size);
+  animateCounter("cardVendors", vendors.size);
 }
 
 // 🔍 Setup filter logic

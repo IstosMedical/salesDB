@@ -186,4 +186,9 @@ tbody tr:hover {
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.instrument-tag:hover {
+  background-color: #dbe9ff;
 }

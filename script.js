@@ -408,5 +408,44 @@ function setupInstrumentDropdown(data) {
 }
 
 
+// Export to PDF
+
+document.getElementById("exportPDF").addEventListener("click", () => {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  // Title
+  doc.setFontSize(16);
+  doc.text("User's List of ISTOS Equipments", 20, 20);
+
+  // Table headers
+  doc.setFontSize(12);
+  doc.text("S.#", 20, 30);
+  doc.text("Name of the Customer", 40, 30);
+  doc.text("Models", 150, 30);
+
+  // Filtered data
+  const filtered = crmDataFiltered || crmData; // Use filtered if available
+  let y = 40;
+
+  filtered.forEach((row, index) => {
+    const customer = row.A?.trim() || "—";
+    const model = row.E?.trim() || "—";
+
+    doc.text(String(index + 1), 20, y);
+    doc.text(customer, 40, y, { maxWidth: 100 });
+    doc.text(model, 150, y, { maxWidth: 40 });
+
+    y += 10;
+    if (y > 280) {
+      doc.addPage();
+      y = 20;
+    }
+  });
+
+  doc.save("istos-equipments.pdf");
+});
+
+
 // 🟢 Initialize dashboard
 fetchCRMData();

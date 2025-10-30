@@ -460,23 +460,35 @@ function setupInstrumentDropdown(data) {
 }
 
 // 🧾 Export to PDF using filtered or full data
+
 document.getElementById("exportPDF").addEventListener("click", () => {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
 
+  // Title
   doc.setFontSize(16);
   doc.text("User's List of ISTOS Equipments", 20, 20);
 
+  // Bold headers
   doc.setFontSize(12);
+  doc.setFont(undefined, "bold");
   doc.text("S.#", 20, 30);
   doc.text("Name of the Customer", 40, 30);
   doc.text("Models", 150, 30);
 
-  const exportData = crmDataFiltered || crmData;
-  let y = 40;
+  // Sort data by customer name
+  const exportData = (crmDataFiltered || crmData).slice().sort((a, b) => {
+    const nameA = a.B?.trim().toLowerCase() || "";
+    const nameB = b.B?.trim().toLowerCase() || "";
+    return nameA.localeCompare(nameB);
+  });
 
+  // Reset font for data rows
+  doc.setFont(undefined, "normal");
+
+  let y = 40;
   exportData.forEach((row, index) => {
-    const customer = row.A?.trim() || "—";
+    const customer = row.B?.trim() || "—";
     const model = row.E?.trim() || "—";
 
     doc.text(String(index + 1), 20, y);
@@ -492,6 +504,7 @@ document.getElementById("exportPDF").addEventListener("click", () => {
 
   doc.save("istos-equipments.pdf");
 });
+
 
 // 🟢 Initialize dashboard
 fetchCRMData();

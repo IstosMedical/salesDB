@@ -1,3 +1,28 @@
+// 🚀 Unique instrument list dropdown
+
+function populateInstrumentDropdown(data) {
+  const dropdown = document.getElementById("instrumentDropdown");
+  const instruments = [...new Set(data.map(row => row.D))].sort();
+
+  instruments.forEach(name => {
+    const option = document.createElement("option");
+    option.value = name;
+    option.textContent = name;
+    dropdown.appendChild(option);
+  });
+}
+
+document.getElementById("instrumentDropdown").addEventListener("change", e => {
+  const selected = e.target.value;
+  const count = crmData.filter(row => row.D === selected).length;
+
+  const display = document.getElementById("instrumentCount");
+  display.textContent = selected
+    ? `🔢 Total Installations: ${count}`
+    : "Select an instrument";
+});
+
+
 // 🚀 Group filter
 
 const instrumentGroups = {
@@ -120,6 +145,7 @@ async function fetchCRMData() {
     setupExport(crmData);
     renderInstrumentList(fullInstrumentList);
     renderInstrumentGroups(instrumentGroups);
+    populateInstrumentDropdown(crmData)
     animateCards(); // 🔥 Animate card entry
   } catch (error) {
     console.error("Failed to fetch CRM data:", error);

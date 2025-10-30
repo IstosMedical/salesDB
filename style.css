@@ -192,3 +192,8 @@ tbody tr:hover {
 .instrument-tag:hover {
   background-color: #dbe9ff;
 }
+
+#summaryCards {
+  display: flex; /* or block */
+  visibility: visible;
+}

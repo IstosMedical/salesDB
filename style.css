@@ -301,37 +301,6 @@ tbody tr:hover {
   margin: 2rem 0 1rem;
 }
 
-.istos-dropdown {
-  margin-top: 0.5rem;
-  padding: 0.4rem;
-  font-size: 0.9rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  width: 100%;
-}
-
-.badge-container {
-  margin-top: 0.8rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.top-badge {
-  background-color: #0078d4;
-  color: white;
-  padding: 0.3rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-}
-
-.instrument-caption {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: #555;
-  font-style: italic;
-}
-
 .instrument-group {
   margin-bottom: 1.5rem;
 }
@@ -375,4 +344,35 @@ tbody tr:hover {
   color: #555;
   font-style: italic;
   margin-top: 0.5rem;
+}
+
+.istos-dropdown {
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.instrument-caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+}
+
+.badge-container {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.top-badge {
+  background-color: #0078d4;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
 }

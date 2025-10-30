@@ -1,6 +1,6 @@
 let crmData = []; // Global reference
 
-const instruments = [
+const fullInstrumentList = [
   "Cryostat", "Microtome", "Tissue Processor", "Embedding System", "Cassette Printer",
   "Slide drying table", "Tissue Flotation Bath", "Bone Band Saw", "Grossing Workstation",
   "Formaldehyde Meter", "Solvent Recyclling System", "Cytocentrifuge", "Manual slide stainer",
@@ -16,7 +16,7 @@ async function fetchCRMData() {
     renderTable(crmData);
     updateSummary(crmData);
     setupExport(crmData);
-    renderInstrumentList(instruments);
+    renderInstrumentList(fullInstrumentList);
     animateCards(); // 🔥 Animate card entry
   } catch (error) {
     console.error("Failed to fetch CRM data:", error);
@@ -127,14 +127,14 @@ function renderInstrumentList(list) {
 
     container.appendChild(tag);
   });
-
-  // 🔍 Live search
-  document.getElementById("instrumentSearch").addEventListener("input", e => {
-    const query = e.target.value.toLowerCase();
-    const filtered = list.filter(item => item.toLowerCase().includes(query));
-    renderInstrumentList(filtered);
-  });
 }
+
+// 🔍 Live search for instrument tags
+document.getElementById("instrumentSearch").addEventListener("input", e => {
+  const query = e.target.value.toLowerCase();
+  const filtered = fullInstrumentList.filter(item => item.toLowerCase().includes(query));
+  renderInstrumentList(filtered);
+});
 
 // 🟢 Initialize dashboard
 fetchCRMData();

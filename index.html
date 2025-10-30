@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ISTOS Dashboard</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
   
@@ -13,32 +15,34 @@
   <h2 class="logo-subheading">ISTOS Medical Private Limited</h2>
   </header>
 
-      <!-- 🔹 Summary cards id's-->
-
-    <section class="summary-cards">
-    <div class="card">
-      <div class="card-label">Instruments</div>
-      <div class="card-value" id="cardInstruments">0</div>
-    </div>
-    <div class="card">
-      <div class="card-label">Model</div>
-      <div class="card-value" id="cardModels">0</div>
-    </div>
-    <div class="card">
-      <div class="card-label">Make</div>
-      <div class="card-value" id="cardMakes">0</div>
-    </div>
-    <div class="card">
-      <div class="card-label">Customers</div>
-      <div class="card-value" id="cardCustomers">0</div>
-    </div>
-  </section>
-  
   <main class="container">
     <!-- 🔹 Header -->
     <header class="dashboard-header">
       <h1>📋 ISTOS Dashboard</h1>
     </header>
+
+<section class="dashboard-header">
+  <h1 class="dashboard-title">
+    <i class="fas fa-clipboard"></i> ISTOS Dashboard
+  </h1>
+
+     <!-- 🔹 Summary cards id's-->
+  
+    <div class="card-container">
+      <div class="summary-card">
+        <i class="fas fa-folder"></i> Instruments <span id="cardInstruments">(0)</span>
+      </div>
+      <div class="summary-card">
+        <i class="fas fa-folder"></i> Model <span id="cardModels">(0)</span>
+      </div>
+      <div class="summary-card">
+        <i class="fas fa-folder"></i> Make <span id="cardMakes">(0)</span>
+      </div>
+      <div class="summary-card">
+        <i class="fas fa-folder"></i> Customers <span id="cardCustomers">(0)</span>
+      </div>
+    </div>
+  </section>
 
     <!-- 🔹 Customr search logic -->
     

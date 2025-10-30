@@ -201,12 +201,14 @@ async function fetchCRMData() {
     crmData = rawData.slice(1);
 
     // ✅ Render dashboard components
+    
     renderTable(crmData);
     updateSummary(crmData);
     setupExport(crmData);
     renderInstrumentGroups(instrumentGroups);
     populateInstrumentDropdown(crmData);
     updateStatewiseCounts(crmData);
+    setupInstrumentDropdown(crmData);
     animateCards();
 
   } catch (error) {
@@ -215,6 +217,7 @@ async function fetchCRMData() {
 }
 
 // 📊 Render table rows
+
 function renderTable(data) {
   const tbody = document.querySelector("#crmTable tbody");
   tbody.innerHTML = "";
@@ -236,6 +239,7 @@ function renderTable(data) {
 }
 
 // 📦 Animate counters
+
 function animateCounter(id, target) {
   const el = document.getElementById(id);
   let count = 0;
@@ -252,6 +256,7 @@ function animateCounter(id, target) {
 }
 
 // 🧠 Animate card entry
+
 function animateCards() {
   const cards = document.querySelectorAll(".istos-card");
   cards.forEach((card, i) => {
@@ -266,6 +271,7 @@ function animateCards() {
 }
 
 // 📦 Update summary cards with animation
+
 function updateSummary(data) {
   const quotations = data.length;
   const instruments = new Set(data.map(d => d.D));
@@ -277,6 +283,7 @@ function updateSummary(data) {
 }
 
 // 🧾 Export filtered data to CSV
+
 function setupExport(data) {
   const exportBtn = document.getElementById("exportCSV");
   if (!exportBtn) return;
@@ -300,6 +307,7 @@ function setupExport(data) {
 }
 
 // 🧠 Render and wire instrument tags
+
 function renderInstrumentList(list) {
   const container = document.getElementById("instrumentList");
   container.innerHTML = "";
@@ -363,6 +371,35 @@ function updateStatewiseCounts(data) {
 
   if (mhEl) mhEl.textContent = maharashtraCount;
   if (kaEl) kaEl.textContent = karnatakaCount;
+}
+
+// Dropdown logic to show instrument count
+
+function setupInstrumentDropdown(data) {
+  const dropdown = document.getElementById("instrumentDropdown");
+  const display = document.getElementById("instrumentCount");
+
+  if (!dropdown || !display) return;
+
+  dropdown.addEventListener("change", e => {
+    const selected = e.target.value;
+    if (!selected) {
+      display.textContent = "Select an instrument";
+      renderTable(data);
+      updateSummary(data);
+      setupExport(data);
+      return;
+    }
+
+    const filtered = data.filter(row =>
+      row.D.toLowerCase().includes(selected.toLowerCase())
+    );
+
+    display.textContent = `🔢 Total Installations: ${filtered.length}`;
+    renderTable(filtered);
+    updateSummary(filtered);
+    setupExport(filtered);
+  });
 }
 
 

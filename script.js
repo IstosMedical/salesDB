@@ -47,8 +47,8 @@ function renderTable(data) {
       <td>${row.D}</td>
       <td>${row.E}</td>
       <td>${row.F}</td>
-      <td>${row.G}</td>
-      <td>${row.H}</td>
+      <td>${excelSerialToDate(row.G)}</td>
+      <td>${excelSerialToDate(row.H)}</td>
     `;
     tbody.appendChild(tr);
   });

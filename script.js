@@ -212,11 +212,13 @@ async function fetchCRMData() {
     const json = await response.json();
 
     // Validate and extract data
-    const rawData = json.sales || json;
+    
+    const rawData = json["sales-data"] || json;
     if (!Array.isArray(rawData) || rawData.length < 2) {
       console.warn("CRM data is empty or malformed.");
       return;
     }
+
 
     // Skip header row
     crmData = rawData.slice(1);

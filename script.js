@@ -19,15 +19,12 @@ const instruments = [
   "Grossing camera"
 ];
 
-const dataWithoutHeader = crmData.slice(1); // Skip first row
-renderTable(dataWithoutHeader);
-
 // 🚀 Fetch data from GitHub Pages
 async function fetchCRMData() {
   try {
     const response = await fetch("https://istosmedical.github.io/salesDB/sales-data.json");
     const json = await response.json();
-    crmData = json.sales || json;
+    crmData = (json.sales || json).slice(1); // Skip header row
     renderTable(crmData);
     updateSummary(crmData);
     setupFilter(crmData);
@@ -53,6 +50,7 @@ function renderTable(data) {
       <td>${row.E}</td>
       <td>${row.F}</td>
       <td>${row.G}</td>
+      <td>${row.H}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -61,8 +59,8 @@ function renderTable(data) {
 // 📦 Update summary cards
 function updateSummary(data) {
   document.getElementById("totalEquipments").textContent = `📦 Equipments: ${data.length}`;
-  const customers = new Set(data.map(d => d.A));
-  const cities = new Set(data.map(d => d.B));
+  const customers = new Set(data.map(d => d.B));
+  const cities = new Set(data.map(d => d.C));
   document.getElementById("uniqueCustomers").textContent = `🏥 Customers: ${customers.size}`;
   document.getElementById("citiesCovered").textContent = `🌆 Cities: ${cities.size}`;
 }
@@ -79,17 +77,17 @@ function setupFilter(dataSet) {
     const make = document.getElementById("makeFilter").value.toLowerCase();
 
     const filtered = dataSet.filter(row => {
-      const doi = row.F || "";
+      const doi = row.G || "";
       const dateMatch =
         (!start || new Date(doi) >= new Date(start)) &&
         (!end || new Date(doi) <= new Date(end));
       return (
         dateMatch &&
-        row.C.toLowerCase().includes(equipment) &&
-        row.D.toLowerCase().includes(model) &&
-        row.A.toLowerCase().includes(customer) &&
-        row.B.toLowerCase().includes(city) &&
-        row.E.toLowerCase().includes(make)
+        row.D.toLowerCase().includes(equipment) &&
+        row.E.toLowerCase().includes(model) &&
+        row.B.toLowerCase().includes(customer) &&
+        row.C.toLowerCase().includes(city) &&
+        row.F.toLowerCase().includes(make)
       );
     });
 
@@ -105,7 +103,7 @@ function setupExport(data) {
   if (!exportBtn) return;
 
   exportBtn.onclick = () => {
-    const headers = ["Customer", "City", "Equipment", "Model", "Make", "DOI", "Warranty"];
+    const headers = ["#", "Customer", "City", "Equipment", "Model", "Make", "DOI", "Warranty"];
     const rows = data.map(row => [
       row.A,
       row.B,
@@ -113,7 +111,8 @@ function setupExport(data) {
       row.D,
       row.E,
       row.F,
-      row.G
+      row.G,
+      row.H
     ]);
 
     const csvContent = [headers, ...rows]
@@ -139,7 +138,7 @@ function renderInstrumentList(list) {
     tag.textContent = name;
 
     tag.addEventListener("click", () => {
-      const filtered = crmData.filter(row => row.C.toLowerCase() === name.toLowerCase());
+      const filtered = crmData.filter(row => row.D.toLowerCase() === name.toLowerCase());
       renderTable(filtered);
       updateSummary(filtered);
       setupExport(filtered);

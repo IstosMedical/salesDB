@@ -251,10 +251,13 @@ function groupInstruments(data) {
     let category = "Others";
 
     if (/microtome/i.test(name)) category = "Microtomes";
+    else if (/Dryer|Bath/i.test(name)) category = "Microtome Ancillary Equipment";
+    else if (/Diamond|Saw/i.test(name)) category = "Bone Band Saw";
     else if (/cryo|cryostat/i.test(name)) category = "Cryo";
-    else if (/processor|stp/i.test(name)) category = "Processors";
+    else if (/processor|stp/i.test(name)) category = "Tissue Processors";
+    else if (/Embedding|cryoconsole/i.test(name)) category = "Embedding Center";
     else if (/camera|imaging/i.test(name)) category = "Imaging";
-    else if (/station/i.test(name)) category = "Workstations";
+    else if (/station/i.test(name)) category = "Grossing";
 
     if (!groups[category]) groups[category] = [];
     if (!groups[category].includes(name)) groups[category].push(name);

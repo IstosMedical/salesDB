@@ -401,6 +401,7 @@ function setupInstrumentDropdown(data) {
     renderTable(filtered);
     updateSummary(filtered);
     setupExport(filtered);
+    updateStatewiseCounts(filtered);
   });
 }
 

@@ -35,11 +35,11 @@ function renderTable(data) {
 
 // 📦 Update summary cards
 function updateSummary(data) {
-  document.getElementById("totalEquipments").textContent = `📦 Equipments: ${data.length}`;
+  document.getElementById("totalEquipments").textContent = `Equipments: ${data.length}`;
   const customers = new Set(data.map(d => d.A));
   const cities = new Set(data.map(d => d.B));
-  document.getElementById("uniqueCustomers").textContent = `🏥 Customers: ${customers.size}`;
-  document.getElementById("citiesCovered").textContent = `🌆 Cities: ${cities.size}`;
+  document.getElementById("uniqueCustomers").textContent = `Customers: ${customers.size}`;
+  document.getElementById("citiesCovered").textContent = `Cities: ${cities.size}`;
 }
 
 // 🔍 Setup filter logic

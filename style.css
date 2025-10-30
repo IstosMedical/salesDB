@@ -376,3 +376,17 @@ tbody tr:hover {
   border-radius: 12px;
   font-size: 0.8rem;
 }
+
+.istos-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0.5rem 0;
+}
+
+.istos-label {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}

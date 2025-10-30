@@ -206,6 +206,7 @@ async function fetchCRMData() {
     setupExport(crmData);
     renderInstrumentGroups(instrumentGroups);
     populateInstrumentDropdown(crmData);
+    updateStatewiseCounts(crmData);
     animateCards();
 
   } catch (error) {
@@ -345,6 +346,25 @@ function setupInstrumentSearch() {
     });
   }
 }
+
+// Statewise sales
+
+function updateStatewiseCounts(data) {
+  const maharashtraCount = data.filter(row =>
+    row.C.toLowerCase().includes("maharashtra")
+  ).length;
+
+  const karnatakaCount = data.filter(row =>
+    row.C.toLowerCase().includes("karnataka")
+  ).length;
+
+  const mhEl = document.getElementById("cardMaharashtra");
+  const kaEl = document.getElementById("cardKarnataka");
+
+  if (mhEl) mhEl.textContent = maharashtraCount;
+  if (kaEl) kaEl.textContent = karnatakaCount;
+}
+
 
 // 🟢 Initialize dashboard
 fetchCRMData();

@@ -205,7 +205,7 @@ if (yearDropdown) {
 
 // 🚀 Fetch and initialize CRM data from GitHub Pages
 async function fetchCRMData() {
-  const url = "https://istosmedical.github.io/salesDB/sales-data.json";
+  const url = "https://istosmedical.github.io/salesDB/sales.json";
 
   try {
     const response = await fetch(url);
@@ -213,7 +213,7 @@ async function fetchCRMData() {
 
     // Validate and extract data
     
-    const rawData = json["sales-data"] || json;
+    const rawData = json.sales || json;
     if (!Array.isArray(rawData) || rawData.length < 2) {
       console.warn("CRM data is empty or malformed.");
       return;

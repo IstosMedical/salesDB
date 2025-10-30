@@ -1,3 +1,67 @@
+// 🚀 Render Top 3 Instruments as Badges
+
+function renderTopInstruments(data) {
+  const badgeContainer = document.getElementById("topInstruments");
+  badgeContainer.innerHTML = "";
+
+  const countMap = {};
+  data.forEach(row => {
+    const name = row.D;
+    countMap[name] = (countMap[name] || 0) + 1;
+  });
+
+  const top3 = Object.entries(countMap)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3);
+
+  top3.forEach(([name, count]) => {
+    const badge = document.createElement("span");
+    badge.className = "top-badge";
+    badge.textContent = `${name} (${count})`;
+    badgeContainer.appendChild(badge);
+  });
+}
+
+
+// 🚀 Animate Unique instrument list dropdown
+
+function animateCount(id, target) {
+  const el = document.getElementById(id);
+  let count = 0;
+  const step = Math.ceil(target / 30);
+
+  const interval = setInterval(() => {
+    count += step;
+    if (count >= target) {
+      count = target;
+      clearInterval(interval);
+    }
+    el.textContent = `🔢 Total Installations: ${count}`;
+  }, 30);
+}
+
+function populateInstrumentDropdown(data) {
+  const dropdown = document.getElementById("instrumentDropdown");
+  const instruments = [...new Set(data.map(row => row.D))].sort();
+
+  instruments.forEach(name => {
+    const option = document.createElement("option");
+    option.value = name;
+    option.textContent = name;
+    dropdown.appendChild(option);
+  });
+
+  renderTopInstruments(data);
+}
+
+document.getElementById("instrumentDropdown").addEventListener("change", e => {
+  const selected = e.target.value;
+  const count = crmData.filter(row => row.D === selected).length;
+
+  animateCount("instrumentCount", count);
+});
+
+
 // 🚀 Unique instrument list dropdown
 
 function populateInstrumentDropdown(data) {

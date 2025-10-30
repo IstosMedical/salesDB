@@ -11,113 +11,94 @@
 <body>
   
   <header class="logo-header">
-  <img src="istos-logo.png" alt="ISTOS Logo" class="istos-logo" />
-  <h2 class="logo-subheading">ISTOS Medical Private Limited</h2>
+    <img src="istos-logo.png" alt="ISTOS Logo" class="istos-logo" />
+    <h2 class="logo-subheading">ISTOS Medical Private Limited</h2>
   </header>
 
   <main class="container">
 
     <section class="dashboard-header">
-    <h2>📊 Dashboard</h2>
+      <h2>📊 Dashboard</h2>
     </section>
 
-     <!-- 🔹 Summary cards id's-->
-  
+    <!-- 🔹 Summary Cards -->
     <section class="istos-summary">
       <div class="istos-card">
         <div class="emoji">📝</div>
         <h3>Overall Sales</h3>
         <p class="istos-value" id="cardQuotations">0</p>
       </div>
-      
+
       <div class="istos-card">
         <div class="emoji">🧰</div>
         <h3>Instrument Count</h3>
-      
-        <!-- Dropdown for selecting instrument -->
         <select id="instrumentDropdown" class="istos-dropdown">
           <option value="">-- Choose Instrument --</option>
         </select>
-      
-        <!-- Caption-style count display -->
         <p id="instrumentCount" class="instrument-caption">***</p>
-      
-        <!-- Top 3 instrument badges -->
         <div id="topInstruments" class="badge-container"></div>
       </div>
-      
+
       <div class="istos-card">
         <div class="emoji">👔</div>
         <h3>Unique Customers</h3>
         <p class="istos-value" id="cardCustomers">0</p>
       </div>
-    
-    <div class="istos-card">
-      <div class="emoji">📍</div>
-      <h3>State-wise Sales</h3>
-    
-      <!-- Maharashtra count -->
-      <p class="istos-value" id="cardMaharashtra">0</p>
-      <p class="istos-label">Maharashtra</p>
-    
-      <hr class="istos-divider" />
-    
-      <!-- Karnataka count -->
-      <p class="istos-value" id="cardKarnataka">0</p>
-      <p class="istos-label">Karnataka</p>
-    </div>
-</section>
 
-     <section class="year-search">
-  <label for="yearDropdown">📅 Filter Installations by Year:</label>
-
-  <div class="year-filter-row">
-    <select id="yearDropdown" class="year-dropdown">
-      <option value="">-- Select Year --</option>
-      <option value="2025">2025</option>
-      <option value="2024">2024</option>
-      <option value="2023">2023</option>
-      <option value="2022">2022</option>
-      <option value="2021">2021</option>
-      <option value="2020">2020</option>
-      <option value="2019">2019</option>
-      <option value="2018">2018</option>
-      <option value="2017">2017</option>
-      <option value="2016">2016</option>
-      <option value="2015">2015</option>
-    </select>
-
- <button id="exportPDF" class="pdf-btn" title="Export filtered data to PDF">
-      <img src="PDF-icon.png" alt="PDF Icon" class="pdf-icon" />""</button>
-  </div>
-  <p id="instrumentCount" class="instrument-caption">Export custom data into PDF</p>
-  <hr class="section-divider" />
- </section>
-        
-      <section class="instrument-section">
-        <h3>🧪 Instrument Categories</h3>
-        <div id="instrumentGroups"></div>
-      
-        <!-- Clear Filters Button -->
-        <div class="clear-group">
-          <button id="clearSearch" class="clear-btn">Clear Filters</button>
-        </div>
-      </section>
-      
-      <hr class="section-divider" />
-
-    <!-- We're have commented the below block-->
-    <!--
-    <section class="instrument-search">
-      <label for="instrumentSearch">🔍 Search Instrument List:</label>
-      <input type="text" id="instrumentSearch" placeholder="Search instruments..." />
-      <button id="clearSearch" class="clear-btn">Clear</button>
-      <div id="instrumentList" class="instrument-tags"></div>
+      <div class="istos-card">
+        <div class="emoji">📍</div>
+        <h3>State-wise Sales</h3>
+        <p class="istos-value" id="cardMaharashtra">0</p>
+        <p class="istos-label">Maharashtra</p>
+        <hr class="istos-divider" />
+        <p class="istos-value" id="cardKarnataka">0</p>
+        <p class="istos-label">Karnataka</p>
+      </div>
     </section>
-    -->
 
-        <!-- 🔹 Data Table -->
-    
+    <!-- 🔹 Year Filter + PDF Export -->
+    <section class="year-search">
+      <label for="yearDropdown">📅 Filter Installations by Year:</label>
+      <div class="year-filter-row">
+        <select id="yearDropdown" class="year-dropdown">
+          <option value="">-- Select Year --</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+        </select>
+
+        <button id="exportPDF" class="pdf-btn" title="Export filtered data to PDF">
+          <img src="PDF-icon.png" alt="PDF Icon" class="pdf-icon" />
+          Export to PDF
+        </button>
+      </div>
+      <p class="instrument-caption">Export custom data into PDF</p>
+      <hr class="section-divider" />
+    </section>
+
+    <!-- 🔹 Instrument Categories -->
+    <section class="instrument-section">
+      <h3>🧪 Instrument Categories</h3>
+      <div class="instrument-grid">
+        <div class="instrument-column" id="instrumentGroupsLeft"></div>
+        <div class="instrument-column" id="instrumentGroupsRight"></div>
+      </div>
+      <div class="clear-group">
+        <button id="clearSearch" class="clear-btn">Clear Filters</button>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- 🔹 Data Table -->
     <section class="data-table">
       <h2>📑 Instrument Records</h2>
       <table id="crmTable">
@@ -136,7 +117,9 @@
         <tbody></tbody>
       </table>
     </section>
+
   </main>
-<script src="script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>

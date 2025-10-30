@@ -1,3 +1,60 @@
+// 🚀 Group filter
+
+const instrumentGroups = {
+  "Staining & Slide Prep": [
+    "Auto Slide Stainer", "Manual slide stainer", "Slide Dryer", "Slide Labeler", "Slide Scanner", "Slide Stainer", "Coverslipper"
+  ],
+  "Tissue Processing": [
+    "Tissue processor", "Tissue Embedding Centre", "Tissue Water Bath", "Tissue Fixation Bath", "Wax Dispenser"
+  ],
+  "Cutting & Imaging": [
+    "Cryostat", "Microtome Manual", "Microtome Semi-Automated", "Microtome Fully Automated", "Programmable Vibrotome", "Grossing station", "Grossing Imaging camera (Prosight)"
+  ],
+  "Safety & Storage": [
+    "Formalin tank", "Formaldehydemeter", "Formadose", "Specimen storage cabinet", "Xylene Pump"
+  ],
+  "Miscellaneous": [
+    "Cassette Printer", "Cryo console", "Optocentrifuge", "Bone Band Saw", "Dispensing Console", "Microscope", "Procycler Solvent Recycling System"
+  ]
+};
+
+// 🚀 Group filter function
+
+function renderInstrumentGroups(groups) {
+  const container = document.getElementById("instrumentGroups");
+  container.innerHTML = "";
+
+  Object.entries(groups).forEach(([groupName, instruments]) => {
+    const groupDiv = document.createElement("div");
+    groupDiv.className = "instrument-group";
+
+    const heading = document.createElement("h4");
+    heading.textContent = groupName;
+    groupDiv.appendChild(heading);
+
+    const tagContainer = document.createElement("div");
+    tagContainer.className = "instrument-tags";
+
+    instruments.forEach(name => {
+      const tag = document.createElement("button");
+      tag.className = "instrument-tag";
+      tag.textContent = name;
+
+      tag.addEventListener("click", () => {
+        const filtered = crmData.filter(row => row.D.toLowerCase() === name.toLowerCase());
+        renderTable(filtered);
+        updateSummary(filtered);
+        setupExport(filtered);
+      });
+
+      tagContainer.appendChild(tag);
+    });
+
+    groupDiv.appendChild(tagContainer);
+    container.appendChild(groupDiv);
+  });
+}
+
 // 🚀 date column conversion
 
 function excelSerialToDate(serial) {
@@ -62,6 +119,7 @@ async function fetchCRMData() {
     updateSummary(crmData);
     setupExport(crmData);
     renderInstrumentList(fullInstrumentList);
+    renderInstrumentGroups(instrumentGroups);
     animateCards(); // 🔥 Animate card entry
   } catch (error) {
     console.error("Failed to fetch CRM data:", error);

@@ -1,3 +1,8 @@
+window.addEventListener("error", e => {
+  console.error("Global JS error:", e.message);
+});
+
+
 // 🚀 Render Top 3 Instruments as Badges
 function renderTopInstruments(data) {
   const badgeContainer = document.getElementById("topInstruments");
@@ -315,27 +320,30 @@ function renderInstrumentList(list) {
 }
 
 // 🔍 Live search for instrument tags
-document.getElementById("instrumentSearch").addEventListener("input", e => {
-  const query = e.target.value.toLowerCase();
-  const filtered = fullInstrumentList.filter(item => item.toLowerCase().includes(query));
-  renderInstrumentList(filtered);
-});
+function setupInstrumentSearch() {
+  const searchInput = document.getElementById("instrumentSearch");
+  const clearBtn = document.getElementById("clearSearch");
 
-document.getElementById("clearSearch").addEventListener("click", () => {
-  document.getElementById("instrumentSearch").value = "";
-  renderTable(crmData);
-  updateSummary(crmData);
-  setupExport(crmData);
-});
+  if (searchInput) {
+    searchInput.addEventListener("input", e => {
+      const query = e.target.value.toLowerCase();
+      const filtered = fullInstrumentList.filter(item =>
+        item.toLowerCase().includes(query)
+      );
+      renderInstrumentList(filtered);
+    });
+  }
 
-const clearBtn = document.getElementById("clearSearch");
-if (clearBtn) {
-  clearBtn.addEventListener("click", () => {
-    renderTable(crmData);
-    updateSummary(crmData);
-    setupExport(crmData);
-    document.getElementById("yearDropdown").value = "";
-  });
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      renderTable(crmData);
+      updateSummary(crmData);
+      setupExport(crmData);
+      const yearDropdown = document.getElementById("yearDropdown");
+      if (yearDropdown) yearDropdown.value = "";
+    });
+  }
 }
 
 // 🟢 Initialize dashboard

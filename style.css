@@ -159,3 +159,31 @@ tbody tr:hover {
 .data-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+
+.instrument-search {
+  margin-top: 2rem;
+}
+
+.instrument-search input {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.instrument-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.instrument-tag {
+  background-color: #eef4ff;
+  border: 1px solid #cce;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}

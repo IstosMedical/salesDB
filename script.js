@@ -83,33 +83,37 @@ function setupDropdownListener(data) {
 }
 
 // 🚀 Group Filter Function
+
 function renderInstrumentGroups(groups) {
   const container = document.getElementById("instrumentGroups");
   if (!container) return;
 
-  container.innerHTML = "";
+  container.innerHTML = ""; // Clear previous
 
   Object.entries(groups).forEach(([groupName, instruments]) => {
     const groupDiv = document.createElement("div");
     groupDiv.className = "instrument-group";
 
-    const heading = document.createElement("h4");
-    heading.textContent = groupName;
-    groupDiv.appendChild(heading);
+    const title = document.createElement("h4");
+    title.textContent = groupName;
+    groupDiv.appendChild(title);
 
     const tagContainer = document.createElement("div");
     tagContainer.className = "instrument-tags";
 
     instruments.forEach(name => {
-      const tag = document.createElement("button");
+      const tag = document.createElement("span");
       tag.className = "instrument-tag";
       tag.textContent = name;
 
       tag.addEventListener("click", () => {
-        const filtered = crmData.filter(row => row.D.toLowerCase() === name.toLowerCase());
+        const filtered = crmData.filter(row =>
+          row.D?.trim().toLowerCase() === name.toLowerCase()
+        );
         renderTable(filtered);
-        updateSummary(filtered);
         setupExport(filtered);
+        document.getElementById("instrumentCount").textContent =
+          `🔢 Total Installations: ${filtered.length}`;
       });
 
       tagContainer.appendChild(tag);
@@ -119,7 +123,6 @@ function renderInstrumentGroups(groups) {
     container.appendChild(groupDiv);
   });
 }
-
 
 // 🚀 date column conversion
 
@@ -207,7 +210,10 @@ async function fetchCRMData() {
     renderTable(crmData);
     updateSummary(crmData);
     setupExport(crmData);
+    
+    const instrumentGroups = groupInstruments(crmData); // ✅ Add this line
     renderInstrumentGroups(instrumentGroups);
+    
     populateInstrumentDropdown(crmData);
     updateStatewiseCounts(crmData);
     setupInstrumentDropdown(crmData);
@@ -216,6 +222,31 @@ async function fetchCRMData() {
   } catch (error) {
     console.error("❌ Failed to fetch CRM data:", error);
   }
+}
+
+
+// 🚀 Group instruments by category for tag rendering
+
+function groupInstruments(data) {
+  const groups = {};
+
+  data.forEach(row => {
+    const name = row.D?.trim();
+    if (!name) return;
+
+    let category = "Others";
+
+    if (/microtome/i.test(name)) category = "Microtomes";
+    else if (/cryo|cryostat/i.test(name)) category = "Cryo";
+    else if (/processor|stp/i.test(name)) category = "Processors";
+    else if (/camera|imaging/i.test(name)) category = "Imaging";
+    else if (/station/i.test(name)) category = "Workstations";
+
+    if (!groups[category]) groups[category] = [];
+    if (!groups[category].includes(name)) groups[category].push(name);
+  });
+
+  return groups;
 }
 
 // 📊 Render table rows

@@ -423,8 +423,10 @@ function updateStatewiseCounts(data) {
   if (kaEl) kaEl.textContent = karnatakaCount;
 }
 
-// Dropdown logic to show instrument count
+// 🌐 Global variable to track filtered data
+let crmDataFiltered = null;
 
+// 🎯 Dropdown logic to show instrument count and update filtered data
 function setupInstrumentDropdown(data) {
   const dropdown = document.getElementById("instrumentDropdown");
   const display = document.getElementById("instrumentCount");
@@ -436,6 +438,7 @@ function setupInstrumentDropdown(data) {
 
     if (!selected) {
       display.textContent = "Select an instrument";
+      crmDataFiltered = null;
       renderTable(data);
       setupExport(data);
       return;
@@ -446,16 +449,15 @@ function setupInstrumentDropdown(data) {
       return instrument === selected;
     });
 
+    crmDataFiltered = filtered; // ✅ Track filtered data globally
+
     display.textContent = `🔢 Total Installations: ${filtered.length}`;
     renderTable(filtered);
     setupExport(filtered);
-    // updateSummary(filtered);         ❌ Removed
-    // updateStatewiseCounts(filtered); ❌ Removed
   });
 }
 
-// Export to PDF
-
+// 🧾 Export to PDF using filtered or full data
 document.getElementById("exportPDF").addEventListener("click", () => {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
@@ -468,10 +470,10 @@ document.getElementById("exportPDF").addEventListener("click", () => {
   doc.text("Name of the Customer", 40, 30);
   doc.text("Models", 150, 30);
 
-  const filtered = crmDataFiltered || crmData;
+  const exportData = crmDataFiltered || crmData;
   let y = 40;
 
-  filtered.forEach((row, index) => {
+  exportData.forEach((row, index) => {
     const customer = row.A?.trim() || "—";
     const model = row.E?.trim() || "—";
 

@@ -1,6 +1,21 @@
 {
   "sales": [
- {
+    {
+   "A": "Sr. No.",
+   "B": "Direct Supply",
+   "C": "Customer Name",
+   "D": "State",
+   "E": "City",
+   "F": "Equipment name",
+   "G": "Make",
+   "H": "Model",
+   "I": "Serial No.",
+   "J": "DOI",
+   "K": "Warranty",
+   "L": "Free AMC",
+   "M": "QTY"
+ },
+    {
    "A": "1",
    "B": "Normal",
    "C": "B J Wadia Hospital for Children, Parel",

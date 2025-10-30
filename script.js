@@ -1,3 +1,13 @@
+function excelSerialToDate(serial) {
+  const baseDate = new Date(1900, 0, 1); // Jan 1, 1900
+  const offset = serial - 1; // Excel starts at 1
+  baseDate.setDate(baseDate.getDate() + offset);
+  const dd = String(baseDate.getDate()).padStart(2, '0');
+  const mm = String(baseDate.getMonth() + 1).padStart(2, '0');
+  const yy = String(baseDate.getFullYear()).slice(-2);
+  return `${dd}/${mm}/${yy}`;
+}
+
 let crmData = []; // Global reference
 
 const fullInstrumentList = [

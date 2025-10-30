@@ -208,9 +208,9 @@ tbody tr:hover {
 
 .istos-summary {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
   margin: 2rem 0;
 }
 

@@ -390,3 +390,21 @@ tbody tr:hover {
   margin-bottom: 0.5rem;
   font-style: italic;
 }
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.dashboard-header h2 {
+  border-bottom: 2px solid #0078d4;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}

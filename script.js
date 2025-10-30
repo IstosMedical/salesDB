@@ -382,7 +382,8 @@ function setupInstrumentDropdown(data) {
   if (!dropdown || !display) return;
 
   dropdown.addEventListener("change", e => {
-    const selected = e.target.value;
+    const selected = e.target.value.trim().toLowerCase();
+
     if (!selected) {
       display.textContent = "Select an instrument";
       renderTable(data);
@@ -391,9 +392,10 @@ function setupInstrumentDropdown(data) {
       return;
     }
 
-    const filtered = data.filter(row =>
-      row.D.toLowerCase().includes(selected.toLowerCase())
-    );
+    const filtered = data.filter(row => {
+      const instrument = row.D?.trim().toLowerCase();
+      return instrument === selected;
+    });
 
     display.textContent = `🔢 Total Installations: ${filtered.length}`;
     renderTable(filtered);

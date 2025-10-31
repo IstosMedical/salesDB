@@ -297,6 +297,17 @@ function showToast(message = "Download complete!") {
   }, 3000);
 }
 
+// Wrap Listener Inside DOM Ready - Extract csv
+
+window.addEventListener("DOMContentLoaded", () => {
+  const exportBtn = document.getElementById("exportPDF");
+  if (!exportBtn) return;
+
+  exportBtn.addEventListener("click", () => {
+    exportToCSV(crmDataFiltered || crmData);
+  });
+});
+
 // Model-Year table
 
 function populateModelDropdown(data) {
@@ -351,15 +362,3 @@ function updateModelYearTable(data, selectedModel) {
     `<td><img src="istos-logo.png" alt="ISTOS Logo" class="istos-logo-tiny" /></td>` +
     Object.values(yearCounts).map(c => `<td>${c}</td>`).join("");
 }
-
-
-// Wrap Listener Inside DOM Ready - Extract csv
-
-window.addEventListener("DOMContentLoaded", () => {
-  const exportBtn = document.getElementById("exportPDF");
-  if (!exportBtn) return;
-
-  exportBtn.addEventListener("click", () => {
-    exportToCSV(crmDataFiltered || crmData);
-  });
-});

@@ -171,11 +171,23 @@ async function fetchCRMData() {
     }
 
     crmData = rawData.slice(1); // skip header
+
+    // ✅ All dependent functions go here
     renderTable(crmData);
     updateSummary(crmData);
     populateInstrumentDropdown(crmData);
     setupDropdownListener(crmData);
     setupYearFilter(crmData);
+    populateModelDropdown(crmData);         // ✅ Moved here
+    updateTopModelsTable(crmData);          // ✅ Moved here
+
+    // ✅ Attach dropdown listener here too
+    document.getElementById("modelDropdown").addEventListener("change", e => {
+      const selectedModel = e.target.value;
+      if (selectedModel) {
+        updateModelYearTable(crmData, selectedModel);
+      }
+    });
 
   } catch (error) {
     console.error("❌ Failed to fetch CRM data:", error);

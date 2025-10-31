@@ -1,6 +1,7 @@
 // Step 1: Global Setup and Error Handling
 
 let crmData = [];
+let crmDataFiltered = [];
 
 function showLoadError() {
   const table = document.getElementById("crmTable");
@@ -254,8 +255,7 @@ function setupYearFilter(data) {
   });
 }
 
-// Export to csv or Excel
-
+// ✅ CSV Export
 function exportToCSV(data) {
   if (!data || !Array.isArray(data) || data.length === 0) {
     showToast("⚠️ No data available to export.");
@@ -284,16 +284,14 @@ function exportToCSV(data) {
   showToast("✅ CSV downloaded successfully!");
 }
 
+// ✅ XLSX Export (requires SheetJS)
 function exportToXLSX(data) {
   if (!data || !Array.isArray(data) || data.length === 0) {
     showToast("⚠️ No data available to export.");
     return;
   }
 
-  const sheetData = [
-    ["#", "Customer Name", "Instrument", "Model"]
-  ];
-
+  const sheetData = [["#", "Customer Name", "Instrument", "Model"]];
   data.forEach((row, index) => {
     sheetData.push([
       index + 1,
@@ -306,39 +304,35 @@ function exportToXLSX(data) {
   const worksheet = XLSX.utils.aoa_to_sheet(sheetData);
   const workbook = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(workbook, worksheet, "ISTOS Data");
-
   XLSX.writeFile(workbook, "ISTOS_Equipments.xlsx");
 
   showToast("✅ Excel file downloaded successfully!");
 }
 
+// ✅ Toast Notification
 function showToast(message = "Download complete!") {
   const toast = document.getElementById("toast");
   if (!toast) return;
 
   toast.textContent = message;
   toast.classList.add("show");
-
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 3000);
+  setTimeout(() => toast.classList.remove("show"), 3000);
 }
 
 // ✅ Attach listeners after DOM is ready
-
 window.addEventListener("DOMContentLoaded", () => {
   const csvBtn = document.getElementById("exportCSV");
   const xlsxBtn = document.getElementById("exportXLSX");
 
   if (csvBtn) {
     csvBtn.addEventListener("click", () => {
-      exportToCSV(crmDataFiltered || crmData);
+      exportToCSV(crmDataFiltered.length ? crmDataFiltered : crmData);
     });
   }
 
   if (xlsxBtn) {
     xlsxBtn.addEventListener("click", () => {
-      exportToXLSX(crmDataFiltered || crmData);
+      exportToXLSX(crmDataFiltered.length ? crmDataFiltered : crmData);
     });
   }
 });

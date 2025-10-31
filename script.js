@@ -2,30 +2,43 @@ window.addEventListener("error", e => {
   console.error("Global JS error:", e.message);
 });
 
-// 📊 Render table rows
-
+// 📊 Render table rows with fallback and modular cell rendering
 function renderTable(data) {
   const tbody = document.querySelector("#crmTable tbody");
-  tbody.innerHTML = "";
+  if (!tbody || !Array.isArray(data)) return;
 
+  tbody.innerHTML = "";
   data.forEach(row => {
     const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${row.A}</td>
-      <td>${row.B}</td>
-      <td>${row.C}</td>
-      <td>${row.D}</td>
-      <td>${row.E}</td>
-      <td>${row.F}</td>
-      <td>${excelSerialToDate(row.G)}</td>
-      <td>${excelSerialToDate(row.H)}</td>
-    `;
+    tr.innerHTML = generateRowHTML(row);
     tbody.appendChild(tr);
   });
 }
 
-<td>${row.G ? excelSerialToDate(row.G) : "—"}</td>
-<td>${row.H ? excelSerialToDate(row.H) : "—"}</td>
+// 🧩 Generate HTML for a single row
+function generateRowHTML(row) {
+  return `
+    <td>${sanitize(row.A)}</td>
+    <td>${sanitize(row.B)}</td>
+    <td>${sanitize(row.C)}</td>
+    <td>${sanitize(row.D)}</td>
+    <td>${sanitize(row.E)}</td>
+    <td>${sanitize(row.F)}</td>
+    <td>${formatDate(row.G)}</td>
+    <td>${formatDate(row.H)}</td>
+  `;
+}
+
+// 🧼 Sanitize cell content
+function sanitize(value) {
+  return value ?? "—";
+}
+
+// 📅 Format Excel serial date or fallback
+function formatDate(serial) {
+  return serial ? excelSerialToDate(serial) : "—";
+}
+
 
 // 📦 Update summary cards with animation
 
@@ -33,8 +46,6 @@ function updateSummary(data) {
   const instruments = new Set(data.map(d => d.D).filter(Boolean));
   const customers = new Set(data.map(d => d.B).filter(Boolean));
   const quotations = data.length;
-  const instruments = new Set(data.map(d => d.D));
-  const customers = new Set(data.map(d => d.B));
 
   animateCounter("cardQuotations", quotations);
   animateCounter("cardInstruments", instruments.size);

@@ -498,13 +498,6 @@ tbody tr:hover {
   opacity: 1;
 }
 
-.istos-logo-small {
-  width: 24px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
 .model-selector {
   margin-bottom: 10px;
   text-align: center;
@@ -536,3 +529,9 @@ tbody tr:hover {
   background-color: #f4f4f4;
 }
 
+.istos-logo-small {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 6px;
+}

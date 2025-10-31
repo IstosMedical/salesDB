@@ -382,12 +382,3 @@ function updateTopModelsTable(data) {
   });
 }
 
-if (!Array.isArray(data) || data.length === 0) return;
-
-if (topModels.length === 0) {
-  body.innerHTML = "<tr><td colspan='11'>No top models found</td></tr>";
-  return;
-}
-
-
-

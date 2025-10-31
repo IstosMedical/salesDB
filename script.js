@@ -176,6 +176,12 @@ async function fetchCRMData() {
 window.addEventListener("DOMContentLoaded", fetchCRMData);
 
 
+function updateFilteredSummary(filteredData, totalQuotations) {
+  animateCounter("cardQuotations", totalQuotations); // always show full count
+  animateCounter("cardCustomers", new Set(filteredData.map(d => d.B).filter(Boolean)).size);
+  animateCounter("cardMaharashtra", filteredData.filter(d => d.C?.toLowerCase().includes("maharashtra")).length);
+  animateCounter("cardKarnataka", filteredData.filter(d => d.C?.toLowerCase().includes("karnataka")).length);
+}
 
 
 

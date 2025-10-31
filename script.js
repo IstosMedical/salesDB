@@ -157,8 +157,6 @@ function setupYearFilter(data) {
 
 // Fetch and Initialize
 
-let crmData = []; // ✅ Declare globally if not already
-
 async function fetchCRMData() {
   const url = "https://istosmedical.github.io/salesDB/sales.json";
 

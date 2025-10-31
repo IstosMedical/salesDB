@@ -2,32 +2,6 @@ window.addEventListener("error", e => {
   console.error("Global JS error:", e.message);
 });
 
-
-// 🚀 Render Top 3 Instruments as Badges
-function renderTopInstruments(data) {
-  const badgeContainer = document.getElementById("topInstruments");
-  if (!badgeContainer) return;
-
-  badgeContainer.innerHTML = "";
-
-  const countMap = {};
-  data.forEach(row => {
-    const name = row.D;
-    countMap[name] = (countMap[name] || 0) + 1;
-  });
-
-  const top3 = Object.entries(countMap)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 3);
-
-  top3.forEach(([name, count]) => {
-    const badge = document.createElement("span");
-    badge.className = "top-badge";
-    badge.textContent = `${name} (${count})`;
-    badgeContainer.appendChild(badge);
-  });
-}
-
 // 🚀 Animate Count Display
 function animateCount(id, target) {
   const el = document.getElementById(id);

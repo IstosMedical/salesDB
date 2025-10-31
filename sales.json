@@ -305,7 +305,7 @@
             "B": "Ehrlich Laboratory Pvt Ltd",
             "C": "Tamil Nadu",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -335,7 +335,7 @@
             "B": "Nizam's Institute of Medical Sciences",
             "C": "Andhra Pradesh",
             "D": "Grossing Station",
-            "E": "-",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -715,7 +715,7 @@
             "B": "BGS Global Institute of Medical Science",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "-",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -725,7 +725,7 @@
             "B": "Grindwell Norton Ltd (Saint-gobain)",
             "C": "Karnataka",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "43579",
             "H": "-"
@@ -835,7 +835,7 @@
             "B": "Novel Tech Inc",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "-",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -1025,7 +1025,7 @@
             "B": "B J Wadia Hospital for Children, Parel",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "43683",
             "H": "44778"
@@ -1035,7 +1035,7 @@
             "B": "Novel Tech Inc",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "5 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -1085,7 +1085,7 @@
             "B": "S M Surgipath Lab",
             "C": "Tamil Nadu",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -1165,7 +1165,7 @@
             "B": "Neuberg Anand Reference Laboratory",
             "C": "Karnataka",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -1185,7 +1185,7 @@
             "B": "Bhakti Vedanta Hospital, Mira Road  (A unit of Apoorva Diagnostics, Bangalore)",
             "C": "Maharashtra",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "43804",
             "H": "44535"
@@ -1295,7 +1295,7 @@
             "B": "Formica Laminates, Kalol, Gandhinagar",
             "C": "Gujarat",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "43841",
             "H": "44206"
@@ -1305,7 +1305,7 @@
             "B": "Aster Clinical Lab LLP",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "-",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "43897",
             "H": "44627"
@@ -1425,7 +1425,7 @@
             "B": "Manipal Health Enterprises Pvt ltd",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "8 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -1445,7 +1445,7 @@
             "B": "Aster Clinical Lab LLP",
             "C": "Karnataka",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -1535,7 +1535,7 @@
             "B": "Mangalore Institute of Oncology Pvt Ltd",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "5 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "44216",
             "H": "44946"
@@ -1685,7 +1685,7 @@
             "B": "Sathiya Sai Lab",
             "C": "Tamil Nadu",
             "D": "Grossing Station",
-            "E": "Table top",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -1735,7 +1735,7 @@
             "B": "Shri B.M.Patil Medical College Hospital & research Centre, Bijapur, ",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "9 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "44367",
             "H": "45463"
@@ -1775,7 +1775,7 @@
             "B": "Bharati vidyapeeth Medical College, Katraj",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "44322",
             "H": "45417"
@@ -1785,7 +1785,7 @@
             "B": "Bharati vidyapeeth Medical College, Katraj",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "44322",
             "H": "45417"
@@ -1885,7 +1885,7 @@
             "B": "Nimhans",
             "C": "Karnataka",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "44062",
             "H": "-"
@@ -1925,7 +1925,7 @@
             "B": "KLES Dr Prabhakar Kore Hospital & Mrc Belagavi",
             "C": "Karnataka",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -1995,7 +1995,7 @@
             "B": "Symbiosis Medical College of Women, Lavale",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "44476",
             "H": "45205"
@@ -2005,7 +2005,7 @@
             "B": "Green Apple Medical Systems",
             "C": "Andhra Pradesh",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -2025,7 +2025,7 @@
             "B": "Histopia Lab, Borivali",
             "C": "Maharashtra",
             "D": "Grossing Station",
-            "E": "labgross",
+            "E": "Labgross",
             "F": "Istos",
             "G": "44501",
             "H": "45231"
@@ -2315,7 +2315,7 @@
             "B": "Karkinos Healthcare Private Llimited",
             "C": "Kerala",
             "D": "Grossing Station",
-            "E": "5 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -2325,7 +2325,7 @@
             "B": "Karkinos Healthcare Private Llimited",
             "C": "Kerala",
             "D": "Grossing Station",
-            "E": "5 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -2415,7 +2415,7 @@
             "B": "Bangalore Medical system (kidwai)",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "44774",
             "H": "45870"
@@ -2495,7 +2495,7 @@
             "B": "Bangalore Medical system (kidwai)",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "-",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -2515,7 +2515,7 @@
             "B": "AMS Medical Systems",
             "C": "Kerala",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -2525,7 +2525,7 @@
             "B": "United Medical Centre",
             "C": "Kerala",
             "D": "Grossing Station",
-            "E": "4.5 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "44647",
             "H": "45743"
@@ -2705,7 +2705,7 @@
             "B": "Jehangir Hospital",
             "C": "Maharashtra",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "44721",
             "H": "45451"
@@ -2765,7 +2765,7 @@
             "B": "Medgenome Labs Limited",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "5 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "44742",
             "H": "45107"
@@ -2775,7 +2775,7 @@
             "B": "Manipal Hospitals Private Limited(KMC)",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "44769",
             "H": "45865"
@@ -2785,7 +2785,7 @@
             "B": "Manipal Hospitals Private Limited(KMC)",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "44769",
             "H": "45865"
@@ -2945,7 +2945,7 @@
             "B": "Deenanath Mangeshkar Hospital, Erandwane",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "44791",
             "H": "45521"
@@ -2995,7 +2995,7 @@
             "B": "Neuberg Supratech Laboratory, Vidyavihar",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "44832",
             "H": "45562"
@@ -3115,7 +3115,7 @@
             "B": "Aster Clinical Lab LLP",
             "C": "Kerala",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -3125,7 +3125,7 @@
             "B": "Karkinos Healthcare Pvt Ltd, Turbhe",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "44923",
             "H": "45653"
@@ -3135,7 +3135,7 @@
             "B": "Aster Clinical Lab LLP",
             "C": "Kerala",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -3165,7 +3165,7 @@
             "B": "Karkinos Healthcare Private Llimited",
             "C": "Kerala",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -3235,7 +3235,7 @@
             "B": "B J Wadia Hospital for Children, Parel",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -3305,7 +3305,7 @@
             "B": "Karkinos Healthcare ",
             "C": "Tamil Nadu",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45006",
             "H": "-"
@@ -3395,7 +3395,7 @@
             "B": "Karkinos Healthcare Pvt Ltd",
             "C": "Assam",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45063",
             "H": "-"
@@ -3405,7 +3405,7 @@
             "B": "Karkinos Healthcare Pvt Ltd",
             "C": "Assam",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45063",
             "H": "-"
@@ -3535,7 +3535,7 @@
             "B": "Shri atal bihari vajpayee medical college and research institute",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "9 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45149",
             "H": "46245"
@@ -3625,7 +3625,7 @@
             "B": "SIR H N Hospital, Charni Road",
             "C": "Maharashtra",
             "D": "Grossing Station",
-            "E": "labgross",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45194",
             "H": "47020"
@@ -3655,7 +3655,7 @@
             "B": "Manipal Academy of higher education",
             "C": "Karnataka",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -3665,7 +3665,7 @@
             "B": "Novel Tech Inc",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "5 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -3685,7 +3685,7 @@
             "B": "Manipal Academy of higher education",
             "C": "Karnataka",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "45198",
             "H": "-"
@@ -3755,7 +3755,7 @@
             "B": "Noble Hospital, Hadapsar",
             "C": "Maharashtra",
             "D": "Grossing Station",
-            "E": "labgross",
+            "E": "Labgross",
             "F": "istos",
             "G": "45217",
             "H": "45947"
@@ -3815,7 +3815,7 @@
             "B": "Dr. Balabhai Nanavati Hospital, Vile Parle",
             "C": "Maharashtra",
             "D": "Grossing Station",
-            "E": "labgross",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45299",
             "H": "46029"
@@ -3835,7 +3835,7 @@
             "B": "N M Medical, Borivali",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "44990",
             "H": "-"
@@ -3855,7 +3855,7 @@
             "B": "Novel Tech Inc",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "5 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -3925,7 +3925,7 @@
             "B": "Deenanath Mangeshkar Hospital, Erandwane",
             "C": "Maharashtra",
             "D": "Tissue Processor",
-            "E": "eftp plus",
+            "E": "EFTP Plus",
             "F": "intelsint",
             "G": "45416",
             "H": "46145"
@@ -4015,7 +4015,7 @@
             "B": "Novel Tech Inc",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -4055,7 +4055,7 @@
             "B": "Aster Aadhar Hospital",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "45483",
             "H": "46577"
@@ -4095,7 +4095,7 @@
             "B": "QXL Diangostics",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "5 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45488",
             "H": "46583"
@@ -4255,7 +4255,7 @@
             "B": "Novel tech Inc",
             "C": "Karnataka",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -4265,7 +4265,7 @@
             "B": "Meitra hospital",
             "C": "Kerala",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "45534",
             "H": "-"
@@ -4345,7 +4345,7 @@
             "B": "Mysore Institue of medical science",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45695",
             "H": "46424"
@@ -4525,7 +4525,7 @@
             "B": "Haveri Institute of Medical Science",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45809",
             "H": "46905"
@@ -4585,7 +4585,7 @@
             "B": "Malti Vasant Heart Trust (Kokilabean dhirubai hospital)",
             "C": "Maharashtra",
             "D": "Grossing Station",
-            "E": "8 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -4675,7 +4675,7 @@
             "B": "DR. VAISHAMPAYAN GOVERNMENT MEDICAL COLLEGE",
             "C": "Maharashtra",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45794",
             "H": "46524"
@@ -4685,7 +4685,7 @@
             "B": "Sri Devaraj Urs Academy of Higher Education and Research",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -4715,7 +4715,7 @@
             "B": "Manipal Academy of higher education",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45826",
             "H": "46922"
@@ -4765,7 +4765,7 @@
             "B": "Bharati Vidyapeeth deemed University",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "45867",
             "H": "-"
@@ -4785,7 +4785,7 @@
             "B": "MGM NEW BOMBAY HOSPITAL",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "-",
             "H": "-"
@@ -5195,7 +5195,7 @@
             "B": "Centre for Oncopathology (Tata Trust), Wadala ",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "43735",
             "H": "44466"
@@ -5385,7 +5385,7 @@
             "B": "Kokilaben Dhirubhai Ambani Hospital, Andheri",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "45182",
             "H": "46277"
@@ -5735,7 +5735,7 @@
             "B": "Sujith Joshi",
             "C": "Maharashtra",
             "D": "Grossing Station",
-            "E": "4 Feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -5745,7 +5745,7 @@
             "B": "Noble Hospital, Hadapsar",
             "C": "Maharashtra",
             "D": "Formaldehydemeter",
-            "E": "HtV-M",
+            "E": "HTV-M",
             "F": "PPM",
             "G": "45017",
             "H": "45747"
@@ -5845,7 +5845,7 @@
             "B": "Alexis Hospital, Mankapur",
             "C": "Maharashtra",
             "D": "Grossing Station",
-            "E": "Labgross (Benchtop)",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -6025,7 +6025,7 @@
             "B": "Novel Tech Inc",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "9 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -6045,7 +6045,7 @@
             "B": "Gulbarga institute of medical science",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -6085,7 +6085,7 @@
             "B": "Vydehi Institute of Medical Sciences and Research Centre",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "-",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -6225,7 +6225,7 @@
             "B": "Kodagu Institute of Medical Science",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "-",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"
@@ -6245,7 +6245,7 @@
             "B": "Shiva and shiva orthopaedic Hospital Pvt Ltd (Sparsh Hospital)",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45874",
             "H": "46970"
@@ -6385,7 +6385,7 @@
             "B": "SSTR Bharath Hospital & Institute of Oncology",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "LG 6",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "45894",
             "H": "46623"
@@ -6435,7 +6435,7 @@
             "B": "Manipal Health Enterprises Pvt Ltd",
             "C": "Karnataka",
             "D": "Grossing Station",
-            "E": "6 feet",
+            "E": "Labgross",
             "F": "ISTOS",
             "G": "-",
             "H": "-"

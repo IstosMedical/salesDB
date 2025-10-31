@@ -504,3 +504,35 @@ tbody tr:hover {
   display: block;
   margin: 0 auto;
 }
+
+.model-selector {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#modelYearTable th,
+#modelYearTable td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.top-models-table {
+  margin-top: 20px;
+}
+
+#topModelsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#topModelsTable th,
+#topModelsTable td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+#topModelsTable thead {
+  background-color: #f4f4f4;
+}
+

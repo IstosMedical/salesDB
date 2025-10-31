@@ -155,45 +155,41 @@ function setupYearFilter(data) {
   });
 }
 
-// Fetch and Initialize
-
-async function fetchCRMData() {
-  const url = "https://istosmedical.github.io/salesDB/sales.json";
-
-  try {
-    const response = await fetch(url);
-    const json = await response.json();
-    const rawData = json.sales || json;
-
-    if (!Array.isArray(rawData) || rawData.length < 2) {
-      showLoadError();
-      return;
-    }
-
-    crmData = rawData.slice(1); // skip header
-
-    renderTable(crmData);
-    updateSummary(crmData);
-    populateInstrumentDropdown(crmData);
-    setupDropdownListener(crmData);
-    setupYearFilter(crmData);
-    populateModelDropdown(crmData); // ✅ still needed
-
-    document.getElementById("modelDropdown").addEventListener("change", e => {
-      const selectedModel = e.target.value;
-      if (selectedModel) {
-        updateModelYearTable(crmData, selectedModel);
+    // Fetch and Initialize
+    
+    async function fetchCRMData() {
+      const url = "https://istosmedical.github.io/salesDB/sales.json";
+    
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        const rawData = json.sales || json;
+    
+        if (!Array.isArray(rawData) || rawData.length < 2) {
+          showLoadError();
+          return;
+        }
+    
+        crmData = rawData.slice(1); // ✅ assign data
+        renderTable(crmData);       // ✅ render instrument records
+        updateSummary(crmData);
+        populateInstrumentDropdown(crmData);
+        setupDropdownListener(crmData);
+        setupYearFilter(crmData);
+        populateModelDropdown(crmData);
+    
+        document.getElementById("modelDropdown").addEventListener("change", e => {
+          const selectedModel = e.target.value;
+          if (selectedModel) {
+            updateModelYearTable(crmData, selectedModel);
+          }
+        });
+    
+      } catch (error) {
+        console.error("❌ Failed to fetch CRM data:", error);
+        showLoadError();
       }
-    });
-
-  } catch (error) {
-    console.error("❌ Failed to fetch CRM data:", error);
-    showLoadError();
-  }
-}
-
-window.addEventListener("DOMContentLoaded", fetchCRMData);
-
+    }
 
 // First card always show full count
 
@@ -360,3 +356,5 @@ window.addEventListener("DOMContentLoaded", () => {
     exportToCSV(crmDataFiltered || crmData);
   });
 });
+
+window.addEventListener("DOMContentLoaded", fetchCRMData);

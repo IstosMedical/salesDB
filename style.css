@@ -532,3 +532,13 @@ tbody tr:hover {
   vertical-align: middle;
 }
 
+.missing-badge {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 8px 12px;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 12px;
+  display: inline-block;
+}

@@ -202,7 +202,7 @@ function setupYearFilter(data) {
   if (!dropdown) return;
 
   dropdown.addEventListener("change", e => {
-    const selectedYear = e.target.value;
+    const selectedYear = Number(e.target.value);
     if (!selectedYear) {
       renderTable(data);
       updateSummary(data);
@@ -213,24 +213,92 @@ function setupYearFilter(data) {
       const doi = row.G;
       if (!doi) return false;
 
-      let date;
+      let year;
+
       if (!isNaN(doi)) {
+        // Excel serial date
         const baseDate = new Date(1900, 0, 1);
         baseDate.setDate(baseDate.getDate() + (doi - 1));
-        date = baseDate;
+        year = baseDate.getFullYear();
       } else if (doi.includes("/")) {
-        const [dd, mm, yyyy] = doi.split("/");
-        date = new Date(`${yyyy}-${mm}-${dd}`);
-      } else {
-        return false;
+        const parts = doi.split("/");
+        if (parts.length === 3) {
+          let [dd, mm, yy] = parts;
+          yy = yy.length === 2 ? `20${yy}` : yy; // assume 20xx for 2-digit years
+          const parsed = new Date(`${yy}-${mm}-${dd}`);
+          year = parsed.getFullYear();
+        }
       }
 
-      return date.getFullYear() === Number(selectedYear);
+      return year === selectedYear;
     });
 
     renderTable(filtered);
     updateSummary(filtered);
   });
+}
+
+// Export to PDF
+
+
+document.getElementById("exportPDF").addEventListener("click", () => {
+  exportFilteredToPDF(crmDataFiltered || crmData);
+});
+
+function exportFilteredToPDF(data) {
+  if (!data || !Array.isArray(data) || data.length === 0) {
+    alert("No data to export.");
+    return;
+  }
+
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  let y = 20;
+  let count = 1;
+
+  // Group by customer name + city
+  const grouped = {};
+  data.forEach(row => {
+    const key = `${row.B}, ${row.C}`;
+    if (!grouped[key]) grouped[key] = [];
+    grouped[key].push(row.E); // model
+  });
+
+  doc.setFontSize(14);
+  doc.text("User's List of Equipments", 15, y);
+  y += 10;
+
+  Object.entries(grouped).forEach(([customer, models]) => {
+    if (y > 270) {
+      doc.addPage();
+      y = 20;
+    }
+
+    doc.setFontSize(12);
+    doc.text(`${count}. ${customer}`, 15, y);
+    y += 8;
+
+    const modelCount = {};
+    models.forEach(model => {
+      if (!model) return;
+      modelCount[model] = (modelCount[model] || 0) + 1;
+    });
+
+    Object.entries(modelCount).forEach(([model, qty]) => {
+      if (y > 270) {
+        doc.addPage();
+        y = 20;
+      }
+      doc.setFontSize(11);
+      doc.text(`- ${model} × ${qty} No${qty > 1 ? "s" : ""}.`, 20, y);
+      y += 6;
+    });
+
+    y += 4;
+    count++;
+  });
+
+  doc.save("Filtered_Installations.pdf");
 }
 
 

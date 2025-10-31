@@ -91,14 +91,12 @@ function renderInstrumentGroups(groups) {
   container.innerHTML = "";
 
   const groupColors = {
-    Microtomes: "#a67b5b",
-    Microtome Ancillary Equipment: "#d1bea8",
-    Bone Band Saw: "#deb887",
-    Cryo: "#c3b091",
-    Tissue Processors: "#bc987e ",
-    Embedding Center: "#987456",
-    Imaging: "#856d4d",
-    Grossing: "#c2b280 ",    
+    Microtomes: "#1976d2",
+    Cryo: "#388e3c",
+    Processors: "#f57c00",
+    Imaging: "#6a1b9a",
+    Workstations: "#c2185b",
+    Others: "#455a64"
   };
 
   Object.entries(groups).forEach(([groupName, instruments]) => {
@@ -139,6 +137,7 @@ function renderInstrumentGroups(groups) {
     container.appendChild(groupDiv);
   });
 }
+
 
 // 🚀 date column conversion
 

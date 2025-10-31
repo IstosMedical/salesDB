@@ -503,35 +503,32 @@ tbody tr:hover {
   text-align: center;
 }
 
-#modelYearTable th,
-#modelYearTable td {
-  text-align: center;
-  vertical-align: middle;
-}
-
-.top-models-table {
-  margin-top: 20px;
-}
-
-#topModelsTable {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-#topModelsTable th,
-#topModelsTable td {
-  text-align: center;
-  padding: 8px;
-  border: 1px solid #ccc;
-}
-
-#topModelsTable thead {
-  background-color: #f4f4f4;
-}
-
 .istos-logo-small {
   width: 20px;
   height: auto;
   vertical-align: middle;
   margin-right: 6px;
 }
+
+.istos-dropdown {
+  width: 100%;
+  font-size: 14px;
+  padding: 4px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.istos-logo-tiny {
+  width: 20px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#modelYearTable th,
+#modelYearTable td {
+  text-align: center;
+  vertical-align: middle;
+}
+

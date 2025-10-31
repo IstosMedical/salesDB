@@ -291,6 +291,103 @@ function showToast(message = "Download complete!") {
   showToast("✅ CSV downloaded successfully!");
 
 
+updateModelYearTable(data, selected);
+
+// Model-Year Table
+
+function updateModelYearTable(data, selectedModel) {
+  const row = document.getElementById("modelYearRow");
+  const label = document.getElementById("selectedModel");
+  if (!row || !label) return;
+
+  label.textContent = selectedModel;
+
+  const yearCounts = {};
+  for (let y = 2016; y <= 2025; y++) yearCounts[y] = 0;
+
+  data.forEach(row => {
+    if (row.E?.trim().toLowerCase() === selectedModel.toLowerCase()) {
+      const doi = row.G;
+      let year;
+      if (!isNaN(doi)) {
+        const baseDate = new Date(1900, 0, 1);
+        baseDate.setDate(baseDate.getDate() + (doi - 1));
+        year = baseDate.getFullYear();
+      } else if (doi?.includes("/")) {
+        const parts = doi.split("/");
+        if (parts.length === 3) {
+          let yy = parts[2];
+          year = yy.length === 2 ? Number(`20${yy}`) : Number(yy);
+        }
+      }
+      if (yearCounts[year] !== undefined) yearCounts[year]++;
+    }
+  });
+
+  row.innerHTML = `<td>${selectedModel}</td>` + Object.values(yearCounts).map(c => `<td>${c}</td>`).join("");
+}
+
+updateTopModelsTable(crmData);
+
+// Generate Top 5 Model Table
+
+function updateTopModelsTable(data) {
+  const body = document.getElementById("topModelsBody");
+  if (!body) return;
+
+  const modelYearMap = {};
+
+  data.forEach(row => {
+    const model = row.E;
+    if (!model) return;
+
+    let year;
+    const doi = row.G;
+    if (!isNaN(doi)) {
+      const baseDate = new Date(1900, 0, 1);
+      baseDate.setDate(baseDate.getDate() + (doi - 1));
+      year = baseDate.getFullYear();
+    } else if (doi?.includes("/")) {
+      const parts = doi.split("/");
+      if (parts.length === 3) {
+        let yy = parts[2];
+        year = yy.length === 2 ? Number(`20${yy}`) : Number(yy);
+      }
+    }
+
+    if (year >= 2016 && year <= 2025) {
+      if (!modelYearMap[model]) modelYearMap[model] = {};
+      modelYearMap[model][year] = (modelYearMap[model][year] || 0) + 1;
+    }
+  });
+
+  const topModels = Object.entries(modelYearMap)
+    .map(([model, years]) => ({
+      model,
+      total: Object.values(years).reduce((a, b) => a + b, 0),
+      years
+    }))
+    .sort((a, b) => b.total - a.total)
+    .slice(0, 5);
+
+  body.innerHTML = "";
+  topModels.forEach((entry, i) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>Top ${i + 1} (${entry.model})</td>` +
+      Array.from({ length: 10 }, (_, idx) => {
+        const y = 2016 + idx;
+        return `<td>${entry.years[y] || 0}</td>`;
+      }).join("");
+    body.appendChild(row);
+  });
+}
+
+if (!Array.isArray(data) || data.length === 0) return;
+
+if (topModels.length === 0) {
+  body.innerHTML = "<tr><td colspan='11'>No top models found</td></tr>";
+  return;
+}
 
 
 

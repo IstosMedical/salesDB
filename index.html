@@ -88,6 +88,50 @@
 
     <div id="toast" class="toast">✅ CSV downloaded successfully!</div>
 
+      <!-- 🔹 Model-wise Year Count Table -->
+    
+    <section class="model-year-table">
+      <h3>📊 Year-wise Count for Selected Model</h3>
+      <table id="modelYearTable">
+        <thead>
+          <tr>
+            <th>Choose Instrument</th>
+            <th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th>
+            <th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="modelYearRow">
+            <td id="selectedModel">—</td>
+            <td colspan="10">Select a model to view counts</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- 🔹 Top 5 Performing Models Table -->
+    
+    <section class="top-models-table">
+      <img src="istos-logo.png" alt="ISTOS Logo" class="istos-logo-heading" />
+      <table id="topModelsTable">
+        <thead>
+          <tr>
+            <th>ISTOS</th>
+            <th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th>
+            <th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th>
+          </tr>
+        </thead>
+        <tbody id="topModelsBody">
+          <tr><td>Top 1</td></tr>
+          <tr><td>Top 2</td></tr>
+          <tr><td>Top 3</td></tr>
+          <tr><td>Top 4</td></tr>
+          <tr><td>Top 5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+
     <!-- 🔹 Data Table -->
     <section class="data-table">
       <h2>📑 Instrument Records</h2>

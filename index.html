@@ -90,13 +90,20 @@
 
       <!-- 🔹 Model-wise Year Count Table -->
     
+    <!-- 🔹 Model-wise Year Count Table -->
+    
     <section class="model-year-table">
+      <div class="model-selector">
+        <label for="modelDropdown">🔽 Choose Model:</label>
+        <select id="modelDropdown" class="istos-dropdown">
+          <option value="">-- Select Model --</option>
+        </select>
+      </div>
+    
       <table id="modelYearTable">
         <thead>
           <tr>
-            <th>
-              <img src="istos-logo.png" alt="ISTOS Logo" class="istos-logo-small" />
-            </th>
+            <th>Model</th>
             <th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th>
             <th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th>
           </tr>
@@ -114,11 +121,10 @@
     <!-- 🔹 Top 5 Performing Models Table -->
     
     <section class="top-models-table">
-      <img src="istos-logo.png" alt="ISTOS Logo" class="istos-logo-heading" />
       <table id="topModelsTable">
         <thead>
           <tr>
-            <th>ISTOS</th>
+            <th>Top Models</th>
             <th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th>
             <th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th>
           </tr>
@@ -132,7 +138,6 @@
         </tbody>
       </table>
     </section>
-
 
     <!-- 🔹 Data Table -->
     <section class="data-table">

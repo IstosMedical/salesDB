@@ -386,6 +386,10 @@ if (yearDropdown) {
 
 // 🚀 Fetch and initialize CRM data from GitHub Pages
 
+// ✅ Attach listener outside the function
+window.addEventListener("DOMContentLoaded", fetchCRMData);
+
+// ✅ Define the async function
 async function fetchCRMData() {
   const url = "https://istosmedical.github.io/salesDB/sales.json";
 
@@ -393,7 +397,7 @@ async function fetchCRMData() {
     const response = await fetch(url);
     const json = await response.json();
 
-    // Validate and extract data
+    // ✅ Validate and extract data
     const rawData = json.sales || json;
     if (!Array.isArray(rawData) || rawData.length < 2) {
       console.warn("CRM data is empty or malformed.");
@@ -402,8 +406,22 @@ async function fetchCRMData() {
       return;
     }
 
-    // Skip header row
-    crmData = rawData.slice(1);
+    // ✅ Assign and render
+    crmData = rawData.slice(1); // skip header row
+    renderTable(crmData);
+    updateSummary(crmData);
+    const instrumentGroups = groupInstruments(crmData);
+    renderInstrumentGroups(instrumentGroups);
+    populateInstrumentDropdown(crmData);
+    animateCards();
+
+  } catch (error) {
+    console.error("❌ Failed to fetch CRM data:", error);
+    document.getElementById("crmTable").innerHTML =
+      "<tr><td colspan='8'>Unable to load data</td></tr>";
+  }
+}
+
 
     // ✅ Render dashboard components
     renderTable(crmData);

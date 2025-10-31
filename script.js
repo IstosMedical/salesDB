@@ -178,8 +178,7 @@ async function fetchCRMData() {
     populateInstrumentDropdown(crmData);
     setupDropdownListener(crmData);
     setupYearFilter(crmData);
-    populateModelDropdown(crmData);         // ✅ Moved here
-    updateTopModelsTable(crmData);          // ✅ Moved here
+    populateModelDropdown(crmData);         // ✅ Moved here  
 
     // ✅ Attach dropdown listener here too
     document.getElementById("modelDropdown").addEventListener("change", e => {

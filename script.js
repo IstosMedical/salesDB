@@ -184,19 +184,30 @@ function animateCounter(id, target) {
 
 // 🧠 Render and wire instrument tags
 
-function renderInstrumentList(list) {
+function renderInstrumentList(matches) {
   const container = document.getElementById("instrumentList");
+  if (!container) return;
+
   container.innerHTML = "";
 
-  list.forEach(name => {
-    const tag = document.createElement("button");
+  matches.forEach(name => {
+    const count = crmData.filter(row =>
+      row.D?.trim().toLowerCase() === name.toLowerCase()
+    ).length;
+
+    const tag = document.createElement("span");
     tag.className = "instrument-tag";
-    tag.textContent = name;
+    tag.textContent = `${name} (${count})`;
 
     tag.addEventListener("click", () => {
-      const filtered = crmData.filter(row => row.D.toLowerCase() === name.toLowerCase());
+      const filtered = crmData.filter(row =>
+        row.D?.trim().toLowerCase() === name.toLowerCase()
+      );
       renderTable(filtered);
-      updateSummary(filtered);      
+      updateSummary(filtered);
+      updateStatewiseCounts(filtered);
+      document.getElementById("instrumentCount").textContent =
+        `🔢 Total Installations: ${filtered.length}`;
     });
 
     container.appendChild(tag);
@@ -206,28 +217,16 @@ function renderInstrumentList(list) {
 // 🔍 Live search for instrument tags
 
 function setupInstrumentSearch() {
-  const searchInput = document.getElementById("instrumentSearch");
-  const clearBtn = document.getElementById("clearSearch");
+  const input = document.getElementById("instrumentSearch");
+  if (!input) return;
 
-  if (searchInput) {
-    searchInput.addEventListener("input", e => {
-      const query = e.target.value.toLowerCase();
-      const filtered = fullInstrumentList.filter(item =>
-        item.toLowerCase().includes(query)
-      );
-      renderInstrumentList(filtered);
-    });
-  }
-
-  if (clearBtn) {
-    clearBtn.addEventListener("click", () => {
-      if (searchInput) searchInput.value = "";
-      renderTable(crmData);
-      updateSummary(crmData);      
-      const yearDropdown = document.getElementById("yearDropdown");
-      if (yearDropdown) yearDropdown.value = "";
-    });
-  }
+  input.addEventListener("input", () => {
+    const query = input.value.trim().toLowerCase();
+    const matches = fullInstrumentList.filter(name =>
+      name.toLowerCase().includes(query)
+    );
+    renderInstrumentList(matches);
+  });
 }
 
 // Statewise sales

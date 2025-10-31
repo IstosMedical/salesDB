@@ -258,7 +258,7 @@ function setupYearFilter(data) {
 
 function exportToCSV(data) {
   if (!data || !Array.isArray(data) || data.length === 0) {
-    alert("No data to export.");
+    showToast("⚠️ No data available to export.");
     return;
   }
 
@@ -277,12 +277,39 @@ function exportToCSV(data) {
   const link = document.createElement("a");
   link.href = URL.createObjectURL(blob);
   link.download = "ISTOS_Equipments.csv";
-  link.style.display = "none";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 
   showToast("✅ CSV downloaded successfully!");
+}
+
+function exportToXLSX(data) {
+  if (!data || !Array.isArray(data) || data.length === 0) {
+    showToast("⚠️ No data available to export.");
+    return;
+  }
+
+  const sheetData = [
+    ["#", "Customer Name", "Instrument", "Model"]
+  ];
+
+  data.forEach((row, index) => {
+    sheetData.push([
+      index + 1,
+      row.B || "",
+      row.D || "",
+      row.E || ""
+    ]);
+  });
+
+  const worksheet = XLSX.utils.aoa_to_sheet(sheetData);
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "ISTOS Data");
+
+  XLSX.writeFile(workbook, "ISTOS_Equipments.xlsx");
+
+  showToast("✅ Excel file downloaded successfully!");
 }
 
 function showToast(message = "Download complete!") {
@@ -297,15 +324,23 @@ function showToast(message = "Download complete!") {
   }, 3000);
 }
 
-// Wrap Listener Inside DOM Ready - Extract csv
+// ✅ Attach listeners after DOM is ready
 
 window.addEventListener("DOMContentLoaded", () => {
-  const exportBtn = document.getElementById("exportPDF");
-  if (!exportBtn) return;
+  const csvBtn = document.getElementById("exportCSV");
+  const xlsxBtn = document.getElementById("exportXLSX");
 
-  exportBtn.addEventListener("click", () => {
-    exportToCSV(crmDataFiltered || crmData);
-  });
+  if (csvBtn) {
+    csvBtn.addEventListener("click", () => {
+      exportToCSV(crmDataFiltered || crmData);
+    });
+  }
+
+  if (xlsxBtn) {
+    xlsxBtn.addEventListener("click", () => {
+      exportToXLSX(crmDataFiltered || crmData);
+    });
+  }
 });
 
 // Model-Year table

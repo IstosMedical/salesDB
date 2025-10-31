@@ -1,3 +1,10 @@
+let crmData = [];
+
+function showLoadError() {
+  document.getElementById("crmTable").innerHTML =
+    "<tr><td colspan='8'>Unable to load data</td></tr>";
+}
+
 window.addEventListener("error", e => {
   console.error("Global JS error:", e.message);
 });

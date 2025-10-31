@@ -240,7 +240,6 @@ function setupYearFilter(data) {
 
 // Export to csv or Excel
 
-
 document.getElementById("exportPDF").addEventListener("click", () => {
   exportToCSV(crmDataFiltered || crmData);
 });
@@ -271,6 +270,26 @@ function exportToCSV(data) {
   link.click();
   document.body.removeChild(link);
 }
+
+// Toast Logic
+
+function showToast(message = "Download complete!") {
+  const toast = document.getElementById("toast");
+  if (!toast) return;
+
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+
+// Trigger Toast After CSV Download
+
+  document.body.removeChild(link);
+  showToast("✅ CSV downloaded successfully!");
+
 
 
 

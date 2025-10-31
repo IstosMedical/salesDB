@@ -240,10 +240,6 @@ function setupYearFilter(data) {
 
 // Export to csv or Excel
 
-document.getElementById("exportPDF").addEventListener("click", () => {
-  exportToCSV(crmDataFiltered || crmData);
-});
-
 function exportToCSV(data) {
   if (!data || !Array.isArray(data) || data.length === 0) {
     alert("No data to export.");
@@ -269,9 +265,9 @@ function exportToCSV(data) {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-}
 
-// Toast Logic
+  showToast("✅ CSV downloaded successfully!");
+}
 
 function showToast(message = "Download complete!") {
   const toast = document.getElementById("toast");
@@ -284,12 +280,6 @@ function showToast(message = "Download complete!") {
     toast.classList.remove("show");
   }, 3000);
 }
-
-// Trigger Toast After CSV Download
-
-  document.body.removeChild(link);
-  showToast("✅ CSV downloaded successfully!");
-
 
 // Model-Year table
 
@@ -348,3 +338,15 @@ function updateModelYearTable(data, selectedModel) {
     `<td><img src="istos-logo.png" alt="ISTOS Logo" class="istos-logo-tiny" /></td>` +
     Object.values(yearCounts).map(c => `<td>${c}</td>`).join("");
 }
+
+
+// Wrap Listener Inside DOM Ready - Extract csv
+
+window.addEventListener("DOMContentLoaded", () => {
+  const exportBtn = document.getElementById("exportPDF");
+  if (!exportBtn) return;
+
+  exportBtn.addEventListener("click", () => {
+    exportToCSV(crmDataFiltered || crmData);
+  });
+});

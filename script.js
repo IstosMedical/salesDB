@@ -255,13 +255,14 @@ function setupYearFilter(data) {
   });
 }
 
+// Export to csv
+
 function exportToCSV(data) {
   if (!data || !Array.isArray(data) || data.length === 0) {
     showToast("⚠️ No data available to export.");
     return;
   }
 
-  // Fixed column widths
   const widths = {
     serial: 4,
     name: 70,
@@ -271,11 +272,14 @@ function exportToCSV(data) {
 
   const pad = (text, width) => {
     const str = text ? text.toString() : "";
-    return `"${str.padEnd(width, " ")}"`; // pad with spaces
+    const space = Math.max(0, width - str.length);
+    const left = Math.floor(space / 2);
+    const right = space - left;
+    return `"${" ".repeat(left) + str + " ".repeat(right)}"`; // simulate center
   };
 
   let csv = "User's List of ISTOS Equipments\n";
-  csv += "#s,Customer Name,Instrument,Model\n";
+  csv += `${pad("#s", widths.serial)},${pad("Customer Name", widths.name)},${pad("Instrument", widths.instrument)},${pad("Model", widths.model)}\n`;
 
   data.forEach((row, index) => {
     const serial = pad(index + 1, widths.serial);
@@ -293,8 +297,9 @@ function exportToCSV(data) {
   link.click();
   document.body.removeChild(link);
 
-  showToast("✅ CSV downloaded with padded columns!");
+  showToast("✅ CSV downloaded with padded header!");
 }
+
 
 // ✅ XLSX Export (requires SheetJS)
 
@@ -316,19 +321,31 @@ function exportToXLSX(data) {
 
   const worksheet = XLSX.utils.aoa_to_sheet(sheetData);
 
-  // Apply fixed column widths
+  // ✅ Apply fixed column widths
   worksheet['!cols'] = [
-    { wch: 4 },   // #s
-    { wch: 70 },  // Customer Name
-    { wch: 48 },  // Instrument
-    { wch: 20 }   // Model
+    { wch: 4 },
+    { wch: 70 },
+    { wch: 48 },
+    { wch: 20 }
   ];
+
+  // ✅ Style header row
+  const headerStyle = {
+    font: { bold: true },
+    alignment: { horizontal: "center", vertical: "center" }
+  };
+
+  ["A1", "B1", "C1", "D1"].forEach(cell => {
+    if (worksheet[cell]) {
+      worksheet[cell].s = headerStyle;
+    }
+  });
 
   const workbook = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(workbook, worksheet, "ISTOS Data");
   XLSX.writeFile(workbook, "ISTOS_Equipments.xlsx");
 
-  showToast("✅ Excel file downloaded with fixed column widths!");
+  showToast("✅ Excel file downloaded with styled header!");
 }
 
 // ✅ Toast Notification

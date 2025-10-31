@@ -172,15 +172,13 @@ async function fetchCRMData() {
 
     crmData = rawData.slice(1); // skip header
 
-    // ✅ All dependent functions go here
     renderTable(crmData);
     updateSummary(crmData);
     populateInstrumentDropdown(crmData);
     setupDropdownListener(crmData);
     setupYearFilter(crmData);
-    populateModelDropdown(crmData);         // ✅ Moved here  
+    populateModelDropdown(crmData); // ✅ still needed
 
-    // ✅ Attach dropdown listener here too
     document.getElementById("modelDropdown").addEventListener("change", e => {
       const selectedModel = e.target.value;
       if (selectedModel) {
@@ -195,6 +193,7 @@ async function fetchCRMData() {
 }
 
 window.addEventListener("DOMContentLoaded", fetchCRMData);
+
 
 // First card always show full count
 

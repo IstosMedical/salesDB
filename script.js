@@ -321,9 +321,6 @@ document.getElementById("modelDropdown").addEventListener("change", e => {
   }
 });
 
-updateTopModelsTable(crmData);
-
-
 function updateModelYearTable(data, selectedModel) {
   const row = document.getElementById("modelYearRow");
   if (!row) return;

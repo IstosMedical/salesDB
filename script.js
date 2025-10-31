@@ -238,68 +238,41 @@ function setupYearFilter(data) {
   });
 }
 
-// Export to PDF
+// Export to csv or Excel
 
 
 document.getElementById("exportPDF").addEventListener("click", () => {
-  exportFilteredToPDF(crmDataFiltered || crmData);
+  exportToCSV(crmDataFiltered || crmData);
 });
 
-function exportFilteredToPDF(data) {
+function exportToCSV(data) {
   if (!data || !Array.isArray(data) || data.length === 0) {
     alert("No data to export.");
     return;
   }
 
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
-  let y = 20;
-  let count = 1;
+  let csv = "User's List of ISTOS Equipments\n";
+  csv += "#s,Customer Name,Instrument,Model\n";
 
-  // Group by customer name + city
-  const grouped = {};
-  data.forEach(row => {
-    const key = `${row.B}, ${row.C}`;
-    if (!grouped[key]) grouped[key] = [];
-    grouped[key].push(row.E); // model
+  data.forEach((row, index) => {
+    const serial = index + 1;
+    const name = row.B?.replace(/,/g, " ") || "";
+    const instrument = row.D?.replace(/,/g, " ") || "";
+    const model = row.E?.replace(/,/g, " ") || "";
+    csv += `${serial},"${name}","${instrument}","${model}"\n`;
   });
 
-  doc.setFontSize(14);
-  doc.text("User's List of Equipments", 15, y);
-  y += 10;
-
-  Object.entries(grouped).forEach(([customer, models]) => {
-    if (y > 270) {
-      doc.addPage();
-      y = 20;
-    }
-
-    doc.setFontSize(12);
-    doc.text(`${count}. ${customer}`, 15, y);
-    y += 8;
-
-    const modelCount = {};
-    models.forEach(model => {
-      if (!model) return;
-      modelCount[model] = (modelCount[model] || 0) + 1;
-    });
-
-    Object.entries(modelCount).forEach(([model, qty]) => {
-      if (y > 270) {
-        doc.addPage();
-        y = 20;
-      }
-      doc.setFontSize(11);
-      doc.text(`- ${model} × ${qty} No${qty > 1 ? "s" : ""}.`, 20, y);
-      y += 6;
-    });
-
-    y += 4;
-    count++;
-  });
-
-  doc.save("Filtered_Installations.pdf");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "ISTOS_Equipments.csv";
+  link.style.display = "none";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
+
+
 
 
 

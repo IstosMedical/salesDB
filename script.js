@@ -155,41 +155,53 @@ function setupYearFilter(data) {
   });
 }
 
-    // Fetch and Initialize
-    
-    async function fetchCRMData() {
-      const url = "https://istosmedical.github.io/salesDB/sales.json";
-    
-      try {
-        const response = await fetch(url);
-        const json = await response.json();
-        const rawData = json.sales || json;
-    
-        if (!Array.isArray(rawData) || rawData.length < 2) {
-          showLoadError();
-          return;
-        }
-    
-        crmData = rawData.slice(1); // ✅ assign data
-        renderTable(crmData);       // ✅ render instrument records
-        updateSummary(crmData);
-        populateInstrumentDropdown(crmData);
-        setupDropdownListener(crmData);
-        setupYearFilter(crmData);
-        populateModelDropdown(crmData);
-    
-        document.getElementById("modelDropdown").addEventListener("change", e => {
-          const selectedModel = e.target.value;
-          if (selectedModel) {
-            updateModelYearTable(crmData, selectedModel);
-          }
-        });
-    
-      } catch (error) {
-        console.error("❌ Failed to fetch CRM data:", error);
-        showLoadError();
-      }
+// Fetch and Initialize
+
+let crmData = []; // ✅ Declare globally if not already
+
+async function fetchCRMData() {
+  const url = "https://istosmedical.github.io/salesDB/sales.json";
+
+  try {
+    const response = await fetch(url);
+    const json = await response.json();
+    const rawData = json.sales || json;
+
+    if (!Array.isArray(rawData) || rawData.length < 2) {
+      showLoadError(); // ✅ Shows fallback message
+      return;
     }
+
+    crmData = rawData.slice(1); // ✅ Skip header row
+
+    // ✅ Populate all sections
+    renderTable(crmData);                    // Instrument Records
+    updateSummary(crmData);                  // Summary cards
+    populateInstrumentDropdown(crmData);     // Instrument filter
+    setupDropdownListener(crmData);          // Instrument filter logic
+    setupYearFilter(crmData);                // Year filter logic
+    populateModelDropdown(crmData);          // Model dropdown inside table
+
+    // ✅ Attach model dropdown listener
+    const modelDropdown = document.getElementById("modelDropdown");
+    if (modelDropdown) {
+      modelDropdown.addEventListener("change", e => {
+        const selectedModel = e.target.value;
+        if (selectedModel) {
+          updateModelYearTable(crmData, selectedModel);
+        }
+      });
+    }
+
+  } catch (error) {
+    console.error("❌ Failed to fetch CRM data:", error);
+    showLoadError();
+  }
+}
+
+// ✅ Trigger on DOM ready
+window.addEventListener("DOMContentLoaded", fetchCRMData);
+    
 
 // First card always show full count
 
@@ -356,5 +368,3 @@ window.addEventListener("DOMContentLoaded", () => {
     exportToCSV(crmDataFiltered || crmData);
   });
 });
-
-window.addEventListener("DOMContentLoaded", fetchCRMData);

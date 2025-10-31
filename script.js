@@ -1,3 +1,5 @@
+// Step 1: Global Setup and Error Handling
+
 let crmData = [];
 
 function showLoadError() {
@@ -11,6 +13,7 @@ window.addEventListener("error", e => {
   console.error("Global JS error:", e.message);
 });
 
+// Step 2: Excel Serial Date Conversion
 
 function excelSerialToDate(serial) {
   if (!serial || isNaN(serial)) return "—";
@@ -22,6 +25,7 @@ function excelSerialToDate(serial) {
   return `${dd}/${mm}/${yy}`;
 }
 
+// Render Table Rows
 
 function renderTable(data) {
   const tbody = document.querySelector("#crmTable tbody");
@@ -44,6 +48,7 @@ function renderTable(data) {
   });
 }
 
+// Update Summary Cards
 
 function updateSummary(data) {
   const instruments = new Set(data.map(d => d.D).filter(Boolean));
@@ -56,6 +61,7 @@ function updateSummary(data) {
   animateCounter("cardKarnataka", data.filter(d => d.C?.toLowerCase().includes("karnataka")).length);
 }
 
+// Animate Counters
 
 function animateCounter(id, target) {
   const el = document.getElementById(id);
@@ -73,6 +79,7 @@ function animateCounter(id, target) {
   }, 30);
 }
 
+// Populate Instrument Dropdown
 
 function populateInstrumentDropdown(data) {
   const dropdown = document.getElementById("instrumentDropdown");
@@ -87,6 +94,7 @@ function populateInstrumentDropdown(data) {
   });
 }
 
+// Dropdown Listener
 
 function setupDropdownListener(data) {
   const dropdown = document.getElementById("instrumentDropdown");
@@ -111,6 +119,7 @@ function setupDropdownListener(data) {
   });
 }
 
+// Year Filter
 
 function setupYearFilter(data) {
   const dropdown = document.getElementById("yearDropdown");
@@ -146,6 +155,7 @@ function setupYearFilter(data) {
   });
 }
 
+// Fetch and Initialize
 
 async function fetchCRMData() {
   const url = "https://istosmedical.github.io/salesDB/sales.json";
@@ -175,6 +185,7 @@ async function fetchCRMData() {
 
 window.addEventListener("DOMContentLoaded", fetchCRMData);
 
+// First card always show full count
 
 function updateFilteredSummary(filteredData, totalQuotations) {
   animateCounter("cardQuotations", totalQuotations); // always show full count

@@ -24,9 +24,14 @@ function renderTable(data) {
   });
 }
 
+<td>${row.G ? excelSerialToDate(row.G) : "—"}</td>
+<td>${row.H ? excelSerialToDate(row.H) : "—"}</td>
+
 // 📦 Update summary cards with animation
 
 function updateSummary(data) {
+  const instruments = new Set(data.map(d => d.D).filter(Boolean));
+  const customers = new Set(data.map(d => d.B).filter(Boolean));
   const quotations = data.length;
   const instruments = new Set(data.map(d => d.D));
   const customers = new Set(data.map(d => d.B));
@@ -37,11 +42,11 @@ function updateSummary(data) {
 }
 
 
-// 🚀 Group Filter Function
+// 🚀 Group Filter Function (Refactored)
 
 function renderInstrumentGroups(groups) {
   const container = document.getElementById("instrumentGroups");
-  if (!container) return;
+  if (!container || !crmData) return;
 
   container.innerHTML = "";
 
@@ -55,6 +60,8 @@ function renderInstrumentGroups(groups) {
   };
 
   Object.entries(groups).forEach(([groupName, instruments]) => {
+    if (!Array.isArray(instruments) || instruments.length === 0) return;
+
     const groupDiv = document.createElement("div");
     groupDiv.className = "instrument-group";
 
@@ -66,20 +73,22 @@ function renderInstrumentGroups(groups) {
     tagContainer.className = "instrument-tags";
 
     instruments.forEach(name => {
-      const count = crmData.filter(row =>
-        row.D?.trim().toLowerCase() === name.toLowerCase()
-      ).length;
+      const normalizedName = name?.trim().toLowerCase();
+      if (!normalizedName) return;
+
+      const filtered = crmData.filter(row =>
+        row.D?.trim().toLowerCase() === normalizedName
+      );
 
       const tag = document.createElement("span");
       tag.className = "instrument-tag";
-      tag.textContent = `${name} (${count})`;
+      tag.textContent = `${name} (${filtered.length})`;
       tag.style.backgroundColor = groupColors[groupName] || "#607d8b";
 
       tag.addEventListener("click", () => {
-        const filtered = crmData.filter(row =>
-          row.D?.trim().toLowerCase() === name.toLowerCase()
-        );
-        renderTable(filtered);        
+        renderTable(filtered);
+        updateSummary(filtered);
+        updateStatewiseCounts(filtered);
         document.getElementById("instrumentCount").textContent =
           `🔢 Total Installations: ${filtered.length}`;
       });
@@ -105,6 +114,40 @@ function populateInstrumentDropdown(data) {
     option.textContent = name;
     dropdown.appendChild(option);
   });
+}
+
+// 🚀 Group instruments by category for tag rendering
+
+function groupInstruments(data) {
+  const groups = {
+    Microtomes: [],
+    Cryo: [],
+    Processors: [],
+    Imaging: [],
+    Workstations: [],
+    Others: []
+  };
+
+  data.forEach(row => {
+    const name = row.D?.trim();
+    if (!name) return;
+
+    if (/microtome/i.test(name)) {
+      groups.Microtomes.push(name);
+    } else if (/cryo|cryostat/i.test(name)) {
+      groups.Cryo.push(name);
+    } else if (/processor|embedding|bath|dryer|stainer/i.test(name)) {
+      groups.Processors.push(name);
+    } else if (/camera|imaging|printer/i.test(name)) {
+      groups.Imaging.push(name);
+    } else if (/station|console|workstation/i.test(name)) {
+      groups.Workstations.push(name);
+    } else {
+      groups.Others.push(name);
+    }
+  });
+
+  return groups;
 }
 
 // 🧠 Animate card entry
@@ -212,29 +255,23 @@ let crmDataFiltered = null;
 
 function setupInstrumentDropdown(data) {
   const dropdown = document.getElementById("instrumentDropdown");
-  const display = document.getElementById("instrumentCount");
+  if (!dropdown) return;
 
-  if (!dropdown || !display) return;
+  dropdown.addEventListener("change", () => {
+    const selected = dropdown.value;
+    if (!selected) return;
 
-  dropdown.addEventListener("change", e => {
-    const selected = e.target.value.trim().toLowerCase();
+    const filtered = data.filter(row =>
+      row.D?.trim().toLowerCase() === selected.toLowerCase()
+    );
 
-    if (!selected) {
-      display.textContent = "Select an instrument";
-      crmDataFiltered = null;
-      renderTable(data);      
-      return;
-    }
+    crmDataFiltered = filtered;
+    renderTable(filtered);
+    updateSummary(filtered);
+    updateStatewiseCounts(filtered);
 
-    const filtered = data.filter(row => {
-      const instrument = row.D?.trim().toLowerCase();
-      return instrument === selected;
-    });
-
-    crmDataFiltered = filtered; // ✅ Track filtered data globally
-
-    display.textContent = `🔢 Total Installations: ${filtered.length}`;
-    renderTable(filtered);    
+    document.getElementById("instrumentCount").textContent =
+      `🔢 Total Installations: ${filtered.length}`;
   });
 }
 
@@ -335,33 +372,6 @@ if (yearDropdown) {
     renderTable(filtered);
     updateSummary(filtered);
   });
-}
-
-// 🚀 Group instruments by category for tag rendering
-
-function groupInstruments(data) {
-  const groups = {};
-
-  data.forEach(row => {
-    const name = row.D?.trim();
-    if (!name) return;
-
-    let category = "Others";
-
-    if (/microtome/i.test(name)) category = "Microtomes";
-    else if (/Dryer|Bath/i.test(name)) category = "Microtome Ancillary Equipment";
-    else if (/Diamond|Saw/i.test(name)) category = "Bone Band Saw";
-    else if (/cryo|cryostat/i.test(name)) category = "Cryo";
-    else if (/processor|stp/i.test(name)) category = "Tissue Processors";
-    else if (/Embedding|cryoconsole/i.test(name)) category = "Embedding Center";
-    else if (/camera|imaging/i.test(name)) category = "Imaging";
-    else if (/station/i.test(name)) category = "Grossing";
-
-    if (!groups[category]) groups[category] = [];
-    if (!groups[category].includes(name)) groups[category].push(name);
-  });
-
-  return groups;
 }
 
 // 🚀 Fetch and initialize CRM data from GitHub Pages

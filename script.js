@@ -367,7 +367,7 @@ function groupInstruments(data) {
 // 🚀 Fetch and initialize CRM data from GitHub Pages
 
 async function fetchCRMData() {
-  const url = "https://istosmedical.github.io/salesDB/sales-data.json";
+  const url = "https://istosmedical.github.io/salesDB/sales.json";
 
   try {
     const response = await fetch(url);
@@ -398,7 +398,6 @@ async function fetchCRMData() {
       "<tr><td colspan='8'>Unable to load data</td></tr>";
   }
 }
-
 
 // 🟢 Initialize dashboard
 fetchCRMData();

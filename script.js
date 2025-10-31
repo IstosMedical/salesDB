@@ -291,16 +291,36 @@ function showToast(message = "Download complete!") {
   showToast("✅ CSV downloaded successfully!");
 
 
-updateModelYearTable(data, selected);
+// Model-Year table
 
-// Model-Year Table
+function populateModelDropdown(data) {
+  const dropdown = document.getElementById("modelDropdown");
+  if (!dropdown) return;
+
+  const models = [...new Set(data.map(row => row.E).filter(Boolean))].sort();
+  models.forEach(model => {
+    const option = document.createElement("option");
+    option.value = model;
+    option.textContent = model;
+    dropdown.appendChild(option);
+  });
+}
+
+populateModelDropdown(crmData);
+
+document.getElementById("modelDropdown").addEventListener("change", e => {
+  const selectedModel = e.target.value;
+  if (selectedModel) {
+    updateModelYearTable(crmData, selectedModel);
+  }
+});
+
+updateTopModelsTable(crmData);
+
 
 function updateModelYearTable(data, selectedModel) {
   const row = document.getElementById("modelYearRow");
-  const label = document.getElementById("selectedModel");
-  if (!row || !label) return;
-
-  label.textContent = selectedModel;
+  if (!row) return;
 
   const yearCounts = {};
   for (let y = 2016; y <= 2025; y++) yearCounts[y] = 0;
@@ -320,11 +340,11 @@ function updateModelYearTable(data, selectedModel) {
           year = yy.length === 2 ? Number(`20${yy}`) : Number(yy);
         }
       }
-      if (yearCounts[year] !== undefined) yearCounts[year]++;
+      if (year && yearCounts[year] !== undefined) yearCounts[year]++;
     }
   });
 
-  row.innerHTML = `<td>${selectedModel}</td>` + Object.values(yearCounts).map(c => `<td>${c}</td>`).join("");
+  row.innerHTML =
+    `<td><img src="istos-logo.png" alt="ISTOS Logo" class="istos-logo-tiny" /></td>` +
+    Object.values(yearCounts).map(c => `<td>${c}</td>`).join("");
 }
-
-updateTopModelsTable(crmData);

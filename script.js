@@ -128,7 +128,12 @@ function filterByYear(data) {
 
   return data.filter(row => {
     const doi = row.G;
-    if (!doi) return false;
+
+    if (selectedYear === "-") {
+      return !doi || doi === "-";
+    }
+
+    if (!doi || doi === "-") return false;
 
     let date;
     if (!isNaN(doi)) {

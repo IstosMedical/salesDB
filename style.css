@@ -497,3 +497,10 @@ tbody tr:hover {
 .toast.show {
   opacity: 1;
 }
+
+.istos-logo-small {
+  width: 24px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

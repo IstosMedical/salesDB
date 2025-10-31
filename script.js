@@ -2,6 +2,7 @@
 
 let crmData = [];
 let crmDataFiltered = [];
+let selectedYear = "";
 
 function showLoadError() {
   const table = document.getElementById("crmTable");
@@ -120,6 +121,30 @@ function setupDropdownListener(data) {
   });
 }
 
+// This is defined to support - specific year logic
+
+function filterByYear(data) {
+  if (!selectedYear) return data;
+
+  return data.filter(row => {
+    const doi = row.G;
+    if (!doi) return false;
+
+    let date;
+    if (!isNaN(doi)) {
+      const baseDate = new Date(1900, 0, 1);
+      baseDate.setDate(baseDate.getDate() + (doi - 1));
+      date = baseDate;
+    } else if (doi.includes("/")) {
+      const [dd, mm, yyyy] = doi.split("/");
+      date = new Date(`${yyyy}-${mm}-${dd}`);
+    }
+
+    return date && date.getFullYear() === Number(selectedYear);
+  });
+}
+
+
 // Year Filter
 
 function setupYearFilter(data) {
@@ -127,34 +152,20 @@ function setupYearFilter(data) {
   if (!dropdown) return;
 
   dropdown.addEventListener("change", e => {
-    const selectedYear = e.target.value;
+    selectedYear = e.target.value; // ✅ update global year
+
     if (!selectedYear) {
+      crmDataFiltered = data;      // ✅ reset filtered data
       renderTable(data);
-      updateSummary(data);
       return;
     }
 
-    const filtered = data.filter(row => {
-      const doi = row.G;
-      if (!doi) return false;
-
-      let date;
-      if (!isNaN(doi)) {
-        const baseDate = new Date(1900, 0, 1);
-        baseDate.setDate(baseDate.getDate() + (doi - 1));
-        date = baseDate;
-      } else if (doi.includes("/")) {
-        const [dd, mm, yyyy] = doi.split("/");
-        date = new Date(`${yyyy}-${mm}-${dd}`);
-      }
-
-      return date.getFullYear() === Number(selectedYear);
-    });
-
+    const filtered = filterByYear(data); // ✅ reuse logic
+    crmDataFiltered = filtered;          // ✅ update global filtered data
     renderTable(filtered);
-    updateSummary(filtered);
   });
 }
+
 
 // Fetch and Initialize
 
@@ -258,30 +269,25 @@ function setupYearFilter(data) {
 // Export to csv
 
 function exportToCSV(data) {
-  if (!data || !Array.isArray(data) || data.length === 0) {
+  const filtered = filterByYear(data);
+  if (!filtered || filtered.length === 0) {
     showToast("⚠️ No data available to export.");
     return;
   }
 
-  const widths = {
-    serial: 4,
-    name: 70,
-    instrument: 48,
-    model: 20
-  };
-
+  const widths = { serial: 4, name: 70, instrument: 48, model: 20 };
   const pad = (text, width) => {
     const str = text ? text.toString() : "";
     const space = Math.max(0, width - str.length);
     const left = Math.floor(space / 2);
     const right = space - left;
-    return `"${" ".repeat(left) + str + " ".repeat(right)}"`; // simulate center
+    return `"${" ".repeat(left) + str + " ".repeat(right)}"`;
   };
 
   let csv = "User's List of ISTOS Equipments\n";
   csv += `${pad("#s", widths.serial)},${pad("Customer Name", widths.name)},${pad("Instrument", widths.instrument)},${pad("Model", widths.model)}\n`;
 
-  data.forEach((row, index) => {
+  filtered.forEach((row, index) => {
     const serial = pad(index + 1, widths.serial);
     const name = pad(row.B?.replace(/,/g, " ") || "", widths.name);
     const instrument = pad(row.D?.replace(/,/g, " ") || "", widths.instrument);
@@ -297,20 +303,21 @@ function exportToCSV(data) {
   link.click();
   document.body.removeChild(link);
 
-  showToast("✅ CSV downloaded with padded header!");
+  showToast("✅ CSV downloaded for selected year!");
 }
 
 
 // ✅ XLSX Export (requires SheetJS)
 
 function exportToXLSX(data) {
-  if (!data || !Array.isArray(data) || data.length === 0) {
+  const filtered = filterByYear(data);
+  if (!filtered || filtered.length === 0) {
     showToast("⚠️ No data available to export.");
     return;
   }
 
   const sheetData = [["#", "Customer Name", "Instrument", "Model"]];
-  data.forEach((row, index) => {
+  filtered.forEach((row, index) => {
     sheetData.push([
       index + 1,
       row.B || "",
@@ -320,8 +327,6 @@ function exportToXLSX(data) {
   });
 
   const worksheet = XLSX.utils.aoa_to_sheet(sheetData);
-
-  // ✅ Apply fixed column widths
   worksheet['!cols'] = [
     { wch: 4 },
     { wch: 70 },
@@ -329,24 +334,22 @@ function exportToXLSX(data) {
     { wch: 20 }
   ];
 
-  // ✅ Style header row
   const headerStyle = {
     font: { bold: true },
     alignment: { horizontal: "center", vertical: "center" }
   };
 
   ["A1", "B1", "C1", "D1"].forEach(cell => {
-    if (worksheet[cell]) {
-      worksheet[cell].s = headerStyle;
-    }
+    if (worksheet[cell]) worksheet[cell].s = headerStyle;
   });
 
   const workbook = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(workbook, worksheet, "ISTOS Data");
   XLSX.writeFile(workbook, "ISTOS_Equipments.xlsx");
 
-  showToast("✅ Excel file downloaded with styled header!");
+  showToast("✅ Excel downloaded for selected year!");
 }
+
 
 // ✅ Toast Notification
 function showToast(message = "Download complete!") {
@@ -359,22 +362,31 @@ function showToast(message = "Download complete!") {
 }
 
 // ✅ Attach listeners after DOM is ready
+
 window.addEventListener("DOMContentLoaded", () => {
   const csvBtn = document.getElementById("exportCSV");
   const xlsxBtn = document.getElementById("exportXLSX");
 
+  const getExportData = () => {
+    const source = crmDataFiltered.length ? crmDataFiltered : crmData;
+    return filterByYear(source);
+  };
+
   if (csvBtn) {
     csvBtn.addEventListener("click", () => {
-      exportToCSV(crmDataFiltered.length ? crmDataFiltered : crmData);
+      const filtered = getExportData();
+      exportToCSV(filtered);
     });
   }
 
   if (xlsxBtn) {
     xlsxBtn.addEventListener("click", () => {
-      exportToXLSX(crmDataFiltered.length ? crmDataFiltered : crmData);
+      const filtered = getExportData();
+      exportToXLSX(filtered);
     });
   }
 });
+
 
 // Model-Year table
 

@@ -195,6 +195,43 @@ function updateFilteredSummary(filteredData, totalQuotations) {
 }
 
 
+// Filter by year
+
+function setupYearFilter(data) {
+  const dropdown = document.getElementById("yearDropdown");
+  if (!dropdown) return;
+
+  dropdown.addEventListener("change", e => {
+    const selectedYear = e.target.value;
+    if (!selectedYear) {
+      renderTable(data);
+      updateSummary(data);
+      return;
+    }
+
+    const filtered = data.filter(row => {
+      const doi = row.G;
+      if (!doi) return false;
+
+      let date;
+      if (!isNaN(doi)) {
+        const baseDate = new Date(1900, 0, 1);
+        baseDate.setDate(baseDate.getDate() + (doi - 1));
+        date = baseDate;
+      } else if (doi.includes("/")) {
+        const [dd, mm, yyyy] = doi.split("/");
+        date = new Date(`${yyyy}-${mm}-${dd}`);
+      } else {
+        return false;
+      }
+
+      return date.getFullYear() === Number(selectedYear);
+    });
+
+    renderTable(filtered);
+    updateSummary(filtered);
+  });
+}
 
 
 

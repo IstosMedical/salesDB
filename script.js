@@ -59,66 +59,6 @@ function updateSummary(data) {
   animateCounter("cardCustomers", customers.size);
 }
 
-
-// 🚀 Group Filter Function (Refactored)
-
-function renderInstrumentGroups(groups) {
-  const container = document.getElementById("instrumentGroups");
-  if (!container || !crmData) return;
-
-  container.innerHTML = "";
-
-  const groupColors = {
-    Microtomes: "#1976d2",
-    Cryo: "#388e3c",
-    Processors: "#f57c00",
-    Imaging: "#6a1b9a",
-    Workstations: "#c2185b",
-    Others: "#455a64"
-  };
-
-  Object.entries(groups).forEach(([groupName, instruments]) => {
-    if (!Array.isArray(instruments) || instruments.length === 0) return;
-
-    const groupDiv = document.createElement("div");
-    groupDiv.className = "instrument-group";
-
-    const title = document.createElement("h4");
-    title.textContent = groupName;
-    groupDiv.appendChild(title);
-
-    const tagContainer = document.createElement("div");
-    tagContainer.className = "instrument-tags";
-
-    instruments.forEach(name => {
-      const normalizedName = name?.trim().toLowerCase();
-      if (!normalizedName) return;
-
-      const filtered = crmData.filter(row =>
-        row.D?.trim().toLowerCase() === normalizedName
-      );
-
-      const tag = document.createElement("span");
-      tag.className = "instrument-tag";
-      tag.textContent = `${name} (${filtered.length})`;
-      tag.style.backgroundColor = groupColors[groupName] || "#607d8b";
-
-      tag.addEventListener("click", () => {
-        renderTable(filtered);
-        updateSummary(filtered);
-        updateStatewiseCounts(filtered);
-        document.getElementById("instrumentCount").textContent =
-          `🔢 Total Installations: ${filtered.length}`;
-      });
-
-      tagContainer.appendChild(tag);
-    });
-
-    groupDiv.appendChild(tagContainer);
-    container.appendChild(groupDiv);
-  });
-}
-
 // 🚀 Populate Instrument Dropdown
 
 function populateInstrumentDropdown(data) {
@@ -132,40 +72,6 @@ function populateInstrumentDropdown(data) {
     option.textContent = name;
     dropdown.appendChild(option);
   });
-}
-
-// 🚀 Group instruments by category for tag rendering
-
-function groupInstruments(data) {
-  const groups = {
-    Microtomes: [],
-    Cryo: [],
-    Processors: [],
-    Imaging: [],
-    Workstations: [],
-    Others: []
-  };
-
-  data.forEach(row => {
-    const name = row.D?.trim();
-    if (!name) return;
-
-    if (/microtome/i.test(name)) {
-      groups.Microtomes.push(name);
-    } else if (/cryo|cryostat/i.test(name)) {
-      groups.Cryo.push(name);
-    } else if (/processor|embedding|bath|dryer|stainer/i.test(name)) {
-      groups.Processors.push(name);
-    } else if (/camera|imaging|printer/i.test(name)) {
-      groups.Imaging.push(name);
-    } else if (/station|console|workstation/i.test(name)) {
-      groups.Workstations.push(name);
-    } else {
-      groups.Others.push(name);
-    }
-  });
-
-  return groups;
 }
 
 // 🧠 Animate card entry
@@ -229,21 +135,6 @@ function renderInstrumentList(matches) {
     });
 
     container.appendChild(tag);
-  });
-}
-
-// 🔍 Live search for instrument tags
-
-function setupInstrumentSearch() {
-  const input = document.getElementById("instrumentSearch");
-  if (!input) return;
-
-  input.addEventListener("input", () => {
-    const query = input.value.trim().toLowerCase();
-    const matches = fullInstrumentList.filter(name =>
-      name.toLowerCase().includes(query)
-    );
-    renderInstrumentList(matches);
   });
 }
 
@@ -417,8 +308,6 @@ async function fetchCRMData() {
     crmData = rawData.slice(1); // skip header row
     renderTable(crmData);
     updateSummary(crmData);
-    const instrumentGroups = groupInstruments(crmData);
-    renderInstrumentGroups(instrumentGroups);
     populateInstrumentDropdown(crmData);
     animateCards();
 
@@ -433,7 +322,6 @@ async function fetchCRMData() {
     // ✅ Render dashboard components
     renderTable(crmData);
     updateSummary(crmData);    
-    renderInstrumentGroups(instrumentGroups);
     populateInstrumentDropdown(crmData);
     animateCards();
 

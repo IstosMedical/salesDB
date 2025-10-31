@@ -392,6 +392,28 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Show/Hide Badge Based on Selection
+
+function setupYearFilter(data) {
+  const dropdown = document.getElementById("yearDropdown");
+  const badge = document.getElementById("missingBadge");
+  if (!dropdown || !badge) return;
+
+  dropdown.addEventListener("change", e => {
+    selectedYear = e.target.value;
+
+    if (selectedYear === "-") {
+      badge.style.display = "block";
+    } else {
+      badge.style.display = "none";
+    }
+
+    const filtered = filterByYear(data);
+    crmDataFiltered = filtered;
+    renderTable(filtered);
+  });
+}
+
 
 // Model-Year table
 

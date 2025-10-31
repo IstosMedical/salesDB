@@ -93,12 +93,15 @@ function setupDropdownListener(data) {
   const display = document.getElementById("instrumentCount");
   if (!dropdown || !display) return;
 
+  const totalQuotations = data.length; // preserve original count
+
   dropdown.addEventListener("change", e => {
     const selected = e.target.value;
     const filtered = data.filter(row => row.D?.trim().toLowerCase() === selected.toLowerCase());
+
     if (selected) {
       renderTable(filtered);
-      updateSummary(filtered);
+      updateFilteredSummary(filtered, totalQuotations);
       display.textContent = `🔢 Total Installations: ${filtered.length}`;
     } else {
       renderTable(data);

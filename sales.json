@@ -87,8 +87,8 @@
             "D": "Cytocentrifuge",
             "E": "Pro Cyt LED (4)",
             "F": "Centurion",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "9",
@@ -137,8 +137,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "14",
@@ -147,8 +147,8 @@
             "D": "Microtome",
             "E": "-",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "15",
@@ -157,8 +157,8 @@
             "D": "Tissue Embedding System",
             "E": "ES 1050",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "16",
@@ -167,8 +167,8 @@
             "D": "Cryostat",
             "E": "650+",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "17",
@@ -177,8 +177,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "18",
@@ -187,8 +187,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "19",
@@ -197,8 +197,8 @@
             "D": "Cryostat",
             "E": "650+",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "20",
@@ -207,8 +207,8 @@
             "D": "Gross Imaging Camera",
             "E": "Propath HD",
             "F": "Propath",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "21",
@@ -217,8 +217,8 @@
             "D": "Gross Imaging Camera",
             "E": "Propath HD",
             "F": "Propath",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "22",
@@ -228,7 +228,7 @@
             "E": "ETP",
             "F": "Intelsint",
             "G": "42947",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "23",
@@ -238,7 +238,7 @@
             "E": "DBS 220",
             "F": "ISTOS",
             "G": "42984",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "24",
@@ -248,7 +248,7 @@
             "E": "DBS 220",
             "F": "ISTOS",
             "G": "42945",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "25",
@@ -257,8 +257,8 @@
             "D": "Microtome",
             "E": "3005 E",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "26",
@@ -267,8 +267,8 @@
             "D": "Gross Imaging Camera",
             "E": "Propath HD",
             "F": "Propath",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "27",
@@ -277,8 +277,8 @@
             "D": "Cryostat",
             "E": "650+",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "28",
@@ -287,8 +287,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "29",
@@ -307,8 +307,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "31",
@@ -317,8 +317,8 @@
             "D": "Tissue Processor",
             "E": "-",
             "F": "-",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "32",
@@ -327,8 +327,8 @@
             "D": "Tissue Embedding System",
             "E": "ES 1050",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "33",
@@ -337,8 +337,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "34",
@@ -347,8 +347,8 @@
             "D": "Specimen storage cabinet",
             "E": "-",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "35",
@@ -357,8 +357,8 @@
             "D": "Gross Imaging Camera",
             "E": "-",
             "F": "Paxcam",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "36",
@@ -377,8 +377,8 @@
             "D": "Microtome",
             "E": "3005 E",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "38",
@@ -387,8 +387,8 @@
             "D": "Microtome",
             "E": "3005 E",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "39",
@@ -397,8 +397,8 @@
             "D": "Microtome",
             "E": "3004 M",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "40",
@@ -447,8 +447,8 @@
             "D": "Cryostat",
             "E": "650+",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "45",
@@ -467,8 +467,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "47",
@@ -477,8 +477,8 @@
             "D": "Slide Labeller",
             "E": "Slidebel",
             "F": "Gordiamkey",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "48",
@@ -487,8 +487,8 @@
             "D": "Tissue Processor",
             "E": "STP 120-1",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "49",
@@ -527,8 +527,8 @@
             "D": "Tissue Embedding System",
             "E": "ES 1050",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "53",
@@ -537,8 +537,8 @@
             "D": "Tissue Processor",
             "E": "STP 120-1",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "54",
@@ -547,8 +547,8 @@
             "D": "Tissue Embedding System",
             "E": "EC 350",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "55",
@@ -657,8 +657,8 @@
             "D": "Microtome",
             "E": "3006 EM",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "66",
@@ -688,7 +688,7 @@
             "E": "Olympus",
             "F": "8x53 Deca Head/Jenoptiik",
             "G": "43546",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "69",
@@ -697,8 +697,8 @@
             "D": "Microtome",
             "E": "-",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "70",
@@ -717,8 +717,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "72",
@@ -728,7 +728,7 @@
             "E": "HTV-M",
             "F": "PPM",
             "G": "43579",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "73",
@@ -737,8 +737,8 @@
             "D": "Cryo console",
             "E": "ES 1050-2",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "74",
@@ -777,8 +777,8 @@
             "D": "Slide Stainer",
             "E": "HistoPro 620",
             "F": "Rushab",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "78",
@@ -787,8 +787,8 @@
             "D": "Slide Stainer",
             "E": "HistoPro 620",
             "F": "Rushab",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "79",
@@ -797,8 +797,8 @@
             "D": "Tissue Water Bath",
             "E": "TFB 1100",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "80",
@@ -807,8 +807,8 @@
             "D": "Slide Dryer",
             "E": "SDT 1200",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "81",
@@ -837,8 +837,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "84",
@@ -857,8 +857,8 @@
             "D": "Tissue Processor",
             "E": "STP 120-1",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "86",
@@ -887,8 +887,8 @@
             "D": "Slide Stainer",
             "E": "AUS 1",
             "F": "Intelsint",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "89",
@@ -897,8 +897,8 @@
             "D": "Cryoplate",
             "E": "CP 45",
             "F": "Gordiamkey",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "90",
@@ -907,8 +907,8 @@
             "D": "Tissue Processor",
             "E": "STP 120-1",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "91",
@@ -997,8 +997,8 @@
             "D": "Cryostat",
             "E": "650+",
             "F": "CM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "100",
@@ -1017,8 +1017,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "102",
@@ -1037,8 +1037,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "104",
@@ -1047,8 +1047,8 @@
             "D": "Gross Imaging Camera",
             "E": "Propath HD",
             "F": "Propath",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "105",
@@ -1057,8 +1057,8 @@
             "D": "Procycler Solvent Recyclling System",
             "E": "-",
             "F": "B/R Instrument",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "106",
@@ -1067,8 +1067,8 @@
             "D": "Microtome",
             "E": "Shurwave 1200",
             "F": "-",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "107",
@@ -1087,8 +1087,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "109",
@@ -1167,8 +1167,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "117",
@@ -1357,8 +1357,8 @@
             "D": "Tissue Processor",
             "E": "STP 120-1",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "136",
@@ -1367,8 +1367,8 @@
             "D": "Microtome",
             "E": "3005 E",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "137",
@@ -1377,8 +1377,8 @@
             "D": "Microtome",
             "E": "3005 E",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "138",
@@ -1388,7 +1388,7 @@
             "E": "EC 350",
             "F": "Myr",
             "G": "44046",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "139",
@@ -1427,8 +1427,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "143",
@@ -1437,8 +1437,8 @@
             "D": "Slide Stainer",
             "E": "AUS 1",
             "F": "Intelsint",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "144",
@@ -1447,8 +1447,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "145",
@@ -1478,7 +1478,7 @@
             "E": "ES 1050",
             "F": "ISTOS",
             "G": "44229",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "148",
@@ -1518,7 +1518,7 @@
             "E": "Accuro",
             "F": "Drager",
             "G": "44167",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "152",
@@ -1606,7 +1606,7 @@
             "C": "Maharashtra",
             "D": "Grossing Station",
             "E": "Labgross",
-            "F": "ISTOS ",
+            "F": "ISTOS",
             "G": "44242",
             "H": "45426"
         },
@@ -1668,7 +1668,7 @@
             "E": "STP 120-1",
             "F": "Myr",
             "G": "44226",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "167",
@@ -1678,7 +1678,7 @@
             "E": "SDT 1200",
             "F": "ISTOS",
             "G": "44197",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "168",
@@ -1687,8 +1687,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "169",
@@ -1698,7 +1698,7 @@
             "E": "TFB 1100",
             "F": "ISTOS",
             "G": "44197",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "170",
@@ -1746,9 +1746,9 @@
             "C": "Maharashtra",
             "D": "Grossing Station",
             "E": "Labgross",
-            "F": "Istos",
-            "G": "-",
-            "H": "-"
+            "F": "ISTOS",
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "175",
@@ -1837,8 +1837,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "184",
@@ -1866,7 +1866,7 @@
             "C": "Maharashtra",
             "D": "Grossing Station",
             "E": "Labgross",
-            "F": "Istos",
+            "F": "ISTOS",
             "G": "44413",
             "H": "45508"
         },
@@ -1888,7 +1888,7 @@
             "E": "HTV-M",
             "F": "PPM",
             "G": "44062",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "189",
@@ -1918,7 +1918,7 @@
             "E": "SDT 1200",
             "F": "ISTOS",
             "G": "44419",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "192",
@@ -1927,8 +1927,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "193",
@@ -1937,8 +1937,8 @@
             "D": "cryostat",
             "E": "Portable",
             "F": "BRIGHT",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "194",
@@ -1947,8 +1947,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "195",
@@ -2007,8 +2007,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "201",
@@ -2017,8 +2017,8 @@
             "D": "Gross Imaging Camera",
             "E": "Propath HD",
             "F": "Propath",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "202",
@@ -2026,7 +2026,7 @@
             "C": "Maharashtra",
             "D": "Grossing Station",
             "E": "Labgross",
-            "F": "Istos",
+            "F": "ISTOS",
             "G": "44501",
             "H": "45231"
         },
@@ -2317,8 +2317,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "232",
@@ -2327,8 +2327,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "233",
@@ -2438,7 +2438,7 @@
             "E": "DBS 220",
             "F": "ISTOS",
             "G": "44630",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "244",
@@ -2468,7 +2468,7 @@
             "E": "PT05TS",
             "F": "Lupetec",
             "G": "44647",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "247",
@@ -2497,8 +2497,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "250",
@@ -2508,7 +2508,7 @@
             "E": "7000smZ-2",
             "F": "Campden",
             "G": "44644",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "251",
@@ -2517,8 +2517,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "252",
@@ -2578,7 +2578,7 @@
             "E": "3006 EM",
             "F": "PFM",
             "G": "44658",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "258",
@@ -2588,7 +2588,7 @@
             "E": "DBS 220",
             "F": "ISTOS",
             "G": "44657",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "259",
@@ -2606,7 +2606,7 @@
             "C": "Maharashtra",
             "D": "Grossing Station",
             "E": "Labgross",
-            "F": "ISTOS ",
+            "F": "ISTOS",
             "G": "44699",
             "H": "45063"
         },
@@ -2628,7 +2628,7 @@
             "E": "STP 120-1",
             "F": "Myr",
             "G": "44694",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "263",
@@ -2638,7 +2638,7 @@
             "E": "EC 350",
             "F": "Myr",
             "G": "44694",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "264",
@@ -2817,8 +2817,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "282",
@@ -2958,7 +2958,7 @@
             "E": "HistoPro 650",
             "F": "Rushab",
             "G": "44812",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "296",
@@ -2967,8 +2967,8 @@
             "D": "Automated Formalin Preparation & Dispensing System",
             "E": "FMD 4011",
             "F": "ULS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "297",
@@ -3017,8 +3017,8 @@
             "D": "Tissue Water Bath",
             "E": "TFB 1100",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "302",
@@ -3036,7 +3036,7 @@
             "C": "Maharashtra",
             "D": "Grossing Station",
             "E": "Labgross",
-            "F": "ISTOS ",
+            "F": "ISTOS",
             "G": "44923",
             "H": "45653"
         },
@@ -3046,7 +3046,7 @@
             "C": "Maharashtra",
             "D": "Grossing Station",
             "E": "Labgross",
-            "F": "Istos",
+            "F": "ISTOS",
             "G": "44923",
             "H": "45653"
         },
@@ -3117,8 +3117,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "312",
@@ -3137,8 +3137,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "314",
@@ -3157,8 +3157,8 @@
             "D": "Microtome",
             "E": "3004 M",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "316",
@@ -3167,8 +3167,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "317",
@@ -3197,8 +3197,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "320",
@@ -3237,8 +3237,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "324",
@@ -3247,8 +3247,8 @@
             "D": "Xylene Pump",
             "E": "Accuro",
             "F": "Drager",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "325",
@@ -3308,7 +3308,7 @@
             "E": "Labgross",
             "F": "ISTOS",
             "G": "45006",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "331",
@@ -3318,7 +3318,7 @@
             "E": "Propath HD",
             "F": "Propath",
             "G": "45096",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "332",
@@ -3398,7 +3398,7 @@
             "E": "Labgross",
             "F": "ISTOS",
             "G": "45063",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "340",
@@ -3408,7 +3408,7 @@
             "E": "Labgross",
             "F": "ISTOS",
             "G": "45063",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "341",
@@ -3437,8 +3437,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "344",
@@ -3448,7 +3448,7 @@
             "E": "HP 2430",
             "F": "Rushab",
             "G": "45096",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "345",
@@ -3528,7 +3528,7 @@
             "E": "STP 120-1",
             "F": "Myr",
             "G": "45089",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "353",
@@ -3637,8 +3637,8 @@
             "D": "Gross Imaging Camera",
             "E": "propath HD",
             "F": "propath",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "364",
@@ -3657,8 +3657,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "366",
@@ -3667,8 +3667,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "367",
@@ -3677,8 +3677,8 @@
             "D": "Specimen storage cabinet",
             "E": "-",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "368",
@@ -3688,7 +3688,7 @@
             "E": "HTV-M",
             "F": "PPM",
             "G": "45198",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "369",
@@ -3697,8 +3697,8 @@
             "D": "Xylene Pump",
             "E": "Accuro",
             "F": "Drager",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "370",
@@ -3756,7 +3756,7 @@
             "C": "Maharashtra",
             "D": "Grossing Station",
             "E": "Labgross",
-            "F": "istos",
+            "F": "ISTOS",
             "G": "45217",
             "H": "45947"
         },
@@ -3787,8 +3787,8 @@
             "D": "Microtome",
             "E": "3004 M",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "379",
@@ -3797,8 +3797,8 @@
             "D": "Tissue Processor",
             "E": "STP 120-1",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "380",
@@ -3808,7 +3808,7 @@
             "E": "Robusta",
             "F": "Ade",
             "G": "45267",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "381",
@@ -3838,7 +3838,7 @@
             "E": "HTV-M",
             "F": "PPM",
             "G": "44990",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "384",
@@ -3857,8 +3857,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "386",
@@ -3867,8 +3867,8 @@
             "D": "cryostat",
             "E": "650+",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "387",
@@ -3967,8 +3967,8 @@
             "D": "Tissue Flotation Bath",
             "E": "TFB 1300",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "397",
@@ -3977,8 +3977,8 @@
             "D": "Tissue Flotation Bath",
             "E": "TFB 1300",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "398",
@@ -4007,8 +4007,8 @@
             "D": "Cytocentrifuge",
             "E": "Pro Cyt LED (4)",
             "F": "Centurion",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "401",
@@ -4017,8 +4017,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "402",
@@ -4027,8 +4027,8 @@
             "D": "Gross Imaging Camera",
             "E": "Propath HD",
             "F": "Propath",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "403",
@@ -4078,7 +4078,7 @@
             "E": "3004 M",
             "F": "PFM",
             "G": "45490",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "408",
@@ -4207,8 +4207,8 @@
             "D": "Tissue Embedding System",
             "E": "ES 1050",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "421",
@@ -4217,8 +4217,8 @@
             "D": "Slide Stainer",
             "E": "AUS 2",
             "F": "Intelsint",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "422",
@@ -4247,8 +4247,8 @@
             "D": "Microtome",
             "E": "3000 Compact",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "425",
@@ -4257,8 +4257,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "426",
@@ -4268,7 +4268,7 @@
             "E": "HTV-M",
             "F": "PPM",
             "G": "45534",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "427",
@@ -4298,7 +4298,7 @@
             "E": "TFB 1300",
             "F": "ISTOS",
             "G": "45561",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "430",
@@ -4307,8 +4307,8 @@
             "D": "Tissue Flotation Bath",
             "E": "TFB 1300",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "431",
@@ -4317,8 +4317,8 @@
             "D": "Slide Dryer",
             "E": "SDT 1200",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "432",
@@ -4327,8 +4327,8 @@
             "D": "cryostat",
             "E": "Portable",
             "F": "Bright",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "433",
@@ -4427,8 +4427,8 @@
             "D": "Tissue Embedding System",
             "E": "ES 1050",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "443",
@@ -4437,8 +4437,8 @@
             "D": "Microtome",
             "E": "3005 E",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "444",
@@ -4467,8 +4467,8 @@
             "D": "Tissue Embedding System",
             "E": "ES 1050",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "447",
@@ -4478,7 +4478,7 @@
             "E": "LPS-17-001",
             "F": "Patholab",
             "G": "45691",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "448",
@@ -4488,7 +4488,7 @@
             "E": "LPS-17-001",
             "F": "Patholab",
             "G": "45698",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "449",
@@ -4498,7 +4498,7 @@
             "E": "LPS-17-001",
             "F": "Patholab",
             "G": "45698",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "450",
@@ -4547,8 +4547,8 @@
             "D": "Cryostat",
             "E": "Portable",
             "F": "Bright",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "455",
@@ -4557,8 +4557,8 @@
             "D": "Cryostat",
             "E": "Portable",
             "F": "Bright",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "456",
@@ -4567,8 +4567,8 @@
             "D": "Tissue Processor",
             "E": "PT05TS",
             "F": "Lupetec",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "457",
@@ -4587,8 +4587,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "459",
@@ -4597,8 +4597,8 @@
             "D": "Gross Imaging Camera",
             "E": "propath HD",
             "F": "Propath",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "460",
@@ -4617,8 +4617,8 @@
             "D": "Slide Stainer",
             "E": "AUS 2",
             "F": "Intelsint",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "462",
@@ -4627,8 +4627,8 @@
             "D": "Coverslipper",
             "E": "CVR",
             "F": "Intelsint",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "463",
@@ -4687,8 +4687,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "469",
@@ -4697,8 +4697,8 @@
             "D": "Cryostat",
             "E": "650+",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "470",
@@ -4747,8 +4747,8 @@
             "D": "Tissue Processor",
             "E": "PT052TS",
             "F": "Lupetec",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "475",
@@ -4768,7 +4768,7 @@
             "E": "HTV-M",
             "F": "PPM",
             "G": "45867",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "477",
@@ -4778,7 +4778,7 @@
             "E": "Accuro",
             "F": "Drager",
             "G": "45867",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "478",
@@ -4787,8 +4787,8 @@
             "D": "Formaldehydemeter",
             "E": "HTV-M",
             "F": "PPM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "479",
@@ -4808,7 +4808,7 @@
             "E": "3005 E",
             "F": "PFM",
             "G": "45880",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "481",
@@ -4817,8 +4817,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "482",
@@ -4827,8 +4827,8 @@
             "D": "Tissue Embedding System",
             "E": "ES 1060",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "483",
@@ -4837,8 +4837,8 @@
             "D": "Tissue Processor",
             "E": "TP 300",
             "F": "Intelsint",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "484",
@@ -4847,8 +4847,8 @@
             "D": "Slide Dryer",
             "E": "SDT 1200",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "485",
@@ -4857,8 +4857,8 @@
             "D": "Tissue Water Bath",
             "E": "TFB 1100",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "486",
@@ -4867,8 +4867,8 @@
             "D": "Microtome",
             "E": "3005 E",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "487",
@@ -4887,8 +4887,8 @@
             "D": "Cryo console",
             "E": "ES 1060-2",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "489",
@@ -4897,8 +4897,8 @@
             "D": "Slide Dryer",
             "E": "SDT 1200",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "490",
@@ -4907,8 +4907,8 @@
             "D": "Slide Dryer",
             "E": "SDT 1200",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "491",
@@ -4917,8 +4917,8 @@
             "D": "Slide Dryer",
             "E": "SDT 1200",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "492",
@@ -4927,8 +4927,8 @@
             "D": "Slide Dryer",
             "E": "SDT 1200",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "493",
@@ -4937,8 +4937,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "494",
@@ -4957,8 +4957,8 @@
             "D": "Programmable Vibrotome",
             "E": "7000smZ-2",
             "F": "Campden",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "496",
@@ -5147,8 +5147,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "515",
@@ -5297,8 +5297,8 @@
             "D": "Tissue Processor",
             "E": "ETP",
             "F": "Intelsint",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "530",
@@ -5357,8 +5357,8 @@
             "D": "cryostat",
             "E": "Portable",
             "F": "BRIGHT",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "536",
@@ -5407,8 +5407,8 @@
             "D": "Wax Dispenser",
             "E": "-",
             "F": "Lupetec",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "541",
@@ -5497,8 +5497,8 @@
             "D": "Tissue Processor",
             "E": "PT09TS",
             "F": "Lupetec",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "550",
@@ -5537,8 +5537,8 @@
             "D": "Microtome",
             "E": "3006 EM",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "554",
@@ -5577,8 +5577,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "558",
@@ -5588,7 +5588,7 @@
             "E": "DBS 220",
             "F": "ISTOS",
             "G": "42796",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "559",
@@ -5598,7 +5598,7 @@
             "E": "3004 M",
             "F": "PFM",
             "G": "44011",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "560",
@@ -5607,8 +5607,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "561",
@@ -5617,8 +5617,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "562",
@@ -5637,8 +5637,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "564",
@@ -5658,7 +5658,7 @@
             "E": "TFB 1300",
             "F": "ISTOS",
             "G": "45369",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "566",
@@ -5668,7 +5668,7 @@
             "E": "TFB 1300",
             "F": "ISTOS",
             "G": "45369",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "567",
@@ -5697,8 +5697,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "570",
@@ -5707,8 +5707,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "571",
@@ -5737,8 +5737,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "574",
@@ -5768,7 +5768,7 @@
             "E": "Pro Cyt LED (4)",
             "F": "Centurion",
             "G": "43158",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "577",
@@ -5827,8 +5827,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "583",
@@ -5847,8 +5847,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "585",
@@ -5877,8 +5877,8 @@
             "D": "Microtome",
             "E": "3000 Compact",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "588",
@@ -5886,9 +5886,9 @@
             "C": "Maharashtra",
             "D": "Grossing Station",
             "E": "Labgross",
-            "F": "Istos",
-            "G": "-",
-            "H": "-"
+            "F": "ISTOS",
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "589",
@@ -5897,8 +5897,8 @@
             "D": "Tissue Processor",
             "E": "STP 120",
             "F": "Myr ",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "590",
@@ -5948,7 +5948,7 @@
             "E": "DBS 220",
             "F": "ISTOS",
             "G": "43263",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "595",
@@ -5958,7 +5958,7 @@
             "E": "Labgross",
             "F": "ISTOS",
             "G": "42689",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "596",
@@ -5968,7 +5968,7 @@
             "E": "SS30",
             "F": "MYR",
             "G": "43384",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "597",
@@ -5978,7 +5978,7 @@
             "E": "3004 M",
             "F": "PFM",
             "G": "43384",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "598",
@@ -5987,8 +5987,8 @@
             "D": "Cytocentrifuge",
             "E": "Pro Cyt LED (4)",
             "F": "Centurion",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "599",
@@ -5998,7 +5998,7 @@
             "E": "Labgross",
             "F": "ISTOS",
             "G": "42772",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "600",
@@ -6007,8 +6007,8 @@
             "D": "Tissue Processor",
             "E": "STP 120-1",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "601",
@@ -6017,8 +6017,8 @@
             "D": "Microtome",
             "E": "3006 EM",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "602",
@@ -6027,8 +6027,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "603",
@@ -6037,8 +6037,8 @@
             "D": "Gross Imaging Camera",
             "E": "Propath HD",
             "F": "Propath",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "604",
@@ -6047,8 +6047,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "605",
@@ -6057,8 +6057,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "606",
@@ -6067,8 +6067,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "607",
@@ -6077,8 +6077,8 @@
             "D": "Gross Imaging Camera",
             "E": "Propath HD",
             "F": "Propath",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "608",
@@ -6087,8 +6087,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "609",
@@ -6097,8 +6097,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "610",
@@ -6107,8 +6107,8 @@
             "D": "Tissue Processor",
             "E": "STP 120-1",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "611",
@@ -6117,8 +6117,8 @@
             "D": "Tissue Embedding System",
             "E": "EC 350",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "612",
@@ -6127,8 +6127,8 @@
             "D": "Cryostat",
             "E": "HM 525",
             "F": "-",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "613",
@@ -6137,8 +6137,8 @@
             "D": "Cryo console",
             "E": "ES 1050-2",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "614",
@@ -6147,8 +6147,8 @@
             "D": "Microtome",
             "E": "HM 340E+STS",
             "F": "-",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "615",
@@ -6168,7 +6168,7 @@
             "E": "TFB 1100",
             "F": "ISTOS",
             "G": "44199",
-            "H": "-"
+            "H": "missing"
         },
         {
             "A": "617",
@@ -6177,8 +6177,8 @@
             "D": "Slide Stainer",
             "E": "AUS 2",
             "F": "Intelsint",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "618",
@@ -6187,8 +6187,8 @@
             "D": "Tissue Processor",
             "E": "ETP PLUS",
             "F": "Intelsint",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "619",
@@ -6197,8 +6197,8 @@
             "D": "Tissue Processor",
             "E": "STP 120-1",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "620",
@@ -6207,8 +6207,8 @@
             "D": "Microtome",
             "E": "SLEE CUT 6062",
             "F": "PFM",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "621",
@@ -6217,8 +6217,8 @@
             "D": "Tissue Embedding System",
             "E": "EC 350",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "622",
@@ -6227,8 +6227,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "623",
@@ -6237,8 +6237,8 @@
             "D": "Slide Dryer",
             "E": "SDT 1200",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "624",
@@ -6367,8 +6367,8 @@
             "D": "Tissue Processor",
             "E": "STP 120-1",
             "F": "Myr",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "637",
@@ -6377,8 +6377,8 @@
             "D": "Coverslipper",
             "E": "CVR",
             "F": "Intelsint",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "638",
@@ -6407,8 +6407,8 @@
             "D": "Cryostat",
             "E": "Portable",
             "F": "Bright",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "641",
@@ -6417,8 +6417,8 @@
             "D": "Diamond Bone Band Saw",
             "E": "DBS 220",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "642",
@@ -6427,8 +6427,8 @@
             "D": "Formadose",
             "E": "-",
             "F": "ULS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         },
         {
             "A": "643",
@@ -6437,8 +6437,8 @@
             "D": "Grossing Station",
             "E": "Labgross",
             "F": "ISTOS",
-            "G": "-",
-            "H": "-"
+            "G": "missing",
+            "H": "missing"
         }
     ]
 }

@@ -781,9 +781,10 @@ button.loading::after {
 }
 
 .input-icon {
-  width: 20px;
-  height: 20px;
-  opacity: 0.6;
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+  margin-right: 0.4rem;
 }
 
 .login-btn {

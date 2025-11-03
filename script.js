@@ -66,29 +66,22 @@ function excelSerialToDate(serial) {
 // Render Table Rows
 
 function renderTable(data) {
-  const tbody = document.querySelector("#crmTable tbody");
-  if (!tbody || !Array.isArray(data)) return;
-  tbody.innerHTML = "";
+  const tableBody = document.querySelector("#crmTable tbody");
+  tableBody.innerHTML = "";
 
-  data.forEach(row => {
-    const doiRaw = row.G === "missing" ? null : row.G;
-    const warrantyRaw = row.H === "missing" ? null : row.H;
-
-    const doi = doiRaw ? excelSerialToDate(doiRaw) : "—";
-    const warranty = warrantyRaw ? excelSerialToDate(warrantyRaw) : "—";
-
+  data.forEach((row, index) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${row.A}</td>
-      <td>${row.B}</td>
-      <td>${row.C}</td>
-      <td>${row.D}</td>
-      <td>${row.E}</td>
-      <td>${row.F}</td>
-      <td>${doi}</td>
-      <td>${warranty}</td>
+      <td>${index + 1}</td>
+      <td>${row["Customer Name"]}</td>
+      <td>${row.City}</td>
+      <td>${row.Instrument}</td>
+      <td>${row.Model}</td>
+      <td>${row.Make}</td>
+      <td>${row.DOI}</td>
+      <td>${row.Warranty}</td>
     `;
-    tbody.appendChild(tr);
+    tableBody.appendChild(tr);
   });
 }
 

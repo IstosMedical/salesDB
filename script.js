@@ -62,6 +62,9 @@ function renderTable(data) {
 function updateSummary(data) {
   const instruments = new Set(data.map(d => d.D).filter(Boolean));
   const customers = new Set(data.map(d => d.B).filter(Boolean));
+  const missingDOI = data.filter(d => d.G === "missing").length;
+animateCounter("cardMissingDOI", missingDOI);
+
   const quotations = data.length;
 
   animateCounter("cardQuotations", quotations);

@@ -374,12 +374,6 @@ h3 {
   max-width: 180px;
 }
 
-.instrument-caption {
-  font-size: 0.9rem;
-  color: #333;
-  margin-top: 0.3rem;
-}
-
 .badge-container {
   margin-top: 0.8rem;
   display: flex;
@@ -853,4 +847,16 @@ button.loading::after {
 .extract-btn:hover {
   background-color: #005fa3;
 }
+
+.instrument-caption-wrapper {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.instrument-caption {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
 

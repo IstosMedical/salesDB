@@ -218,7 +218,55 @@ function setupYearFilter(data) {
 }
 
 
-// Fetch and Initialize
+// Sort of columns with indicators
+
+let currentSortColumn = "Customer Name";
+let currentSortOrder = "asc";
+
+function sortCRMData(data, columnKey, order = "asc") {
+  return [...data].sort((a, b) => {
+    const valA = (a[columnKey] || "").toString().toLowerCase();
+    const valB = (b[columnKey] || "").toString().toLowerCase();
+    if (valA < valB) return order === "asc" ? -1 : 1;
+    if (valA > valB) return order === "asc" ? 1 : -1;
+    return 0;
+  });
+}
+
+function updateSortIndicators(headers, activeIndex) {
+  headers.forEach((th, i) => {
+    th.textContent = th.textContent.replace(/ ▲| ▼/g, "");
+    if (i === activeIndex) {
+      th.textContent += currentSortOrder === "asc" ? " ▲" : " ▼";
+    }
+  });
+}
+
+function setupColumnSort() {
+  const headers = document.querySelectorAll("#crmTable thead th");
+  const columnMap = [
+    "#", "Customer Name", "City", "Instrument",
+    "Model", "Make", "DOI", "Warranty"
+  ];
+
+  headers.forEach((th, index) => {
+    th.style.cursor = "pointer";
+    th.addEventListener("click", () => {
+      const clickedKey = columnMap[index];
+
+      if (currentSortColumn === clickedKey) {
+        currentSortOrder = currentSortOrder === "asc" ? "desc" : "asc";
+      } else {
+        currentSortColumn = clickedKey;
+        currentSortOrder = "asc";
+      }
+
+      const sorted = sortCRMData(crmData, currentSortColumn, currentSortOrder);
+      renderTable(sorted);
+      updateSortIndicators(headers, index);
+    });
+  });
+}
 
 async function fetchCRMData() {
   const url = "https://istosmedical.github.io/salesDB/sales.json";
@@ -229,21 +277,22 @@ async function fetchCRMData() {
     const rawData = json.sales || json;
 
     if (!Array.isArray(rawData) || rawData.length < 2) {
-      showLoadError(); // ✅ Shows fallback message
+      showLoadError();
       return;
     }
 
-    crmData = rawData.slice(1); // ✅ Skip header row
+    crmData = rawData.slice(1);
 
-    // ✅ Populate all sections
-    renderTable(crmData);                    // Instrument Records
-    updateSummary(crmData);                  // Summary cards
-    populateInstrumentDropdown(crmData);     // Instrument filter
-    setupDropdownListener(crmData);          // Instrument filter logic
-    setupYearFilter(crmData);                // Year filter logic
-    populateModelDropdown(crmData);          // Model dropdown inside table
+    const sortedData = sortCRMData(crmData, currentSortColumn, currentSortOrder);
+    renderTable(sortedData);
+    setupColumnSort();
 
-    // ✅ Attach model dropdown listener
+    updateSummary(crmData);
+    populateInstrumentDropdown(crmData);
+    setupDropdownListener(crmData);
+    setupYearFilter(crmData);
+    populateModelDropdown(crmData);
+
     const modelDropdown = document.getElementById("modelDropdown");
     if (modelDropdown) {
       modelDropdown.addEventListener("change", e => {
@@ -260,8 +309,8 @@ async function fetchCRMData() {
   }
 }
 
-// ✅ Trigger on DOM ready
 window.addEventListener("DOMContentLoaded", fetchCRMData);
+
     
 
 // First card always show full count

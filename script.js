@@ -66,22 +66,29 @@ function excelSerialToDate(serial) {
 // Render Table Rows
 
 function renderTable(data) {
-  const tableBody = document.querySelector("#crmTable tbody");
-  tableBody.innerHTML = "";
+  const tbody = document.querySelector("#crmTable tbody");
+  if (!tbody || !Array.isArray(data)) return;
+  tbody.innerHTML = "";
 
-  data.forEach((row, index) => {
+  data.forEach(row => {
+    const doiRaw = row.G === "missing" ? null : row.G;
+    const warrantyRaw = row.H === "missing" ? null : row.H;
+
+    const doi = doiRaw ? excelSerialToDate(doiRaw) : "—";
+    const warranty = warrantyRaw ? excelSerialToDate(warrantyRaw) : "—";
+
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${index + 1}</td>
-      <td>${row["Customer Name"]}</td>
-      <td>${row.City}</td>
-      <td>${row.Instrument}</td>
-      <td>${row.Model}</td>
-      <td>${row.Make}</td>
-      <td>${row.DOI}</td>
-      <td>${row.Warranty}</td>
+      <td>${row.A}</td>
+      <td>${row.B}</td>
+      <td>${row.C}</td>
+      <td>${row.D}</td>
+      <td>${row.E}</td>
+      <td>${row.F}</td>
+      <td>${doi}</td>
+      <td>${warranty}</td>
     `;
-    tableBody.appendChild(tr);
+    tbody.appendChild(tr);
   });
 }
 
@@ -211,55 +218,7 @@ function setupYearFilter(data) {
 }
 
 
-// Sort of columns with indicators
-
-let currentSortColumn = "Customer Name";
-let currentSortOrder = "asc";
-
-function sortCRMData(data, columnKey, order = "asc") {
-  return [...data].sort((a, b) => {
-    const valA = (a[columnKey] || "").toString().toLowerCase();
-    const valB = (b[columnKey] || "").toString().toLowerCase();
-    if (valA < valB) return order === "asc" ? -1 : 1;
-    if (valA > valB) return order === "asc" ? 1 : -1;
-    return 0;
-  });
-}
-
-function updateSortIndicators(headers, activeIndex) {
-  headers.forEach((th, i) => {
-    th.textContent = th.textContent.replace(/ ▲| ▼/g, "");
-    if (i === activeIndex) {
-      th.textContent += currentSortOrder === "asc" ? " ▲" : " ▼";
-    }
-  });
-}
-
-function setupColumnSort() {
-  const headers = document.querySelectorAll("#crmTable thead th");
-  const columnMap = [
-    "#", "Customer Name", "City", "Instrument",
-    "Model", "Make", "DOI", "Warranty"
-  ];
-
-  headers.forEach((th, index) => {
-    th.style.cursor = "pointer";
-    th.addEventListener("click", () => {
-      const clickedKey = columnMap[index];
-
-      if (currentSortColumn === clickedKey) {
-        currentSortOrder = currentSortOrder === "asc" ? "desc" : "asc";
-      } else {
-        currentSortColumn = clickedKey;
-        currentSortOrder = "asc";
-      }
-
-      const sorted = sortCRMData(crmData, currentSortColumn, currentSortOrder);
-      renderTable(sorted);
-      updateSortIndicators(headers, index);
-    });
-  });
-}
+// Fetch and Initialize
 
 async function fetchCRMData() {
   const url = "https://istosmedical.github.io/salesDB/sales.json";
@@ -270,22 +229,21 @@ async function fetchCRMData() {
     const rawData = json.sales || json;
 
     if (!Array.isArray(rawData) || rawData.length < 2) {
-      showLoadError();
+      showLoadError(); // ✅ Shows fallback message
       return;
     }
 
-    crmData = rawData.slice(1);
+    crmData = rawData.slice(1); // ✅ Skip header row
 
-    const sortedData = sortCRMData(crmData, currentSortColumn, currentSortOrder);
-    renderTable(sortedData);
-    setupColumnSort();
+    // ✅ Populate all sections
+    renderTable(crmData);                    // Instrument Records
+    updateSummary(crmData);                  // Summary cards
+    populateInstrumentDropdown(crmData);     // Instrument filter
+    setupDropdownListener(crmData);          // Instrument filter logic
+    setupYearFilter(crmData);                // Year filter logic
+    populateModelDropdown(crmData);          // Model dropdown inside table
 
-    updateSummary(crmData);
-    populateInstrumentDropdown(crmData);
-    setupDropdownListener(crmData);
-    setupYearFilter(crmData);
-    populateModelDropdown(crmData);
-
+    // ✅ Attach model dropdown listener
     const modelDropdown = document.getElementById("modelDropdown");
     if (modelDropdown) {
       modelDropdown.addEventListener("change", e => {
@@ -302,8 +260,8 @@ async function fetchCRMData() {
   }
 }
 
+// ✅ Trigger on DOM ready
 window.addEventListener("DOMContentLoaded", fetchCRMData);
-
     
 
 // First card always show full count

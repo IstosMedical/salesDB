@@ -11,21 +11,26 @@ function validateLogin(event) {
   const isPasswordValid = passwordInput === correctPassword;
 
   if (isUserValid && isPasswordValid) {
+    const userMap = {
+      naushad: "Naushad Khan",
+      sarfaraz: "Sarfaraz Ahmed",
+      mazhar: "Mazhar Mecci"
+    };
+
     sessionStorage.setItem("istos-auth", "true");
     sessionStorage.setItem("istos-last-active", Date.now());
+    sessionStorage.setItem("istos-user", userMap[userInput]); // ✅ full name stored
     window.location.href = "dashboard.html";
   } else {
-    const errorMsg = document.getElementById("error");
-    errorMsg.textContent = "Invalid credentials. Please try again.";
-    errorMsg.style.color = "red";
+    showToast("Invalid credentials. Please try again.");
   }
 }
 
-sessionStorage.setItem("istos-user", userInput);
-
 function showToast(message) {
   const toast = document.getElementById("toast");
+  if (!toast) return;
   toast.textContent = message;
   toast.classList.add("show");
   setTimeout(() => toast.classList.remove("show"), 3000);
 }
+

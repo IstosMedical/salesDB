@@ -554,6 +554,7 @@ tbody tr:hover {
 // logon screen
 
 /* Fullscreen center alignment */
+
 body.login-body {
   margin: 0;
   height: 100vh;
@@ -578,6 +579,7 @@ body.login-body {
 }
 
 /* Animate the login form */
+
 .login-container {
   opacity: 0;
   transform: translateY(30px);
@@ -596,12 +598,14 @@ body.login-body {
 }
 
 /* Logo styling */
+
 .login-logo {
   width: 60px;
   margin-bottom: 1rem;
 }
 
 /* Input fields */
+
 input {
   width: 100%;
   margin: 0.5rem 0;
@@ -612,6 +616,7 @@ input {
 }
 
 /* Login button */
+
 button {
   width: 100%;
   padding: 0.6rem;
@@ -674,5 +679,22 @@ button.loading::after {
 
 @keyframes spin {
   to { transform: translateY(-50%) rotate(360deg); }
+}
+
+.export-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: auto; /* Prevent full-width */
+  max-width: 200px; /* Optional: cap width */
+  transition: background-color 0.3s ease;
+}
+
+.export-btn:hover {
+  background-color: #005fa3;
 }
 

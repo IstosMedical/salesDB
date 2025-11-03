@@ -20,6 +20,10 @@
   }
 })();
 
+const username = sessionStorage.getItem("istos-user");
+if (username) {
+  document.getElementById("usernameDisplay").textContent = username.charAt(0).toUpperCase() + username.slice(1);
+}
 
 // Step 1: Global Setup and Error Handling
 

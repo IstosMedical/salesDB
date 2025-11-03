@@ -271,46 +271,6 @@ function setupYearFilter(data) {
   });
 }
 
-// Export to csv
-
-function exportToCSV(data) {
-  const filtered = filterByYear(data);
-  if (!filtered || filtered.length === 0) {
-    showToast("⚠️ No data available to export.");
-    return;
-  }
-
-  const widths = { serial: 4, name: 70, instrument: 48, model: 20 };
-  const pad = (text, width) => {
-    const str = text ? text.toString() : "";
-    const space = Math.max(0, width - str.length);
-    const left = Math.floor(space / 2);
-    const right = space - left;
-    return `"${" ".repeat(left) + str + " ".repeat(right)}"`;
-  };
-
-  let csv = "User's List of ISTOS Equipments\n";
-  csv += `${pad("#s", widths.serial)},${pad("Customer Name", widths.name)},${pad("Instrument", widths.instrument)},${pad("Model", widths.model)}\n`;
-
-  filtered.forEach((row, index) => {
-    const serial = pad(index + 1, widths.serial);
-    const name = pad(row.B?.replace(/,/g, " ") || "", widths.name);
-    const instrument = pad(row.D?.replace(/,/g, " ") || "", widths.instrument);
-    const model = pad(row.E?.replace(/,/g, " ") || "", widths.model);
-    csv += `${serial},${name},${instrument},${model}\n`;
-  });
-
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
-  link.download = "ISTOS_Equipments.csv";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-
-  showToast("✅ CSV downloaded for selected year!");
-}
-
 
 // ✅ XLSX Export (requires SheetJS)
 

@@ -1,5 +1,3 @@
-// Logon session check and exit
-
 (function enforceSession() {
   const SESSION_KEY = "istos-auth";
   const LAST_ACTIVE_KEY = "istos-last-active";
@@ -12,8 +10,11 @@
   const isSessionExpired = !lastActive || (now - lastActive > MAX_IDLE_TIME);
 
   if (!isLoggedIn || isSessionExpired) {
+    showToast("Session expired. Please log in again.");
     sessionStorage.clear();
-    window.location.href = "index.html";
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 2000); // show toast for 2 seconds before redirect
   } else {
     sessionStorage.setItem(LAST_ACTIVE_KEY, now); // refresh activity
   }

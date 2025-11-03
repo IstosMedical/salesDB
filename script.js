@@ -227,6 +227,32 @@ function updateFilteredSummary(filteredData, totalQuotations) {
   animateCounter("cardKarnataka", filteredData.filter(d => d.C?.toLowerCase().includes("karnataka")).length);
 }
 
+// To tackle missing 
+
+fetch('sales.json')
+  .then(response => response.json())
+  .then(data => {
+    const sales = data.sales;
+
+    sales.forEach(record => {
+      // Place it here 👇
+      const doi = record.G === "missing" ? "Missing" : record.G;
+      const warranty = record.H === "missing" ? "Missing" : record.H;
+
+      // Now use `doi` and `warranty` to render your table or summary
+      // Example:
+      const row = `
+        <tr>
+          <td>${record.B}</td>
+          <td>${record.D}</td>
+          <td>${doi}</td>
+          <td>${warranty}</td>
+        </tr>
+      `;
+      document.querySelector("#sales-table").innerHTML += row;
+    });
+  });
+
 
 // Filter by year
 

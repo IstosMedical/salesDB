@@ -243,6 +243,7 @@ async function fetchCRMData() {
     setupDropdownListener(crmData);
     setupYearFilter(crmData);
     populateModelDropdown(crmData);
+    setupExtractInstrumentButton(crmData);
 
     // ✅ Attach model dropdown listener
     
@@ -256,41 +257,35 @@ async function fetchCRMData() {
       });
     }
 
-    // ✅ Attach extractInstrumentBtn logic
-    
-    const extractBtn = document.getElementById("extractInstrumentBtn");
-    if (extractBtn) {
-      extractBtn.addEventListener("click", () => {
-        const dropdown = document.getElementById("instrumentDropdown");
-        const display = document.getElementById("instrumentCount");
-        const selected = dropdown.value.trim().toLowerCase();
+// ✅ Attach extractInstrumentBtn logic
+function setupExtractInstrumentButton(data) {
+  const extractBtn = document.getElementById("extractInstrumentBtn");
+  const dropdown = document.getElementById("instrumentDropdown");
+  const display = document.getElementById("instrumentCount");
 
-        if (!selected) {
-          showToast("⚠️ Please select an instrument.");
-          return;
-        }
+  if (!extractBtn || !dropdown || !display) return;
 
-        const filtered = crmData.filter(row => row.D?.toLowerCase() === selected);
-        if (filtered.length === 0) {
-          showToast("⚠️ No matching records found.");
-          renderTable([]);
-          display.textContent = "🔢 Total Installations: 0";
-        } else {
-          renderTable(filtered);
-          updateFilteredSummary(filtered, crmData.length);
-          display.textContent = `🔢 Total Installations: ${filtered.length}`;
-        }
-      });
+  extractBtn.addEventListener("click", () => {
+    const selected = dropdown.value.trim().toLowerCase();
+
+    if (!selected) {
+      showToast("⚠️ Please choose an instrument.");
+      return;
     }
 
-  } catch (error) {
-    console.error("❌ Failed to fetch CRM data:", error);
-    showLoadError();
-  }
-}
+    const filtered = data.filter(row => row.D?.toLowerCase() === selected);
 
-// ✅ Trigger on DOM ready
-window.addEventListener("DOMContentLoaded", fetchCRMData);
+    if (filtered.length === 0) {
+      showToast("⚠️ No matching records found.");
+      renderTable([]);
+      display.textContent = "🔢 Total Installations: 0";
+    } else {
+      renderTable(filtered);
+      updateFilteredSummary(filtered, data.length);
+      display.textContent = `🔢 Total Installations: ${filtered.length}`;
+    }
+  });
+}
     
 
 // First card always show full count

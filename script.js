@@ -1,3 +1,25 @@
+// Logon session check and exit
+
+(function enforceSession() {
+  const SESSION_KEY = "istos-auth";
+  const LAST_ACTIVE_KEY = "istos-last-active";
+  const MAX_IDLE_TIME = 15 * 60 * 1000; // 15 minutes
+
+  const isLoggedIn = sessionStorage.getItem(SESSION_KEY) === "true";
+  const lastActive = parseInt(sessionStorage.getItem(LAST_ACTIVE_KEY), 10);
+  const now = Date.now();
+
+  const isSessionExpired = !lastActive || (now - lastActive > MAX_IDLE_TIME);
+
+  if (!isLoggedIn || isSessionExpired) {
+    sessionStorage.clear();
+    window.location.href = "index.html";
+  } else {
+    sessionStorage.setItem(LAST_ACTIVE_KEY, now); // refresh activity
+  }
+})();
+
+
 // Step 1: Global Setup and Error Handling
 
 let crmData = [];

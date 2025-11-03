@@ -542,3 +542,11 @@ tbody tr:hover {
   margin-top: 12px;
   display: inline-block;
 }
+
+.table-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+  text-align: center;
+}

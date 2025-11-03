@@ -25,6 +25,15 @@ if (username) {
   document.getElementById("usernameDisplay").textContent = username.charAt(0).toUpperCase() + username.slice(1);
 }
 
+document.getElementById("logoutBtn").addEventListener("click", () => {
+  sessionStorage.clear();
+  showToast("You’ve been logged out.");
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 1500);
+});
+
+
 // Step 1: Global Setup and Error Handling
 
 let crmData = [];

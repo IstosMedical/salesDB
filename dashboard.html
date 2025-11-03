@@ -1,16 +1,3 @@
-const isLoggedIn = sessionStorage.getItem("istos-auth") === "true";
-const lastActive = parseInt(sessionStorage.getItem("istos-last-active"), 10);
-const now = Date.now();
-const maxIdle = 15 * 60 * 1000; // 15 minutes
-
-if (!isLoggedIn || (now - lastActive > maxIdle)) {
-  sessionStorage.clear();
-  window.location.href = "index.html";
-} else {
-  sessionStorage.setItem("istos-last-active", now); // refresh activity
-}
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

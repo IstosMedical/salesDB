@@ -258,6 +258,7 @@ async function fetchCRMData() {
     }
 
 // ✅ Attach extractInstrumentBtn logic
+    
 function setupExtractInstrumentButton(data) {
   const extractBtn = document.getElementById("extractInstrumentBtn");
   const dropdown = document.getElementById("instrumentDropdown");
@@ -281,12 +282,11 @@ function setupExtractInstrumentButton(data) {
       display.textContent = "🔢 Total Installations: 0";
     } else {
       renderTable(filtered);
-      updateFilteredSummary(filtered, data.length);
+      updateFilteredSummary(filtered, filtered.length); // ✅ FIXED
       display.textContent = `🔢 Total Installations: ${filtered.length}`;
     }
   });
 }
-    
 
 // First card always show full count
 

@@ -229,24 +229,21 @@ async function fetchCRMData() {
     const rawData = json.sales || json;
 
     if (!Array.isArray(rawData) || rawData.length < 2) {
-      showLoadError();
+      showLoadError(); // ✅ Shows fallback message
       return;
     }
 
-    crmData = rawData.slice(1);
+    crmData = rawData.slice(1); // ✅ Skip header row
 
     // ✅ Populate all sections
-    
-    renderTable(crmData);
-    updateSummary(crmData);
-    populateInstrumentDropdown(crmData);
-    setupDropdownListener(crmData);
-    setupYearFilter(crmData);
-    populateModelDropdown(crmData);
-    setupExtractInstrumentButton(crmData);
+    renderTable(crmData);                    // Instrument Records
+    updateSummary(crmData);                  // Summary cards
+    populateInstrumentDropdown(crmData);     // Instrument filter
+    setupDropdownListener(crmData);          // Instrument filter logic
+    setupYearFilter(crmData);                // Year filter logic
+    populateModelDropdown(crmData);          // Model dropdown inside table
 
     // ✅ Attach model dropdown listener
-    
     const modelDropdown = document.getElementById("modelDropdown");
     if (modelDropdown) {
       modelDropdown.addEventListener("change", e => {
@@ -257,36 +254,15 @@ async function fetchCRMData() {
       });
     }
 
-// ✅ Attach extractInstrumentBtn logic
-    
-function setupExtractInstrumentButton(data) {
-  const extractBtn = document.getElementById("extractInstrumentBtn");
-  const dropdown = document.getElementById("instrumentDropdown");
-  const display = document.getElementById("instrumentCount");
-
-  if (!extractBtn || !dropdown || !display) return;
-
-  extractBtn.addEventListener("click", () => {
-    const selected = dropdown.value.trim().toLowerCase();
-
-    if (!selected) {
-      showToast("⚠️ Please choose an instrument.");
-      return;
-    }
-
-    const filtered = data.filter(row => row.D?.toLowerCase() === selected);
-
-    if (filtered.length === 0) {
-      showToast("⚠️ No matching records found.");
-      renderTable([]);
-      display.textContent = "🔢 Total Installations: 0";
-    } else {
-      renderTable(filtered);
-      updateFilteredSummary(filtered, filtered.length); // ✅ FIXED
-      display.textContent = `🔢 Total Installations: ${filtered.length}`;
-    }
-  });
+  } catch (error) {
+    console.error("❌ Failed to fetch CRM data:", error);
+    showLoadError();
+  }
 }
+
+// ✅ Trigger on DOM ready
+window.addEventListener("DOMContentLoaded", fetchCRMData);
+    
 
 // First card always show full count
 

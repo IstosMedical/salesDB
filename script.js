@@ -229,27 +229,56 @@ async function fetchCRMData() {
     const rawData = json.sales || json;
 
     if (!Array.isArray(rawData) || rawData.length < 2) {
-      showLoadError(); // ✅ Shows fallback message
+      showLoadError();
       return;
     }
 
-    crmData = rawData.slice(1); // ✅ Skip header row
+    crmData = rawData.slice(1);
 
     // ✅ Populate all sections
-    renderTable(crmData);                    // Instrument Records
-    updateSummary(crmData);                  // Summary cards
-    populateInstrumentDropdown(crmData);     // Instrument filter
-    setupDropdownListener(crmData);          // Instrument filter logic
-    setupYearFilter(crmData);                // Year filter logic
-    populateModelDropdown(crmData);          // Model dropdown inside table
+    
+    renderTable(crmData);
+    updateSummary(crmData);
+    populateInstrumentDropdown(crmData);
+    setupDropdownListener(crmData);
+    setupYearFilter(crmData);
+    populateModelDropdown(crmData);
 
     // ✅ Attach model dropdown listener
+    
     const modelDropdown = document.getElementById("modelDropdown");
     if (modelDropdown) {
       modelDropdown.addEventListener("change", e => {
         const selectedModel = e.target.value;
         if (selectedModel) {
           updateModelYearTable(crmData, selectedModel);
+        }
+      });
+    }
+
+    // ✅ Attach extractInstrumentBtn logic
+    
+    const extractBtn = document.getElementById("extractInstrumentBtn");
+    if (extractBtn) {
+      extractBtn.addEventListener("click", () => {
+        const dropdown = document.getElementById("instrumentDropdown");
+        const display = document.getElementById("instrumentCount");
+        const selected = dropdown.value.trim().toLowerCase();
+
+        if (!selected) {
+          showToast("⚠️ Please select an instrument.");
+          return;
+        }
+
+        const filtered = crmData.filter(row => row.D?.toLowerCase() === selected);
+        if (filtered.length === 0) {
+          showToast("⚠️ No matching records found.");
+          renderTable([]);
+          display.textContent = "🔢 Total Installations: 0";
+        } else {
+          renderTable(filtered);
+          updateFilteredSummary(filtered, crmData.length);
+          display.textContent = `🔢 Total Installations: ${filtered.length}`;
         }
       });
     }

@@ -21,6 +21,8 @@ function validateLogin(event) {
   }
 }
 
+sessionStorage.setItem("istos-user", userInput);
+
 function showToast(message) {
   const toast = document.getElementById("toast");
   toast.textContent = message;

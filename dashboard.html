@@ -35,14 +35,20 @@
         <h3>Overall Sales by Unit</h3>
         <p class="istos-value" id="cardQuotations">0</p>
       </div>
-
-      <div class="istos-card">
+      
+      <div class="istos-card istos-units-card">
         <div class="emoji">🧰</div>
         <h3># of Units</h3>
-        <select id="instrumentDropdown" class="istos-dropdown">
-          <option value="">-- Choose Instrument --</option>
-        </select>
-        <p id="instrumentCount" class="instrument-caption">***</p>
+      
+        <div class="instrument-select-group">
+          <label for="instrumentDropdown" class="dropdown-label">Select Instrument:</label>
+          <select id="instrumentDropdown" class="istos-dropdown">
+            <option value="">-- Choose Instrument --</option>
+          </select>
+          <button id="extractInstrumentBtn" class="extract-btn">Extract</button>
+        </div>
+      
+        <p id="instrumentCount" class="instrument-caption">🔢 Total Installations: ***</p>
         <div id="topInstruments" class="badge-container"></div>
       </div>
 

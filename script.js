@@ -32,9 +32,15 @@ function excelSerialToDate(serial) {
 function renderTable(data) {
   const tbody = document.querySelector("#crmTable tbody");
   if (!tbody || !Array.isArray(data)) return;
-
   tbody.innerHTML = "";
+
   data.forEach(row => {
+    const doiRaw = row.G === "missing" ? null : row.G;
+    const warrantyRaw = row.H === "missing" ? null : row.H;
+
+    const doi = doiRaw ? excelSerialToDate(doiRaw) : "—";
+    const warranty = warrantyRaw ? excelSerialToDate(warrantyRaw) : "—";
+
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${row.A}</td>
@@ -43,12 +49,13 @@ function renderTable(data) {
       <td>${row.D}</td>
       <td>${row.E}</td>
       <td>${row.F}</td>
-      <td>${row.G ? excelSerialToDate(row.G) : "—"}</td>
-      <td>${row.H ? excelSerialToDate(row.H) : "—"}</td>
+      <td>${doi}</td>
+      <td>${warranty}</td>
     `;
     tbody.appendChild(tr);
   });
 }
+
 
 // Update Summary Cards
 

@@ -553,14 +553,18 @@ tbody tr:hover {
 
 // logon screen
 
+/* Fullscreen center alignment */
 body.login-body {
+  margin: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background: #f0f2f5;
   font-family: 'Segoe UI', sans-serif;
 }
+
+/* Login form container */
 
 .login-container {
   display: flex;
@@ -570,14 +574,34 @@ body.login-body {
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 300px;
+  width: 320px;
 }
 
+/* Animate the login form */
+.login-container {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo styling */
 .login-logo {
   width: 60px;
   margin-bottom: 1rem;
 }
 
+/* Input fields */
 input {
   width: 100%;
   margin: 0.5rem 0;
@@ -587,6 +611,7 @@ input {
   border-radius: 6px;
 }
 
+/* Login button */
 button {
   width: 100%;
   padding: 0.6rem;
@@ -599,10 +624,9 @@ button {
   margin-top: 1rem;
 }
 
+/* Error message */
 .error-msg {
   color: red;
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
-
-

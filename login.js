@@ -13,7 +13,7 @@ function validateLogin(event) {
   if (isUserValid && isPasswordValid) {
     const userMap = {
       naushad: "Naushad Khan",
-      sarfaraz: "Sarfaraz Ahmed",
+      sarfaraz: "Sarfaraz Khan",
       mazhar: "Mazhar Mecci"
     };
 

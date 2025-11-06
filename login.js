@@ -14,7 +14,7 @@ function validateLogin(event) {
     const userMap = {
       naushad: "Naushad Khan",
       sarfaraz: "Sarfaraz Khan",
-      mazhar: "Mazhar Mecci"
+      mazhar: "Mazhar Mecci",
       nadeem: "Nadeem Khadri"
     };
 

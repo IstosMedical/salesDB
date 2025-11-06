@@ -4,7 +4,7 @@ function validateLogin(event) {
   const userInput = document.getElementById("username").value.trim().toLowerCase();
   const passwordInput = document.getElementById("password").value;
 
-  const allowedUsers = ["naushad", "sarfaraz", "mazhar"];
+  const allowedUsers = ["naushad", "sarfaraz", "mazhar", "nadeem"];
   const correctPassword = "Istos@123";
 
   const isUserValid = allowedUsers.includes(userInput);
@@ -15,6 +15,7 @@ function validateLogin(event) {
       naushad: "Naushad Khan",
       sarfaraz: "Sarfaraz Khan",
       mazhar: "Mazhar Mecci"
+      nadeem: "Nadeem Khadri"
     };
 
     sessionStorage.setItem("istos-auth", "true");

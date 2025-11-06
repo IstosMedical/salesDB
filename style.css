@@ -859,4 +859,35 @@ button.loading::after {
   font-style: italic;
 }
 
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 16px auto;
+  display: block;
+  transition: max-height 0.3s ease;
+}
+
+.map-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #1976d2;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
 

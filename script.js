@@ -530,11 +530,11 @@ const pinPositions = {
   "Gujarat": { top: "45%", left: "18%" },
   "Jammu and Kashmir": { top: "10%", left: "30%" },
   "Karnataka": { top: "75%", left: "30%" },
-  "Kerala": { top: "80%", left: "42%" },
-  "Madhya Pradesh": { top: "38%", left: "37%" },
+  "Kerala": { top: "80%", left: "22%" },
+  "Madhya Pradesh": { top: "44%", left: "37%" },
   "Maharashtra": { top: "55%", left: "28%" },
   "Tamil Nadu": { top: "77%", left: "37%" },  
-  "Uttar Pradesh": { top: "35%", left: "40%" },
+  "Uttar Pradesh": { top: "31%", left: "42%" },
   "West Bengal": { top: "44%", left: "60%" }
 };
 

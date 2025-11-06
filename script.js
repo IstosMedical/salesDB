@@ -501,3 +501,8 @@ function updateModelYearTable(data, selectedModel) {
     `<td><img src="istos-logo.png" alt="ISTOS Logo" class="istos-logo-tiny" /></td>` +
     Object.values(yearCounts).map(c => `<td>${c}</td>`).join("");
 }
+
+function toggleMap() {
+  const map = document.getElementById("indiaMapContainer");
+  map.style.display = map.style.display === "none" ? "block" : "none";
+}

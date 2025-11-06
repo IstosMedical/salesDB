@@ -502,7 +502,84 @@ function updateModelYearTable(data, selectedModel) {
     Object.values(yearCounts).map(c => `<td>${c}</td>`).join("");
 }
 
+// map logic
+
 function toggleMap() {
   const map = document.getElementById("indiaMapContainer");
   map.style.display = map.style.display === "none" ? "block" : "none";
 }
+
+// Aggregate sales by state
+
+function getSalesByState(data) {
+  const stateSales = {};
+  data.forEach(row => {
+    const state = row.C?.trim();
+    if (!state) return;
+    if (!stateSales[state]) stateSales[state] = 0;
+    stateSales[state]++;
+  });
+  return stateSales;
+}
+
+const pinPositions = {
+  "Andhra Pradesh": { top: "65%", left: "25%" },
+  "Telangana": { top: "58%", left: "38%" },
+  "Assam": { top: "40%", left: "70%" },
+  "Goa": { top: "68%", left: "21%" },
+  "Gujarat": { top: "45%", left: "18%" },
+  "Jammu and Kashmir": { top: "10%", left: "30%" },
+  "Karnataka": { top: "75%", left: "30%" },
+  "Kerala": { top: "80%", left: "42%" },
+  "Madhya Pradesh": { top: "38%", left: "37%" },
+  "Maharashtra": { top: "55%", left: "28%" },
+  "Tamil Nadu": { top: "77%", left: "37%" },  
+  "Uttar Pradesh": { top: "35%", left: "40%" },
+  "West Bengal": { top: "44%", left: "60%" }
+};
+
+function renderSalesPins(data) {
+  const container = document.getElementById("indiaMapContainer");
+  const stateSales = getSalesByState(data);
+
+  Object.entries(pinPositions).forEach(([state, pos]) => {
+    const count = stateSales[state] || 0;
+    const pin = document.createElement("div");
+    pin.className = "pin pulse";
+    pin.style.top = pos.top;
+    pin.style.left = pos.left;
+    pin.textContent = count;
+    pin.setAttribute("data-tooltip", `${state}: ${count} units`);
+    container.appendChild(pin);
+  });
+}
+
+renderSalesPins(crmData);
+
+
+function renderSalesPins(data) {
+  const container = document.getElementById("indiaMapContainer");
+  if (!container) return;
+
+  container.querySelectorAll(".pin").forEach(pin => pin.remove());
+
+  const stateSales = getSalesByState(data);
+
+  Object.entries(pinPositions).forEach(([state, pos]) => {
+    const count = stateSales[state] || 0;
+    const pin = document.createElement("div");
+    pin.className = "pin pulse";
+    pin.style.top = pos.top;
+    pin.style.left = pos.left;
+    pin.textContent = count;
+    pin.setAttribute("data-tooltip", `${state}: ${count} units`);
+
+    // Optional: color gradient
+    if (count > 150) pin.style.background = "#0d47a1";
+    else if (count > 100) pin.style.background = "#1976d2";
+    else pin.style.background = "#90caf9";
+
+    container.appendChild(pin);
+  });
+}
+

@@ -277,7 +277,7 @@ function getSalesByState(data) {
 // Pin Positions for Map Overlay
 
 const pinPositions = {
-  "Andhra Pradesh": { top: "65%", left: "34%" },
+  "Andhra Pradesh": { top: "67%", left: "36%" },
   "Telangana": { top: "58%", left: "38%" },
   "Assam": { top: "40%", left: "70%" },
   "Goa": { top: "68%", left: "21%" },

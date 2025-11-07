@@ -1,37 +1,42 @@
 (function enforceSession() {
   const SESSION_KEY = "istos-auth";
   const LAST_ACTIVE_KEY = "istos-last-active";
-  const MAX_IDLE_TIME = 15 * 60 * 1000;
+  const MAX_IDLE_TIME = 15 * 60 * 1000; // 15 minutes
 
+  const now = Date.now();
   const isLoggedIn = sessionStorage.getItem(SESSION_KEY) === "true";
   const lastActive = parseInt(sessionStorage.getItem(LAST_ACTIVE_KEY), 10);
-  const now = Date.now();
+  const isExpired = !lastActive || (now - lastActive > MAX_IDLE_TIME);
 
-  if (!isLoggedIn || !lastActive || (now - lastActive > MAX_IDLE_TIME)) {
+  if (!isLoggedIn || isExpired) {
     sessionStorage.clear();
-    requestAnimationFrame(() => {
-      showToast("Session expired. Redirecting...");
-      setTimeout(() => window.location.href = "index.html", 1200);
-    });
-  } else {
-    sessionStorage.setItem(LAST_ACTIVE_KEY, now);
+    showToast("Session expired. Redirecting...");
+    setTimeout(() => window.location.href = "index.html", 1000);
+    return;
   }
+
+  // ✅ Refresh activity timestamp
+  sessionStorage.setItem(LAST_ACTIVE_KEY, now);
 })();
 
-const username = sessionStorage.getItem("istos-user");
-if (username) {
+function displayUsername() {
+  const username = sessionStorage.getItem("istos-user");
   const display = document.getElementById("usernameDisplay");
-  if (display) {
+  if (username && display) {
     display.textContent = username.charAt(0).toUpperCase() + username.slice(1);
   }
 }
 
+displayUsername();
+
 function logout() {
+  showToast("Logging out...");
   setTimeout(() => {
     sessionStorage.clear();
     window.location.href = "index.html";
-  }, 50);
+  }, 800);
 }
+
 
 // Step 1: Global Setup and Error Handling
 

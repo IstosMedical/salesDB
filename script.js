@@ -281,12 +281,12 @@ const pinPositions = {
   "Goa": { top: "68%", left: "21%" },
   "Gujarat": { top: "45%", left: "18%" },
   "Jammu and Kashmir": { top: "10%", left: "30%" },
-  "Karnataka": { top: "72%", left: "30%" },
-  "Kerala": { top: "80%", left: "25%" },
+  "Karnataka": { top: "72%", left: "29%" },
+  "Kerala": { top: "80%", left: "26%" },
   "Madhya Pradesh": { top: "44%", left: "37%" },
   "Maharashtra": { top: "55%", left: "28%" },
   "Tamil Nadu": { top: "77%", left: "37%" },
-  "Uttar Pradesh": { top: "31%", left: "42%" },
+  "Uttar Pradesh": { top: "33%", left: "42%" },
   "West Bengal": { top: "44%", left: "60%" }
 };
 

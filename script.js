@@ -1,4 +1,5 @@
-(function enforceSession() {
+// 🔐 Session Enforcement
+function enforceSession() {
   const SESSION_KEY = "istos-auth";
   const LAST_ACTIVE_KEY = "istos-last-active";
   const MAX_IDLE_TIME = 15 * 60 * 1000; // 15 minutes
@@ -15,10 +16,10 @@
     return;
   }
 
-  // ✅ Refresh activity timestamp
-  sessionStorage.setItem(LAST_ACTIVE_KEY, now);
-})();
+  sessionStorage.setItem(LAST_ACTIVE_KEY, now); // ✅ Refresh activity
+}
 
+// 👤 Display Username
 function displayUsername() {
   const username = sessionStorage.getItem("istos-user");
   const display = document.getElementById("usernameDisplay");
@@ -27,8 +28,7 @@ function displayUsername() {
   }
 }
 
-displayUsername();
-
+// 🚪 Logout Handler
 function logout() {
   showToast("Logging out...");
   setTimeout(() => {
@@ -36,6 +36,17 @@ function logout() {
     window.location.href = "index.html";
   }, 800);
 }
+
+// 🚀 Initialize on DOM Ready
+window.addEventListener("DOMContentLoaded", () => {
+  enforceSession();
+  displayUsername();
+
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", logout);
+  }
+});
 
 
 // Step 1: Global Setup and Error Handling

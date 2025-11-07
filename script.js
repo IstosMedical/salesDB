@@ -18,7 +18,6 @@
   }
 })();
 
-
 const username = sessionStorage.getItem("istos-user");
 if (username) {
   const display = document.getElementById("usernameDisplay");
@@ -27,13 +26,12 @@ if (username) {
   }
 }
 
-document.getElementById("logoutBtn")?.addEventListener("click", () => {
-  showToast("Logging out...");
+function logout() {
   setTimeout(() => {
     sessionStorage.clear();
     window.location.href = "index.html";
-  }, 1000);
-});
+  }, 50);
+}
 
 // Step 1: Global Setup and Error Handling
 

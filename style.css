@@ -928,7 +928,7 @@ button.loading::after {
   z-index: 10;
 }
 
-.istosmini_logo img {
+.istosmini-logo img {
   width: 28px;
   height: auto;
   border-radius: 2px;

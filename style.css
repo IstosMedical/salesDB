@@ -921,19 +921,27 @@ button.loading::after {
   opacity: 1;
 }
 
-.flag-logo {
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.istosmini-logo {
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 12px;
+  left: 12px;
   z-index: 10;
 }
 
 .istosmini-logo img {
-  width: 28px;
+  width: 32px;
   height: auto;
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
+
 
 .year-search {
   margin-top: 16px; /* ~1 line space */

@@ -1,38 +1,39 @@
 (function enforceSession() {
   const SESSION_KEY = "istos-auth";
   const LAST_ACTIVE_KEY = "istos-last-active";
-  const MAX_IDLE_TIME = 15 * 60 * 1000; // 15 minutes
+  const MAX_IDLE_TIME = 15 * 60 * 1000;
 
   const isLoggedIn = sessionStorage.getItem(SESSION_KEY) === "true";
   const lastActive = parseInt(sessionStorage.getItem(LAST_ACTIVE_KEY), 10);
   const now = Date.now();
 
-  const isSessionExpired = !lastActive || (now - lastActive > MAX_IDLE_TIME);
-
-  if (!isLoggedIn || isSessionExpired) {
-    showToast("Session expired. Please log in again.");
+  if (!isLoggedIn || !lastActive || (now - lastActive > MAX_IDLE_TIME)) {
     sessionStorage.clear();
-    setTimeout(() => {
-      window.location.href = "index.html";
-    }, 2000); // show toast for 2 seconds before redirect
+    requestAnimationFrame(() => {
+      showToast("Session expired. Redirecting...");
+      setTimeout(() => window.location.href = "index.html", 1200);
+    });
   } else {
-    sessionStorage.setItem(LAST_ACTIVE_KEY, now); // refresh activity
+    sessionStorage.setItem(LAST_ACTIVE_KEY, now);
   }
 })();
 
+
 const username = sessionStorage.getItem("istos-user");
 if (username) {
-  document.getElementById("usernameDisplay").textContent = username.charAt(0).toUpperCase() + username.slice(1);
+  const display = document.getElementById("usernameDisplay");
+  if (display) {
+    display.textContent = username.charAt(0).toUpperCase() + username.slice(1);
+  }
 }
 
-document.getElementById("logoutBtn").addEventListener("click", () => {
-  sessionStorage.clear();
-  showToast("You’ve been logged out.");
+document.getElementById("logoutBtn")?.addEventListener("click", () => {
+  showToast("Logging out...");
   setTimeout(() => {
+    sessionStorage.clear();
     window.location.href = "index.html";
-  }, 1500);
+  }, 1000);
 });
-
 
 // Step 1: Global Setup and Error Handling
 
@@ -276,13 +277,13 @@ function getSalesByState(data) {
 // Pin Positions for Map Overlay
 
 const pinPositions = {
-  "Andhra Pradesh": { top: "65%", left: "28%" },
+  "Andhra Pradesh": { top: "65%", left: "34%" },
   "Telangana": { top: "58%", left: "38%" },
   "Assam": { top: "40%", left: "70%" },
   "Goa": { top: "68%", left: "21%" },
   "Gujarat": { top: "45%", left: "18%" },
   "Jammu and Kashmir": { top: "10%", left: "30%" },
-  "Karnataka": { top: "75%", left: "30%" },
+  "Karnataka": { top: "72%", left: "30%" },
   "Kerala": { top: "80%", left: "25%" },
   "Madhya Pradesh": { top: "44%", left: "37%" },
   "Maharashtra": { top: "55%", left: "28%" },

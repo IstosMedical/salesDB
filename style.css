@@ -928,14 +928,14 @@ button.loading::after {
   margin: auto;
 }
 
-.istosmini-logo {
+.istosm-logo {
   position: absolute;
   top: 12px;
   left: 12px;
   z-index: 10;
 }
 
-.istosmini-logo img {
+.istosm-logo img {
   width: 32px;
   height: auto;
   border-radius: 2px;

@@ -780,6 +780,9 @@ function exportInstrumentToPDF(data) {
   showToast(`📄 PDF downloaded for ${selectedInstrument}!`);
 }
 
+document.getElementById("exportInstrumentPDF")?.addEventListener("click", () => {
+  exportInstrumentToPDF(crmData);
+});
 
 const exportPDFBtn = document.getElementById("exportInstrumentPDF");
 if (exportPDFBtn) {

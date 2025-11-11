@@ -961,3 +961,24 @@ button.loading::after {
   background-color: #ef6c00;
 }
 
+.export-icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.export-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.export-icon:hover {
+  transform: scale(1.1);
+}
+
+.export-icon.orange {
+  filter: hue-rotate(-20deg) saturate(1.2);
+}

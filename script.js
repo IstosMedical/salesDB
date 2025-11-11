@@ -718,3 +718,74 @@ function setupInstrumentExportListener(data) {
 
   exportBtn.addEventListener("click", () => exportInstrumentToXLSX(data));
 }
+
+
+//Export to PDF
+
+function exportInstrumentToPDF(data) {
+  const dropdown = document.getElementById("instrumentDropdown");
+  if (!dropdown) {
+    console.warn("Instrument dropdown not found.");
+    return;
+  }
+
+  const selectedInstrument = dropdown.value.trim();
+  if (!selectedInstrument) {
+    showToast("⚠️ Please select an instrument to export.");
+    return;
+  }
+
+  const filtered = data.filter(row =>
+    row.D?.trim().toLowerCase() === selectedInstrument.toLowerCase()
+  );
+
+  if (!filtered.length) {
+    showToast("⚠️ No matching instrument data found.");
+    return;
+  }
+
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  doc.setFontSize(14);
+  doc.text(`ISTOS Installations – ${selectedInstrument}`, 14, 20);
+
+  const headers = ["#", "Customer", "City", "Model", "Make", "DOI", "Warranty"];
+  const rows = filtered.map((row, index) => [
+    index + 1,
+    row.B || "",
+    row.C || "",
+    row.E || "",
+    row.F || "",
+    excelSerialToDate(row.G),
+    excelSerialToDate(row.H)
+  ]);
+
+  doc.autoTable({
+    startY: 30,
+    head: [headers],
+    body: rows,
+    styles: {
+      fontSize: 10,
+      cellPadding: 3
+    },
+    headStyles: {
+      fillColor: [245, 124, 0], // orange header
+      textColor: 255,
+      halign: "center"
+    }
+  });
+
+  doc.save(`ISTOS_${selectedInstrument}_Installations.pdf`);
+  showToast(`📄 PDF downloaded for ${selectedInstrument}!`);
+}
+
+
+const exportPDFBtn = document.getElementById("exportInstrumentPDF");
+if (exportPDFBtn) {
+  exportPDFBtn.addEventListener("click", () => {
+    exportInstrumentToPDF(crmData);
+  });
+}
+
+

@@ -166,16 +166,20 @@
 
     <!-- 🔹 HTML – Filter Tags + Export Button -->
     
-  <div class="filter-bar flex flex-wrap gap-2 p-4 bg-gray-100 rounded-md">
-      <input type="text" id="searchInput" placeholder="Search instruments..." class="px-3 py-2 border rounded-md w-full sm:w-64" />
-
-  <div id="instrumentTags" class="flex flex-wrap gap-2 mt-2">
-    <!-- Dynamically generated tags -->
-  </div>
-
-  <button id="exportBtn" class="ml-auto px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-    Export Filtered Data
-  </button>
+  <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Search instruments..." />
+  
+    <div class="tag-container">
+      <button class="tag">Bonesaw</button>
+      <button class="tag">LabGross Grossing</button>
+      <button class="tag">Rotary Microtome</button>
+      <button class="tag">Tissue Processor</button>
+      <button class="tag">Cryostat</button>
+      <button class="tag">Tissue Embedding Centre</button>
+      <button class="tag">Cassette Printer</button>
+    </div>
+  
+    <button id="exportBtn">Export Filtered Data</button>
   </div>
 
     

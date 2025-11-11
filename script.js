@@ -249,7 +249,8 @@ async function fetchCRMData() {
 
     crmData = rawData.slice(1); // Skip header row
 
-    // Populate dashboard sections
+// Populate dashboard sections
+    
     renderTable(crmData);
     updateSummary(crmData);
     populateInstrumentDropdown(crmData);
@@ -267,7 +268,8 @@ async function fetchCRMData() {
       });
     }
 
-    // ✅ Inject sales pins after data is ready
+// ✅ Inject sales pins after data is ready
+    
     renderSalesPins(crmData);
 
   } catch (error) {
@@ -642,4 +644,55 @@ exportBtn.addEventListener("click", () => {
   link.click();
 });
 
+// Export logic for the Instrument, distinct from other logics above
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const instrumentDropdown = document.getElementById("instrumentDropdown");
+  const exportInstrumentBtn = document.getElementById("exportInstrumentXLSX");
+  const crmTable = document.getElementById("crmTable");
+
+  // 🔍 Utility: Get filtered rows based on selected instrument
+  function getFilteredRowsByInstrument() {
+    const selectedInstrument = instrumentDropdown.value.trim();
+    const rows = Array.from(crmTable.querySelectorAll("tbody tr"));
+
+    if (!selectedInstrument) return rows; // No filter, return all
+
+    return rows.filter(row => {
+      const instrumentCell = row.cells[3]; // Assuming 4th column is Instrument
+      return instrumentCell && instrumentCell.textContent.trim() === selectedInstrument;
+    });
+  }
+
+  // 📦 Export filtered rows to CSV
+  function exportInstrumentFilteredData() {
+    const filteredRows = getFilteredRowsByInstrument();
+    if (filteredRows.length === 0) {
+      alert("No matching instrument data to export.");
+      return;
+    }
+
+    let csvContent = "data:text/csv;charset=utf-8,";
+    csvContent += "Customer Name,City,Instrument,Model,Make,DOI,Warranty\n";
+
+    filteredRows.forEach(row => {
+      const cells = Array.from(row.cells).slice(1); // Skip index column
+      const rowData = cells.map(cell => `"${cell.textContent.trim()}"`).join(",");
+      csvContent += rowData + "\n";
+    });
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "instrument_filtered_data.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  // 🔁 Bind export button
+  exportInstrumentBtn.addEventListener("click", exportInstrumentFilteredData);
+});
+</script>
 

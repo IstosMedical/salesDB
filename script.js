@@ -585,3 +585,59 @@ function toggleMap() {
   map.style.display = map.style.display === "none" ? "block" : "none";
 }
 
+
+// Dynamic instrument search
+
+const instruments = [
+  "Bonesaw", "LabGross Grossing", "Rotary Microtome", "Tissue Processor",
+  "Cryostat", "Tissue Embedding Centre", "Cassette Printer"
+];
+
+const table = document.querySelector("#instrumentTable"); // your table ID
+const searchInput = document.querySelector("#searchInput");
+const tagContainer = document.querySelector("#instrumentTags");
+
+let activeFilters = new Set();
+
+// Render filter tags
+instruments.forEach(name => {
+  const tag = document.createElement("button");
+  tag.textContent = name;
+  tag.className = "px-3 py-1 bg-gray-200 rounded hover:bg-gray-300";
+  tag.onclick = () => {
+    tag.classList.toggle("bg-blue-500");
+    tag.classList.toggle("text-white");
+    if (activeFilters.has(name)) activeFilters.delete(name);
+    else activeFilters.add(name);
+    filterTable();
+  };
+  tagContainer.appendChild(tag);
+});
+
+// Filter logic
+function filterTable() {
+  const query = searchInput.value.toLowerCase();
+  const rows = table.querySelectorAll("tbody tr");
+
+  rows.forEach(row => {
+    const text = row.textContent.toLowerCase();
+    const matchesSearch = text.includes(query);
+    const matchesTags = [...activeFilters].length === 0 || [...activeFilters].some(tag => text.includes(tag.toLowerCase()));
+    row.style.display = matchesSearch && matchesTags ? "" : "none";
+  });
+}
+
+searchInput.addEventListener("input", filterTable);
+
+document.querySelector("#exportBtn").addEventListener("click", () => {
+  const rows = Array.from(table.querySelectorAll("tbody tr")).filter(row => row.style.display !== "none");
+  const csv = rows.map(row => 
+    Array.from(row.cells).map(cell => `"${cell.textContent.trim()}"`).join(",")
+  ).join("\n");
+
+  const blob = new Blob([csv], { type: "text/csv" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "filtered_instruments.csv";
+  link.click();
+});

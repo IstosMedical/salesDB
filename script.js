@@ -745,17 +745,24 @@ function exportInstrumentToPDF(data) {
     return;
   }
 
-  // ✅ Defensive check for jsPDF and autoTable
+  // ✅ UMD Compatibility Patch + Validation
   if (!window.jspdf || !window.jspdf.jsPDF || !window.jspdf.autoTable) {
     console.error("❌ jsPDF or autoTable not loaded.");
+    console.log("typeof jsPDF:", typeof window.jspdf?.jsPDF);
+    console.log("typeof autoTable:", typeof window.jspdf?.autoTable);
     showToast("⚠️ PDF export library missing.");
     return;
   }
 
   try {
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
 
+    // 🔧 Patch: Ensure autoTable is registered on jsPDF prototype
+    if (typeof jsPDF.API.autoTable === "undefined" && typeof window.jspdf.autoTable === "function") {
+      jsPDF.API.autoTable = window.jspdf.autoTable;
+    }
+
+    const doc = new jsPDF();
     doc.setFontSize(14);
     doc.text(`ISTOS Installations – ${selectedInstrument}`, 14, 20);
 
@@ -802,5 +809,4 @@ function setupPDFExportListener(data) {
 
   pdfBtn.addEventListener("click", () => exportInstrumentToPDF(data));
 }
-
 

@@ -947,37 +947,17 @@ button.loading::after {
   margin-top: 16px; /* ~1 line space */
 }
 
-.instrument-filter-row {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.instrument-dropdown {
-  padding: 0.4rem;
-  font-size: 0.9rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.instrument-dropdown:focus {
-  outline: none;
-  border-color: #1976d2;
-  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
-}
-
-.export-btn {
+.export-btn.orange {
+  background-color: #f57c00; /* Deep orange */
+  color: white;
+  border: none;
   padding: 0.4rem 0.8rem;
   font-size: 0.9rem;
   border-radius: 4px;
-  background-color: #1976d2;
-  color: white;
-  border: none;
   cursor: pointer;
 }
 
-.export-btn:hover {
-  background-color: #1565c0;
+.export-btn.orange:hover {
+  background-color: #ef6c00;
 }
 

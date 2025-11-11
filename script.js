@@ -641,3 +641,80 @@ exportBtn.addEventListener("click", () => {
   link.download = "filtered_instruments.csv";
   link.click();
 });
+
+
+// Custom instrument search and export
+
+// 🔹 DOM References
+const searchInput = document.getElementById("searchInput");
+const tags = document.querySelectorAll(".tag");
+const yearDropdown = document.getElementById("yearDropdown");
+const table = document.getElementById("crmTable");
+const exportFilteredBtn = document.getElementById("exportBtn");
+const exportYearBtn = document.getElementById("exportXLSX");
+
+let activeFilters = new Set();
+let selectedYear = "";
+
+// 🔹 Tag Filter Logic
+tags.forEach(tag => {
+  tag.addEventListener("click", () => {
+    tag.classList.toggle("active");
+    const label = tag.textContent;
+    activeFilters.has(label) ? activeFilters.delete(label) : activeFilters.add(label);
+    filterTable();
+  });
+});
+
+// 🔹 Search Input Logic
+searchInput.addEventListener("input", filterTable);
+
+// 🔹 Year Dropdown Logic
+yearDropdown.addEventListener("change", () => {
+  selectedYear = yearDropdown.value;
+  filterTable();
+});
+
+// 🔹 Filter Function
+function filterTable() {
+  const query = searchInput.value.toLowerCase();
+  const rows = table.querySelectorAll("tbody tr");
+
+  rows.forEach(row => {
+    const text = row.textContent.toLowerCase();
+    const doiCell = row.querySelector("td:nth-child(7)"); // DOI column
+    const yearMatch = selectedYear === "" || (doiCell && doiCell.textContent.startsWith(selectedYear));
+    const tagMatch = activeFilters.size === 0 || [...activeFilters].some(tag => text.includes(tag.toLowerCase()));
+    const searchMatch = text.includes(query);
+    const show = yearMatch && tagMatch && searchMatch;
+    row.style.display = show ? "" : "none";
+  });
+}
+
+// 🔹 Export Filtered Data (Tag + Search + Year)
+exportFilteredBtn.addEventListener("click", () => {
+  exportVisibleRows("filtered_instruments.csv");
+});
+
+// 🔹 Export Year-Specific Data Only
+exportYearBtn.addEventListener("click", () => {
+  if (!selectedYear) return alert("Please select a year first.");
+  exportVisibleRows(`installations_${selectedYear}.csv`);
+});
+
+// 🔹 Export Helper
+function exportVisibleRows(filename) {
+  const rows = Array.from(table.querySelectorAll("tbody tr")).filter(row => row.style.display !== "none");
+  if (rows.length === 0) return alert("No rows to export.");
+
+  const csv = rows.map(row =>
+    Array.from(row.cells).map(cell => `"${cell.textContent.trim()}"`).join(",")
+  ).join("\n");
+
+  const blob = new Blob([csv], { type: "text/csv" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = filename;
+  link.click();
+}
+

@@ -159,29 +159,30 @@
           <option value="2015">2015</option>      
         </select>   
         <button id="exportXLSX" class="export-btn">Export to Excel</button>
-      </div>
-      <p class="instrument-caption">Export custom data into PDF</p>
+      </div>     
       <hr class="section-divider" />
   </section>
 
-    <!-- 🔹 HTML – Filter Tags + Export Button -->
-    
-  <div class="filter-bar">
-    <input type="text" id="searchInput" placeholder="Search instruments..." />
-  
-    <div class="tag-container">
-      <button class="tag">Bonesaw</button>
-      <button class="tag">LabGross Grossing</button>
-      <button class="tag">Rotary Microtome</button>
-      <button class="tag">Tissue Processor</button>
-      <button class="tag">Cryostat</button>
-      <button class="tag">Tissue Embedding Centre</button>
-      <button class="tag">Cassette Printer</button>
-    </div>
-  
-    <button id="exportBtn">Export Filtered Data</button>
-  </div>
+    <!-- 🔹 Instrument Filter + Export -->
 
+<section class="instrument-search">
+  <label for="instrumentDropdown">🎛️ Filter Installations by Instrument:</label>
+  <div class="instrument-filter-row">
+    <select id="instrumentDropdown" class="instrument-dropdown">
+      <option value="">-- Select Instrument --</option>
+      <option value="Bonesaw">Bonesaw</option>
+      <option value="LabGross Grossing">LabGross Grossing</option>
+      <option value="Rotary Microtome">Rotary Microtome</option>
+      <option value="Tissue Processor">Tissue Processor</option>
+      <option value="Cryostat">Cryostat</option>
+      <option value="Tissue Embedding Centre">Tissue Embedding Centre</option>
+      <option value="Cassette Printer">Cassette Printer</option>
+    </select>
+    <button id="exportInstrumentXLSX" class="export-btn">Export to Excel</button>
+  </div>
+  <p class="instrument-caption">Export instrument-specific data into Excel</p>
+  <hr class="section-divider" />
+</section>
     
     <!-- 🔹 Data Table -->
     <section class="data-table">

@@ -586,52 +586,52 @@ function toggleMap() {
 }
 
 
-// Dynamic instrument search
-
-const instruments = [
-  "Bonesaw", "LabGross Grossing", "Rotary Microtome", "Tissue Processor",
-  "Cryostat", "Tissue Embedding Centre", "Cassette Printer"
-];
-
-const table = document.querySelector("#instrumentTable"); // your table ID
-const searchInput = document.querySelector("#searchInput");
-const tagContainer = document.querySelector("#instrumentTags");
+// Setup references
+const searchInput = document.getElementById("searchInput");
+const tags = document.querySelectorAll(".tag");
+const table = document.getElementById("instrumentTable");
+const countBadge = document.getElementById("countBadge");
+const exportBtn = document.getElementById("exportBtn");
 
 let activeFilters = new Set();
 
-// Render filter tags
-instruments.forEach(name => {
-  const tag = document.createElement("button");
-  tag.textContent = name;
-  tag.className = "px-3 py-1 bg-gray-200 rounded hover:bg-gray-300";
-  tag.onclick = () => {
-    tag.classList.toggle("bg-blue-500");
-    tag.classList.toggle("text-white");
-    if (activeFilters.has(name)) activeFilters.delete(name);
-    else activeFilters.add(name);
+// Tag click logic
+tags.forEach(tag => {
+  tag.addEventListener("click", () => {
+    tag.classList.toggle("active");
+    const label = tag.textContent;
+    activeFilters.has(label) ? activeFilters.delete(label) : activeFilters.add(label);
     filterTable();
-  };
-  tagContainer.appendChild(tag);
+  });
 });
 
-// Filter logic
+// Search input logic
+searchInput.addEventListener("input", filterTable);
+
+// Filter function
 function filterTable() {
   const query = searchInput.value.toLowerCase();
   const rows = table.querySelectorAll("tbody tr");
+  let visibleCount = 0;
 
   rows.forEach(row => {
     const text = row.textContent.toLowerCase();
     const matchesSearch = text.includes(query);
-    const matchesTags = [...activeFilters].length === 0 || [...activeFilters].some(tag => text.includes(tag.toLowerCase()));
-    row.style.display = matchesSearch && matchesTags ? "" : "none";
+    const matchesTags = activeFilters.size === 0 || [...activeFilters].some(tag => text.includes(tag.toLowerCase()));
+    const show = matchesSearch && matchesTags;
+    row.style.display = show ? "" : "none";
+    if (show) visibleCount++;
   });
+
+  countBadge.textContent = visibleCount;
 }
 
-searchInput.addEventListener("input", filterTable);
-
-document.querySelector("#exportBtn").addEventListener("click", () => {
+// Export logic
+exportBtn.addEventListener("click", () => {
   const rows = Array.from(table.querySelectorAll("tbody tr")).filter(row => row.style.display !== "none");
-  const csv = rows.map(row => 
+  if (rows.length === 0) return alert("No rows to export.");
+
+  const csv = rows.map(row =>
     Array.from(row.cells).map(cell => `"${cell.textContent.trim()}"`).join(",")
   ).join("\n");
 

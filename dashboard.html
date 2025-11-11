@@ -163,6 +163,21 @@
       <p class="instrument-caption">Export custom data into PDF</p>
       <hr class="section-divider" />
   </section>
+
+    <!-- 🔹 HTML – Filter Tags + Export Button -->
+    
+  <div class="filter-bar flex flex-wrap gap-2 p-4 bg-gray-100 rounded-md">
+      <input type="text" id="searchInput" placeholder="Search instruments..." class="px-3 py-2 border rounded-md w-full sm:w-64" />
+
+  <div id="instrumentTags" class="flex flex-wrap gap-2 mt-2">
+    <!-- Dynamically generated tags -->
+  </div>
+
+  <button id="exportBtn" class="ml-auto px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+    Export Filtered Data
+  </button>
+  </div>
+
     
     <!-- 🔹 Data Table -->
     <section class="data-table">

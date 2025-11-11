@@ -257,7 +257,9 @@ async function fetchCRMData() {
     setupDropdownListener(crmData);
     setupYearFilter(crmData);
     populateModelDropdown(crmData);
-    setupInstrumentExportListener(crmData);
+    setupInstrumentExportListener(crmData); // Excel
+    setupPDFExportListener(crmData);       // PDF
+
 
     const modelDropdown = document.getElementById("modelDropdown");
     if (modelDropdown) {
@@ -720,8 +722,7 @@ function setupInstrumentExportListener(data) {
 }
 
 
-//Export to PDF
-
+// 🔹 Export Instrument Data to PDF
 function exportInstrumentToPDF(data) {
   const dropdown = document.getElementById("instrumentDropdown");
   if (!dropdown) {
@@ -735,60 +736,71 @@ function exportInstrumentToPDF(data) {
     return;
   }
 
-  const filtered = data.filter(row =>
+  const matchingRows = data.filter(row =>
     row.D?.trim().toLowerCase() === selectedInstrument.toLowerCase()
   );
 
-  if (!filtered.length) {
+  if (matchingRows.length === 0) {
     showToast("⚠️ No matching instrument data found.");
     return;
   }
 
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
+  // ✅ Defensive check for jsPDF and autoTable
+  if (!window.jspdf || !window.jspdf.jsPDF || !window.jspdf.autoTable) {
+    console.error("❌ jsPDF or autoTable not loaded.");
+    showToast("⚠️ PDF export library missing.");
+    return;
+  }
 
-  doc.setFontSize(14);
-  doc.text(`ISTOS Installations – ${selectedInstrument}`, 14, 20);
+  try {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
 
-  const headers = ["#", "Customer", "City", "Model", "Make", "DOI", "Warranty"];
-  const rows = filtered.map((row, index) => [
-    index + 1,
-    row.B || "",
-    row.C || "",
-    row.E || "",
-    row.F || "",
-    excelSerialToDate(row.G),
-    excelSerialToDate(row.H)
-  ]);
+    doc.setFontSize(14);
+    doc.text(`ISTOS Installations – ${selectedInstrument}`, 14, 20);
 
-  doc.autoTable({
-    startY: 30,
-    head: [headers],
-    body: rows,
-    styles: {
-      fontSize: 10,
-      cellPadding: 3
-    },
-    headStyles: {
-      fillColor: [245, 124, 0], // orange header
-      textColor: 255,
-      halign: "center"
-    }
-  });
+    const headers = ["#", "Customer", "City", "Model", "Make", "DOI", "Warranty"];
+    const rows = matchingRows.map((row, index) => [
+      index + 1,
+      row.B || "",
+      row.C || "",
+      row.E || "",
+      row.F || "",
+      excelSerialToDate(row.G),
+      excelSerialToDate(row.H)
+    ]);
 
-  doc.save(`ISTOS_${selectedInstrument}_Installations.pdf`);
-  showToast(`📄 PDF downloaded for ${selectedInstrument}!`);
+    doc.autoTable({
+      startY: 30,
+      head: [headers],
+      body: rows,
+      styles: {
+        fontSize: 10,
+        cellPadding: 3
+      },
+      headStyles: {
+        fillColor: [245, 124, 0],
+        textColor: 255,
+        halign: "center"
+      }
+    });
+
+    doc.save(`ISTOS_${selectedInstrument}_Installations.pdf`);
+    showToast(`📄 PDF downloaded for ${selectedInstrument}!`);
+  } catch (err) {
+    console.error("❌ PDF Export Error:", err);
+    showToast("⚠️ PDF export failed. Check console for details.");
+  }
 }
 
-document.getElementById("exportInstrumentPDF")?.addEventListener("click", () => {
-  exportInstrumentToPDF(crmData);
-});
+function setupPDFExportListener(data) {
+  const pdfBtn = document.getElementById("exportInstrumentPDF");
+  if (!pdfBtn) {
+    console.warn("PDF export button not found.");
+    return;
+  }
 
-const exportPDFBtn = document.getElementById("exportInstrumentPDF");
-if (exportPDFBtn) {
-  exportPDFBtn.addEventListener("click", () => {
-    exportInstrumentToPDF(crmData);
-  });
+  pdfBtn.addEventListener("click", () => exportInstrumentToPDF(data));
 }
 
 

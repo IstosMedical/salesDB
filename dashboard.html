@@ -37,25 +37,37 @@
         <h3>Overall Sales by Unit</h3>
         <p class="istos-value" id="cardQuotations">0</p>
       </div>
-
-    <div class="istos-card">
-      <div class="emoji">🧰</div>
-      <h3># of Units</h3>
-    
-      <select id="instrumentDropdown" class="istos-dropdown">
-        <option value="">-- Choose Instrument --</option>
-      </select>
-    
-      <p id="instrumentCount" class="instrument-caption">***</p>
-      <div id="topInstruments" class="badge-container"></div>
-    
-      <br /> <!-- One-line gap before buttons -->
-    
-      <div class="export-button-row">
-        <button id="exportInstrumentXLSX" class="export-btn">Export to Excel</button>
-        <button id="exportInstrumentPDF" class="export-btn secondary">Export to PDF</button>
+      
+      <div class="istos-card">
+        <div class="emoji">🧰</div>
+        <h3># of Units</h3>
+      
+        <select id="instrumentDropdown" class="istos-dropdown">
+          <option value="">-- Choose Instrument --</option>
+        </select>
+      
+        <p id="instrumentCount" class="instrument-caption">***</p>
+        <div id="topInstruments" class="badge-container"></div>
+      
+        <br /> <!-- One-line gap before icons -->
+      
+        <div class="export-icon-row">
+          <img
+            src="assets/excel-icon.png"
+            alt="Export to Excel"
+            id="exportInstrumentXLSX"
+            class="export-icon"
+            title="Export to Excel"
+          />
+          <img
+            src="assets/pdf-icon.png"
+            alt="Export to PDF"
+            id="exportInstrumentPDF"
+            class="export-icon orange"
+            title="Export to PDF"
+          />
+        </div>
       </div>
-    </div>
 
       <div class="istos-card">
         <div class="emoji">👔</div>

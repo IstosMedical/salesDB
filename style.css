@@ -950,30 +950,63 @@ button.loading::after {
 
 /* Filter bar search and instrument search */
 
-.filter-bar {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 16px;
-  background-color: #f3f4f6;
-  border-radius: 8px;
-  max-width: 900px;
+/* 🔹 Shared Container Styling */
+.year-search,
+.filter-bar,
+.data-table {
+  max-width: 600px;
   margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
-.filter-bar input[type="text"] {
+/* 🔹 Search Input */
+#searchInput {
   padding: 10px 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
   width: 100%;
-  box-sizing: border-box;
 }
 
+/* 🔹 Year Dropdown + Export */
+.year-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.year-dropdown {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.export-btn {
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.export-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* 🔹 Tag Container */
 .tag-container {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 12px;
 }
 
 .tag {
@@ -996,26 +1029,9 @@ button.loading::after {
   color: white;
 }
 
-.action-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#resultCount {
-  font-size: 14px;
-  color: #555;
-}
-
-#countBadge {
-  background-color: #dbeafe;
-  color: #1e3a8a;
-  padding: 4px 10px;
-  border-radius: 9999px;
-  font-weight: bold;
-}
-
+/* 🔹 Export Button (Filtered) */
 #exportBtn {
+  margin-top: 12px;
   padding: 10px 18px;
   background-color: #2563eb;
   color: white;
@@ -1030,3 +1046,39 @@ button.loading::after {
   background-color: #1d4ed8;
 }
 
+/* 🔹 Table Styling */
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+.data-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+/* 🔹 Responsive Enhancements */
+@media (max-width: 640px) {
+  .year-filter-row {
+    flex-direction: column;
+  }
+
+  .export-btn,
+  .year-dropdown {
+    width: 100%;
+  }
+
+  .tag {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}

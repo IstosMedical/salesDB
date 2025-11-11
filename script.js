@@ -257,6 +257,7 @@ async function fetchCRMData() {
     setupDropdownListener(crmData);
     setupYearFilter(crmData);
     populateModelDropdown(crmData);
+    setupInstrumentExportListener(crmData);
 
     const modelDropdown = document.getElementById("modelDropdown");
     if (modelDropdown) {
@@ -645,26 +646,34 @@ exportBtn.addEventListener("click", () => {
 });
 
 
-// Export Instrument data based on selection
-
+// 🔹 Export Instrument Data to Excel
 function exportInstrumentToXLSX(data) {
-  const dropdown = document.getElementById("instrumentDropdown");
-  if (!dropdown) return;
+  const instrumentDropdown = document.getElementById("instrumentDropdown");
+  if (!instrumentDropdown) {
+    console.warn("Instrument dropdown not found.");
+    return;
+  }
 
-  const selectedInstrument = dropdown.value.trim();
+  const selectedInstrument = instrumentDropdown.value.trim();
   if (!selectedInstrument) {
     showToast("⚠️ Please select an instrument to export.");
     return;
   }
 
-  const filtered = data.filter(row => row.D?.trim().toLowerCase() === selectedInstrument.toLowerCase());
-  if (!filtered.length) {
+  const matchingRows = data.filter(row =>
+    row.D?.trim().toLowerCase() === selectedInstrument.toLowerCase()
+  );
+
+  if (matchingRows.length === 0) {
     showToast("⚠️ No matching instrument data found.");
     return;
   }
 
-  const sheetData = [["#", "Customer Name", "City", "Instrument", "Model", "Make", "DOI", "Warranty"]];
-  filtered.forEach((row, index) => {
+  const sheetData = [
+    ["#", "Customer Name", "City", "Instrument", "Model", "Make", "DOI", "Warranty"]
+  ];
+
+  matchingRows.forEach((row, index) => {
     sheetData.push([
       index + 1,
       row.B || "",
@@ -678,15 +687,9 @@ function exportInstrumentToXLSX(data) {
   });
 
   const worksheet = XLSX.utils.aoa_to_sheet(sheetData);
-  worksheet['!cols'] = [
-    { wch: 4 },
-    { wch: 30 },
-    { wch: 20 },
-    { wch: 30 },
-    { wch: 20 },
-    { wch: 20 },
-    { wch: 15 },
-    { wch: 15 }
+  worksheet["!cols"] = [
+    { wch: 4 }, { wch: 30 }, { wch: 20 }, { wch: 30 },
+    { wch: 20 }, { wch: 20 }, { wch: 15 }, { wch: 15 }
   ];
 
   const headerStyle = {
@@ -694,7 +697,7 @@ function exportInstrumentToXLSX(data) {
     alignment: { horizontal: "center", vertical: "center" }
   };
 
-  ["A1","B1","C1","D1","E1","F1","G1","H1"].forEach(cell => {
+  ["A1", "B1", "C1", "D1", "E1", "F1", "G1", "H1"].forEach(cell => {
     if (worksheet[cell]) worksheet[cell].s = headerStyle;
   });
 
@@ -705,11 +708,13 @@ function exportInstrumentToXLSX(data) {
   showToast(`✅ Excel downloaded for ${selectedInstrument}!`);
 }
 
-const exportInstrumentBtn = document.getElementById("exportInstrumentXLSX");
-if (exportInstrumentBtn) {
-  exportInstrumentBtn.addEventListener("click", () => {
-    exportInstrumentToXLSX(crmData);
-  });
+// 🔹 Attach Export Listener Safely
+function setupInstrumentExportListener(data) {
+  const exportBtn = document.getElementById("exportInstrumentXLSX");
+  if (!exportBtn) {
+    console.warn("Export button for instrument not found.");
+    return;
+  }
+
+  exportBtn.addEventListener("click", () => exportInstrumentToXLSX(data));
 }
-
-

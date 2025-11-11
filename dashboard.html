@@ -165,74 +165,24 @@
 
     <!-- 🔹 Instrument Filter + Export -->
 
-<section class="instrument-search">
-  <label for="instrumentDropdown">🎛️ Filter Installations by Instrument:</label>
-  <div class="instrument-filter-row">
-    <select id="instrumentDropdown" class="instrument-dropdown">
-      <option value="">-- Select Instrument --</option>
-      <option value="Bonesaw">Bonesaw</option>
-      <option value="LabGross Grossing">LabGross Grossing</option>
-      <option value="Rotary Microtome">Rotary Microtome</option>
-      <option value="Tissue Processor">Tissue Processor</option>
-      <option value="Cryostat">Cryostat</option>
-      <option value="Tissue Embedding Centre">Tissue Embedding Centre</option>
-      <option value="Cassette Printer">Cassette Printer</option>
-    </select>
-    <button id="exportInstrumentXLSX" class="export-btn">Export to Excel</button>
-  </div>
-  <p class="instrument-caption">Export instrument-specific data into Excel</p>
-  <hr class="section-divider" />
-</section>
-
-<script>
-(function () {
-  const instrumentDropdown = document.getElementById("instrumentDropdown");
-  const exportInstrumentBtn = document.getElementById("exportInstrumentXLSX");
-  const crmTable = document.getElementById("crmTable");
-
-  // ✅ Ensure all required elements exist
-  if (!instrumentDropdown || !exportInstrumentBtn || !crmTable) return;
-
-  function getFilteredRowsByInstrument() {
-    const selectedInstrument = instrumentDropdown.value.trim();
-    const rows = Array.from(crmTable.querySelectorAll("tbody tr"));
-
-    if (!selectedInstrument) return rows;
-
-    return rows.filter(row => {
-      const instrumentCell = row.cells[3]; // 4th column = Instrument
-      return instrumentCell && instrumentCell.textContent.trim() === selectedInstrument;
-    });
-  }
-
-  function exportInstrumentFilteredData() {
-    const filteredRows = getFilteredRowsByInstrument();
-    if (filteredRows.length === 0) {
-      alert("No matching instrument data to export.");
-      return;
-    }
-
-    let csvContent = "data:text/csv;charset=utf-8,";
-    csvContent += "Customer Name,City,Instrument,Model,Make,DOI,Warranty\n";
-
-    filteredRows.forEach(row => {
-      const cells = Array.from(row.cells).slice(1); // Skip index column
-      const rowData = cells.map(cell => `"${cell.textContent.trim()}"`).join(",");
-      csvContent += rowData + "\n";
-    });
-
-    const encodedUri = encodeURI(csvContent);
-    const link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "instrument_filtered_data.csv");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-
-  exportInstrumentBtn.addEventListener("click", exportInstrumentFilteredData);
-})();
-</script>
+    <section class="instrument-search">
+      <label for="instrumentDropdown">🎛️ Filter Installations by Instrument:</label>
+      <div class="instrument-filter-row">
+        <select id="instrumentDropdown" class="instrument-dropdown">
+          <option value="">-- Select Instrument --</option>
+          <option value="Bonesaw">Bonesaw</option>
+          <option value="LabGross Grossing">LabGross Grossing</option>
+          <option value="Rotary Microtome">Rotary Microtome</option>
+          <option value="Tissue Processor">Tissue Processor</option>
+          <option value="Cryostat">Cryostat</option>
+          <option value="Tissue Embedding Centre">Tissue Embedding Centre</option>
+          <option value="Cassette Printer">Cassette Printer</option>
+        </select>
+        <button id="exportInstrumentXLSX" class="export-btn">Export to Excel</button>
+      </div>
+      <p class="instrument-caption">Export instrument-specific data into Excel</p>
+      <hr class="section-divider" />
+    </section>
 
     <!-- 🔹 Data Table -->
     <section class="data-table">

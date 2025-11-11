@@ -644,3 +644,72 @@ exportBtn.addEventListener("click", () => {
   link.click();
 });
 
+
+// Export Instrument data based on selection
+
+function exportInstrumentToXLSX(data) {
+  const dropdown = document.getElementById("instrumentDropdown");
+  if (!dropdown) return;
+
+  const selectedInstrument = dropdown.value.trim();
+  if (!selectedInstrument) {
+    showToast("⚠️ Please select an instrument to export.");
+    return;
+  }
+
+  const filtered = data.filter(row => row.D?.trim().toLowerCase() === selectedInstrument.toLowerCase());
+  if (!filtered.length) {
+    showToast("⚠️ No matching instrument data found.");
+    return;
+  }
+
+  const sheetData = [["#", "Customer Name", "City", "Instrument", "Model", "Make", "DOI", "Warranty"]];
+  filtered.forEach((row, index) => {
+    sheetData.push([
+      index + 1,
+      row.B || "",
+      row.C || "",
+      row.D || "",
+      row.E || "",
+      row.F || "",
+      excelSerialToDate(row.G),
+      excelSerialToDate(row.H)
+    ]);
+  });
+
+  const worksheet = XLSX.utils.aoa_to_sheet(sheetData);
+  worksheet['!cols'] = [
+    { wch: 4 },
+    { wch: 30 },
+    { wch: 20 },
+    { wch: 30 },
+    { wch: 20 },
+    { wch: 20 },
+    { wch: 15 },
+    { wch: 15 }
+  ];
+
+  const headerStyle = {
+    font: { bold: true },
+    alignment: { horizontal: "center", vertical: "center" }
+  };
+
+  ["A1","B1","C1","D1","E1","F1","G1","H1"].forEach(cell => {
+    if (worksheet[cell]) worksheet[cell].s = headerStyle;
+  });
+
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Instrument Data");
+  XLSX.writeFile(workbook, `ISTOS_${selectedInstrument}_Installations.xlsx`);
+
+  showToast(`✅ Excel downloaded for ${selectedInstrument}!`);
+}
+
+const exportInstrumentBtn = document.getElementById("exportInstrumentXLSX");
+if (exportInstrumentBtn) {
+  exportInstrumentBtn.addEventListener("click", () => {
+    exportInstrumentToXLSX(crmData);
+  });
+}
+
+

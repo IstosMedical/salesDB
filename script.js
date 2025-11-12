@@ -1,3 +1,6 @@
+import jsPDF from 'jspdf';
+import 'jspdf-autotable';
+
 // 🔐 Session Enforcement
 function enforceSession() {
   const SESSION_KEY = "istos-auth";
@@ -722,47 +725,47 @@ function setupInstrumentExportListener(data) {
 }
 
 
+// 🔹 Guard: Ensure jsPDF and autoTable are available
+function isPDFExportReady() {
+  const jspdf = window.jspdf;
+  if (!jspdf || !jspdf.jsPDF || !jspdf.autoTable) {
+    console.error("❌ jsPDF or autoTable not loaded.");
+    console.log("typeof jsPDF:", typeof jspdf?.jsPDF);
+    console.log("typeof autoTable:", typeof jspdf?.autoTable);
+    showToast("⚠️ PDF export library missing.");
+    return false;
+  }
+
+  // 🔧 Patch: Register autoTable if needed
+  if (typeof jspdf.jsPDF.API.autoTable === "undefined" && typeof jspdf.autoTable === "function") {
+    jspdf.jsPDF.API.autoTable = jspdf.autoTable;
+  }
+
+  return true;
+}
+
 // 🔹 Export Instrument Data to PDF
 function exportInstrumentToPDF(data) {
   const dropdown = document.getElementById("instrumentDropdown");
-  if (!dropdown) {
-    console.warn("Instrument dropdown not found.");
-    return;
-  }
+  if (!dropdown) return console.warn("Instrument dropdown not found.");
 
   const selectedInstrument = dropdown.value.trim();
-  if (!selectedInstrument) {
-    showToast("⚠️ Please select an instrument to export.");
-    return;
-  }
+  if (!selectedInstrument) return showToast("⚠️ Please select an instrument to export.");
 
   const matchingRows = data.filter(row =>
     row.D?.trim().toLowerCase() === selectedInstrument.toLowerCase()
   );
 
   if (matchingRows.length === 0) {
-    showToast("⚠️ No matching instrument data found.");
-    return;
+    return showToast("⚠️ No matching instrument data found.");
   }
 
-  // ✅ UMD Compatibility Patch + Validation
-  if (!window.jspdf || !window.jspdf.jsPDF || !window.jspdf.autoTable) {
-    console.error("❌ jsPDF or autoTable not loaded.");
-    console.log("typeof jsPDF:", typeof window.jspdf?.jsPDF);
-    console.log("typeof autoTable:", typeof window.jspdf?.autoTable);
-    showToast("⚠️ PDF export library missing.");
-    return;
-  }
+  if (!isPDFExportReady()) return;
 
   try {
     const { jsPDF } = window.jspdf;
-
-    // 🔧 Patch: Ensure autoTable is registered on jsPDF prototype
-    if (typeof jsPDF.API.autoTable === "undefined" && typeof window.jspdf.autoTable === "function") {
-      jsPDF.API.autoTable = window.jspdf.autoTable;
-    }
-
     const doc = new jsPDF();
+
     doc.setFontSize(14);
     doc.text(`ISTOS Installations – ${selectedInstrument}`, 14, 20);
 
@@ -781,15 +784,8 @@ function exportInstrumentToPDF(data) {
       startY: 30,
       head: [headers],
       body: rows,
-      styles: {
-        fontSize: 10,
-        cellPadding: 3
-      },
-      headStyles: {
-        fillColor: [245, 124, 0],
-        textColor: 255,
-        halign: "center"
-      }
+      styles: { fontSize: 10, cellPadding: 3 },
+      headStyles: { fillColor: [245, 124, 0], textColor: 255, halign: "center" }
     });
 
     doc.save(`ISTOS_${selectedInstrument}_Installations.pdf`);
@@ -800,13 +796,9 @@ function exportInstrumentToPDF(data) {
   }
 }
 
+// 🔹 Bind Export Button
 function setupPDFExportListener(data) {
   const pdfBtn = document.getElementById("exportInstrumentPDF");
-  if (!pdfBtn) {
-    console.warn("PDF export button not found.");
-    return;
-  }
-
+  if (!pdfBtn) return console.warn("PDF export button not found.");
   pdfBtn.addEventListener("click", () => exportInstrumentToPDF(data));
 }
-

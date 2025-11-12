@@ -721,8 +721,6 @@ function setupInstrumentExportListener(data) {
   exportBtn.addEventListener("click", () => exportInstrumentToXLSX(data));
 }
 
-import jsPDF from 'jspdf';
-import 'jspdf-autotable';
 
 // 🔹 Guard: Ensure jsPDF and autoTable are available
 function isPDFExportReady() {
